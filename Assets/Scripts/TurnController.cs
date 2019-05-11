@@ -5,20 +5,23 @@ using UnityEngine.UI;
 
 public class TurnController : MonoBehaviour
 {
-    public GameObject resourceController;
+    public GameObject playerOneResourceController;
+    public GameObject playerTwoResourceController;
     
     public int currentTurn;
     public int turnLimit;
     public Text turnDisplay;
 
     private bool gameOver;
-    private ResourceController resourceControllerScript;
-    
-    
+    private ResourceController playerOneResourceControllerScript;
+    private ResourceController playerTwoResourceControllerScript;
+
+
     // Start is called before the first frame update
     void Start()
     {
-        resourceControllerScript = resourceController.GetComponent<ResourceController>();
+        playerOneResourceControllerScript = playerOneResourceController.GetComponent<ResourceController>();
+        playerTwoResourceControllerScript = playerTwoResourceController.GetComponent<ResourceController>();
         Clicked();
         gameOver = false;
     }
@@ -29,7 +32,8 @@ public class TurnController : MonoBehaviour
         {
             currentTurn += 1;
             turnDisplay.text = "Current Turn: " + currentTurn;
-            resourceControllerScript.UpdateResourceCount();
+            playerOneResourceControllerScript.UpdateResourceCount();
+            playerTwoResourceControllerScript.UpdateResourceCount();
         }
 
         else if (currentTurn == turnLimit)

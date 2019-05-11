@@ -23,7 +23,7 @@ public class ResourceController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //UpdateResourceCount();
+
     }
 
     public void UpdateResourceCount()
@@ -32,7 +32,6 @@ public class ResourceController : MonoBehaviour
         if (currentFood <= currentPops)
         {
             popFoodDifference = (currentPops - currentFood);
-            //popsLostToAnger = popResourceDifference;
 
         }
 
@@ -48,10 +47,10 @@ public class ResourceController : MonoBehaviour
         currentPopsAngry += popsLostToAnger;
 
         //update mockup UI
-        currentFoodDisplay.text = "Current Food: " + currentFood;
-        currentEnergyDisplay.text = "Current Energy: " + currentEnergy;
-        currentPopsDisplay.text = "Current Pops: " + currentPops;
-        currentPopsAngryDisplay.text = "Current Angry Pops: " + currentPopsAngry;
+        currentFoodDisplay.text = "P1 Current Food: " + currentFood;
+        currentEnergyDisplay.text = "P1 Current Energy: " + currentEnergy;
+        currentPopsDisplay.text = "P1 Current Pops: " + currentPops;
+        currentPopsAngryDisplay.text = "P1 Current Angry: " + currentPopsAngry;
     }
 
 
