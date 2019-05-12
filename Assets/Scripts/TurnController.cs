@@ -30,6 +30,8 @@ public class TurnController : MonoBehaviour
     private WaterLevelController playerOneWaterLevelControllerScript;
     private WaterLevelController playerTwoWaterLevelControllerScript;
     private SeaLevelController seaLevelControllerScript;
+    private ProductionController playerOneProductionControllerScript;
+
 
     // Start is called before the first frame update
     void Start()
@@ -40,6 +42,7 @@ public class TurnController : MonoBehaviour
         playerTwoTradeControllerScript = playerTwoTradeController.GetComponent<TradeController>();
         playerOneWaterLevelControllerScript = playerOneWaterLevelController.GetComponent<WaterLevelController>();
         playerTwoWaterLevelControllerScript = playerTwoWaterLevelController.GetComponent<WaterLevelController>();
+        playerOneProductionControllerScript = playerOneResourceController.GetComponent<ProductionController>();
         seaLevelControllerScript = seaLevelController.GetComponent<SeaLevelController>();
         started = gameOver = false;
 
@@ -55,6 +58,7 @@ public class TurnController : MonoBehaviour
         {
             currentTurn += 1;
             //turnDisplay.text = "Current Turn: " + currentTurn;
+
             //sea level calculations
             seaLevelControllerScript.DrawPollutionFromIslands();
             if (seaLevelControllerScript.currentPollutionLevel >= 10 && seaLevelControllerScript.currentWaterHeight == 0)
@@ -62,6 +66,7 @@ public class TurnController : MonoBehaviour
                 playerOneWaterLevelControllerScript.RaiseWaterLevel();
                 playerTwoWaterLevelControllerScript.RaiseWaterLevel();
                 seaLevelControllerScript.currentWaterHeight = 1;
+                //playerOneProductionControllerScript.UpdateProduction();
             }
 
             if (seaLevelControllerScript.currentPollutionLevel >= 20 && seaLevelControllerScript.currentWaterHeight == 1)
