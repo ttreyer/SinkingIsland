@@ -21,6 +21,10 @@ public class SeaLevelController : MonoBehaviour
     public void DrawPollutionFromIslands()
     {
         currentPollutionLevel = (island1ResourceControllerScript.current.polution + island2ResourceControllerScript.current.polution);
+        if(currentPollutionLevel < 0)
+        {
+            currentPollutionLevel = 0;
+        }
     }
 
     // Update is called once per frame
