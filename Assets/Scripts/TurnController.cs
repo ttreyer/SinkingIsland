@@ -14,6 +14,7 @@ public class TurnController : MonoBehaviour
     public GameObject playerTwoWaterLevelController;
     public GameObject seaLevelController;
     public GameObject playerOneProductionController;
+    public GameObject playerTwoProductionController;
 
     public CardController p1Cards, p2Cards;
 
@@ -32,7 +33,7 @@ public class TurnController : MonoBehaviour
     private WaterLevelController playerTwoWaterLevelControllerScript;
     private SeaLevelController seaLevelControllerScript;
     private ProductionController playerOneProductionControllerScript;
-
+    private ProductionController playerTwoProductionControllerScript;
 
     // Start is called before the first frame update
     void Start()
@@ -44,6 +45,7 @@ public class TurnController : MonoBehaviour
         playerOneWaterLevelControllerScript = playerOneWaterLevelController.GetComponent<WaterLevelController>();
         playerTwoWaterLevelControllerScript = playerTwoWaterLevelController.GetComponent<WaterLevelController>();
         playerOneProductionControllerScript = playerOneProductionController.GetComponent<ProductionController>();
+        playerTwoProductionControllerScript = playerTwoProductionController.GetComponent<ProductionController>();
         seaLevelControllerScript = seaLevelController.GetComponent<SeaLevelController>();
         started = gameOver = false;
 
@@ -69,6 +71,7 @@ public class TurnController : MonoBehaviour
                 playerTwoWaterLevelControllerScript.RaiseWaterLevel();
                 seaLevelControllerScript.currentWaterHeight = 1;
                 playerOneProductionControllerScript.UpdateProduction();
+                playerTwoProductionControllerScript.UpdateProduction();
             }
 
             if (seaLevelControllerScript.currentPollutionLevel >= 20 && seaLevelControllerScript.currentWaterHeight == 1)
@@ -77,6 +80,7 @@ public class TurnController : MonoBehaviour
                 playerTwoWaterLevelControllerScript.RaiseWaterLevel();
                 seaLevelControllerScript.currentWaterHeight = 2;
                 playerOneProductionControllerScript.UpdateProduction();
+                playerTwoProductionControllerScript.UpdateProduction();
             }
 
             if (seaLevelControllerScript.currentPollutionLevel >= 30 && seaLevelControllerScript.currentWaterHeight == 2)
@@ -85,10 +89,11 @@ public class TurnController : MonoBehaviour
                 playerTwoWaterLevelControllerScript.RaiseWaterLevel();
                 seaLevelControllerScript.currentWaterHeight = 3;
                 playerOneProductionControllerScript.UpdateProduction();
+                playerTwoProductionControllerScript.UpdateProduction();
             }
 
             playerOneResourceControllerScript.ResetCurrentResource();
-            playerOneResourceControllerScript.ResetCurrentResource();
+            playerTwoResourceControllerScript.ResetCurrentResource();
 
             // When do we want to handle the delayed actions?
             foreach (Action action in ActionsForTurn(currentTurn))
