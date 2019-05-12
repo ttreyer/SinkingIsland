@@ -70,6 +70,21 @@ public class ResourceController : MonoBehaviour
             current.energy = 0;
         }
 
+        if (current.polution < 0)
+        {
+            current.polution = 0;
+        }
+
+        if (current.population < 0)
+        {
+            current.population = 0;
+        }
+
+        if (current.populationAngry < 0)
+        {
+            current.populationAngry = 0;
+        }
+
         //calculate final total pop loss based off any deficits found
         popsLostToAnger = Math.Max(popFoodDifference,popEnergyDifference);
         if (current.population != 0)
