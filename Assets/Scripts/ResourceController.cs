@@ -93,6 +93,16 @@ public class ResourceController : MonoBehaviour
         }
     }
 
+    public void TakeFoodBack(int Food)
+    {
+        if (foodToTrade != 0)
+        {
+            currentFood += Food;
+            foodToTrade -= Food;
+            foodToTradeDisplay.text = "To Trade: " + foodToTrade;
+        }
+    }
+
     public void TradeEnergyAway(int Energy)
     {
         if (currentEnergy != 0)
@@ -103,12 +113,32 @@ public class ResourceController : MonoBehaviour
         }
     }
 
+    public void TakeEnergyBack(int Energy)
+    {
+        if (energyToTrade != 0)
+        {
+            currentEnergy += Energy;
+            energyToTrade -= Energy;
+            energyToTradeDisplay.text = "To Trade: " + energyToTrade;
+        }
+    }
+
     public void TradePopsAway(int Pops)
     {
         if (currentPops != 0)
         {
             currentPops -= Pops;
             popsToTrade += Pops;
+            popsToTradeDisplay.text = "To Trade: " + popsToTrade;
+        }
+    }
+
+    public void TakePopsBack(int Pops)
+    {
+        if (popsToTrade != 0)
+        {
+            currentPops += Pops;
+            popsToTrade -= Pops;
             popsToTradeDisplay.text = "To Trade: " + popsToTrade;
         }
     }

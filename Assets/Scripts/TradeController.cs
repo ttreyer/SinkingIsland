@@ -21,19 +21,37 @@ public class TradeController : MonoBehaviour
 
     public void TradeFoodFromSource(int foodToSend)
     {
-        sourceResourceControllerScript.TradeFoodAway(1);
+        sourceResourceControllerScript.TradeFoodAway(foodToSend);
+        sourceFood = sourceResourceController.GetComponent<ResourceController>().foodToTrade;
+    }
+
+    public void TakeFoodBackToSource(int foodToTake)
+    {
+        sourceResourceControllerScript.TakeFoodBack(foodToTake);
         sourceFood = sourceResourceController.GetComponent<ResourceController>().foodToTrade;
     }
 
     public void TradeEnergyFromSource(int energyToSend)
     {
-        sourceResourceControllerScript.TradeEnergyAway(1);
+        sourceResourceControllerScript.TradeEnergyAway(energyToSend);
+        sourceEnergy = sourceResourceController.GetComponent<ResourceController>().energyToTrade;
+    }
+
+    public void TakeEnergyBackToSource(int energyToTake)
+    {
+        sourceResourceControllerScript.TakeEnergyBack(energyToTake);
         sourceEnergy = sourceResourceController.GetComponent<ResourceController>().energyToTrade;
     }
 
     public void TradePopsFromSource(int popsToSend)
     {
-        sourceResourceControllerScript.TradePopsAway(1);
+        sourceResourceControllerScript.TradePopsAway(popsToSend);
+        sourcePops = sourceResourceController.GetComponent<ResourceController>().popsToTrade;
+    }
+
+    public void TakePopsBackToSource(int popsToTake)
+    {
+        sourceResourceControllerScript.TakePopsBack(popsToTake);
         sourcePops = sourceResourceController.GetComponent<ResourceController>().popsToTrade;
     }
 
