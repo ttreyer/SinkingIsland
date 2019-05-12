@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -13,6 +14,8 @@ public class TurnController : MonoBehaviour
     public int currentTurn;
     public int turnLimit;
     public Text turnDisplay;
+
+    public List<Action>[] turnActions;
 
     private bool started, gameOver;
     private ResourceController playerOneResourceControllerScript;
@@ -29,6 +32,10 @@ public class TurnController : MonoBehaviour
         playerOneTradeControllerScript = playerOneTradeController.GetComponent<TradeController>();
         playerTwoTradeControllerScript = playerTwoTradeController.GetComponent<TradeController>();
         started = gameOver = false;
+
+        turnActions = new List<Action>[turnLimit];
+        for (int i = 0; i < turnLimit; ++i)
+            turnActions[i] = new List<Action>();
     }
 
     //turn execution
@@ -38,6 +45,10 @@ public class TurnController : MonoBehaviour
         {
             currentTurn += 1;
             //turnDisplay.text = "Current Turn: " + currentTurn;
+
+            // When do we want to handle the delayed actions?
+            foreach (Action action in ActionsForTurn(currentTurn))
+                action();
 
             ResourceValues playerOneResources = playerOneTradeControllerScript.ProcessTrades();
             ResourceValues playerTwoResources = playerTwoTradeControllerScript.ProcessTrades();
@@ -53,9 +64,6 @@ public class TurnController : MonoBehaviour
             gameOver = true;
             //turnDisplay.text = "Turn limit exceeded";
         }
-
-        
-
     }
 
     // Update is called once per frame
@@ -65,5 +73,13 @@ public class TurnController : MonoBehaviour
             started = true;
             Clicked();
         }
+    }
+
+    private List<Action> ActionsForTurn(int turn) {
+        return turnActions[turn - 1]; // List is 0 based, turn are 1 based
+    }
+
+    public void DelayAction(int turn, Action action) {
+        ActionsForTurn(currentTurn + turn).Add(action);
     }
 }
