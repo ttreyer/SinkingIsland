@@ -61,7 +61,7 @@ public class TurnController : MonoBehaviour
         {
             currentTurn += 1;
 
-            //turnDisplay.text = "Current Turn: " + currentTurn;
+            turnDisplay.text = "Current Turn: " + currentTurn;
 
             //sea level calculations
             seaLevelControllerScript.DrawPollutionFromIslands();
@@ -114,7 +114,7 @@ public class TurnController : MonoBehaviour
         else if (currentTurn == turnLimit)
         {
             gameOver = true;
-            //turnDisplay.text = "Turn limit exceeded";
+            turnDisplay.text = "Game has ended!";
         }
     }
 
