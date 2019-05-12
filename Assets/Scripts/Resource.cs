@@ -11,10 +11,10 @@ public enum ResourceType {
 
 [System.Serializable]
 public struct ResourceValues {
-    public int food, energy, polution, population;
+    public int food, energy, polution, population, populationAngry;
 
     public void Reset() {
-        food = energy = polution = population = 0;
+        food = energy = polution = population = populationAngry = 0;
     }
 
     public ResourceValues Add(ResourceValues v) {
@@ -22,6 +22,7 @@ public struct ResourceValues {
         energy += v.energy;
         polution += v.polution;
         population += v.population;
+        populationAngry += v.populationAngry;
 
         return this;
     }
@@ -30,7 +31,8 @@ public struct ResourceValues {
         return food <= v.food
             && energy <= v.energy
             && polution <= v.polution
-            && population <= v.population;
+            && population <= v.population
+            && populationAngry <= v.populationAngry;
     }
 }
 

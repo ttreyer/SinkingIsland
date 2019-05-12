@@ -22,47 +22,52 @@ public class TradeController : MonoBehaviour
     public void TradeFoodFromSource(int foodToSend)
     {
         sourceResourceControllerScript.TradeFoodAway(foodToSend);
-        sourceFood = sourceResourceController.GetComponent<ResourceController>().foodToTrade;
+        sourceFood = sourceResourceController.GetComponent<ResourceController>().trade.food;
     }
 
     public void TakeFoodBackToSource(int foodToTake)
     {
         sourceResourceControllerScript.TakeFoodBack(foodToTake);
-        sourceFood = sourceResourceController.GetComponent<ResourceController>().foodToTrade;
+        sourceFood = sourceResourceController.GetComponent<ResourceController>().trade.food;
     }
 
     public void TradeEnergyFromSource(int energyToSend)
     {
         sourceResourceControllerScript.TradeEnergyAway(energyToSend);
-        sourceEnergy = sourceResourceController.GetComponent<ResourceController>().energyToTrade;
+        sourceEnergy = sourceResourceController.GetComponent<ResourceController>().trade.energy;
     }
 
     public void TakeEnergyBackToSource(int energyToTake)
     {
         sourceResourceControllerScript.TakeEnergyBack(energyToTake);
-        sourceEnergy = sourceResourceController.GetComponent<ResourceController>().energyToTrade;
+        sourceEnergy = sourceResourceController.GetComponent<ResourceController>().trade.energy;
     }
 
     public void TradePopsFromSource(int popsToSend)
     {
         sourceResourceControllerScript.TradePopsAway(popsToSend);
-        sourcePops = sourceResourceController.GetComponent<ResourceController>().popsToTrade;
+        sourcePops = sourceResourceController.GetComponent<ResourceController>().trade.population;
     }
 
     public void TakePopsBackToSource(int popsToTake)
     {
         sourceResourceControllerScript.TakePopsBack(popsToTake);
-        sourcePops = sourceResourceController.GetComponent<ResourceController>().popsToTrade;
+        sourcePops = sourceResourceController.GetComponent<ResourceController>().trade.population;
     }
 
-    public void ProcessTrades()
+    public ResourceValues ProcessTrades()
     {
-        targetResourceControllerScript.GetFoodFromTrade(sourceFood);
-        targetResourceControllerScript.GetEnergyFromTrade(sourceEnergy);
-        targetResourceControllerScript.GetPopsFromTrade(sourcePops);
+        ResourceValues tradeResources = new ResourceValues {
+            food = sourceFood,
+            energy = sourceEnergy,
+            population = sourcePops,
+        };
+
         sourceFood = 0;
         sourceEnergy = 0;
         sourcePops = 0;
+
+        return tradeResources;
     }
 
     // Update is called once per frame

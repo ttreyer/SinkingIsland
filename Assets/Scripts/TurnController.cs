@@ -14,7 +14,7 @@ public class TurnController : MonoBehaviour
     public int turnLimit;
     public Text turnDisplay;
 
-    private bool gameOver;
+    private bool started, gameOver;
     private ResourceController playerOneResourceControllerScript;
     private ResourceController playerTwoResourceControllerScript;
     private TradeController playerOneTradeControllerScript;
@@ -28,8 +28,7 @@ public class TurnController : MonoBehaviour
         playerTwoResourceControllerScript = playerTwoResourceController.GetComponent<ResourceController>();
         playerOneTradeControllerScript = playerOneTradeController.GetComponent<TradeController>();
         playerTwoTradeControllerScript = playerTwoTradeController.GetComponent<TradeController>();
-        Clicked();
-        gameOver = false;
+        started = gameOver = false;
     }
 
     //turn execution
@@ -38,17 +37,21 @@ public class TurnController : MonoBehaviour
         if ((currentTurn != turnLimit) && (gameOver == false))
         {
             currentTurn += 1;
-            turnDisplay.text = "Current Turn: " + currentTurn;
-            playerOneTradeControllerScript.ProcessTrades();
-            playerTwoTradeControllerScript.ProcessTrades();
-            playerOneResourceControllerScript.UpdateResourceCount("P1");
-            playerTwoResourceControllerScript.UpdateResourceCount("P2");
+            //turnDisplay.text = "Current Turn: " + currentTurn;
+
+            ResourceValues playerOneResources = playerOneTradeControllerScript.ProcessTrades();
+            ResourceValues playerTwoResources = playerTwoTradeControllerScript.ProcessTrades();
+            playerOneResources.Add(playerOneResourceController.GetComponentInChildren<ProductionController>().production);
+
+            playerTwoResources.Add(playerTwoResourceController.GetComponentInChildren<ProductionController>().production);
+            playerOneResourceControllerScript.UpdateResourceCount("P1", playerOneResources);
+            playerTwoResourceControllerScript.UpdateResourceCount("P2", playerTwoResources);
         }
 
         else if (currentTurn == turnLimit)
         {
             gameOver = true;
-            turnDisplay.text = "Turn limit exceeded";
+            //turnDisplay.text = "Turn limit exceeded";
         }
 
         
@@ -58,6 +61,9 @@ public class TurnController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (!started) {
+            started = true;
+            Clicked();
+        }
     }
 }

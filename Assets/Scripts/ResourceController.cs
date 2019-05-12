@@ -11,14 +11,8 @@ public class ResourceController : MonoBehaviour
     //public int islandPops;
     //public int islandPopsAngry;
 
-    public int currentFood;
-    public int currentEnergy;
-    public int currentPops;
-    public int currentPopsAngry;
-
-    public int foodToTrade;
-    public int energyToTrade;
-    public int popsToTrade;
+    public ResourceValues current;
+    public ResourceValues trade;
 
     public Text foodToTradeDisplay;
     public Text energyToTradeDisplay;
@@ -43,119 +37,129 @@ public class ResourceController : MonoBehaviour
     ////will need to be amending this a lot once we integrate the prototype
     //public void AssessIslandResources()
     //{
-    //    currentFood = islandFood;
-    //    currentEnergy = islandEnergy;
+    //    current.food = islandFood;
+    //    current.energy = islandEnergy;
     //}
 
-    public void UpdateResourceCount(string player)
+    public void UpdateResourceCount(string player, ResourceValues newResources)
     {
+        current.Reset();
+        current.Add(newResources);
         //check food and energy deficits
-        if (currentFood <= currentPops)
+        if (current.food <= current.population)
         {
-            popFoodDifference = (currentPops - currentFood);
+            popFoodDifference = (current.population - current.food);
 
         }
 
-        if (currentEnergy <= currentPops)
+        if (current.energy <= current.population)
         {
-            popEnergyDifference = (currentPops - currentEnergy);
+            popEnergyDifference = (current.population - current.energy);
 
         }
 
         //calculate final total pop loss
         popsLostToAnger = Math.Max(popFoodDifference,popEnergyDifference);
-        currentPops -= popsLostToAnger;
-        currentPopsAngry += popsLostToAnger;
+        current.population -= popsLostToAnger;
+        current.populationAngry += popsLostToAnger;
 
         //clear trades
-        foodToTrade = 0;
-        energyToTrade = 0;
-        popsToTrade = 0;
+        trade.Reset();
 
+        UpdateCurrentUI(player);
+    }
+
+    public void UpdateCurrentUI(string player) {
+        return;
         //update mockup UI
-        currentFoodDisplay.text =  player + " Current Food: " + currentFood;
-        currentEnergyDisplay.text = player + " Current Energy: " + currentEnergy;
-        currentPopsDisplay.text = player + " Current Pops: " + currentPops;
-        currentPopsAngryDisplay.text = player + " Current Angry: " + currentPopsAngry;
-        foodToTradeDisplay.text = "To Trade: " + foodToTrade;
-        energyToTradeDisplay.text = "To Trade: " + energyToTrade;
-        popsToTradeDisplay.text = "To Trade: " + popsToTrade;
+        currentFoodDisplay.text = player + " Current Food: " + current.food;
+        currentEnergyDisplay.text = player + " Current Energy: " + current.energy;
+        currentPopsDisplay.text = player + " Current Pops: " + current.population;
+        currentPopsAngryDisplay.text = player + " Current Angry: " + current.populationAngry;
+
+    }
+
+    public void UpdateTradeUI() {
+        return;
+        foodToTradeDisplay.text = "To Trade: " + trade.food;
+        energyToTradeDisplay.text = "To Trade: " + trade.energy;
+        popsToTradeDisplay.text = "To Trade: " + trade.population;
     }
 
     //there's probably a super easy way to refactor these 6 trade methods but for now it works so I leave it as is
     public void TradeFoodAway(int Food)
     {
-        if (currentFood != 0)
+        if (current.food != 0)
         {
-            currentFood -= Food;
-            foodToTrade += Food;
-            foodToTradeDisplay.text = "To Trade: " + foodToTrade;
+            current.food -= Food;
+            trade.food += Food;
+            UpdateTradeUI();
         }
     }
 
     public void TakeFoodBack(int Food)
     {
-        if (foodToTrade != 0)
+        if (trade.food != 0)
         {
-            currentFood += Food;
-            foodToTrade -= Food;
-            foodToTradeDisplay.text = "To Trade: " + foodToTrade;
+            current.food += Food;
+            trade.food -= Food;
+            UpdateTradeUI();
         }
     }
 
     public void TradeEnergyAway(int Energy)
     {
-        if (currentEnergy != 0)
+        if (current.energy != 0)
         {
-            currentEnergy -= Energy;
-            energyToTrade += Energy;
-            energyToTradeDisplay.text = "To Trade: " + energyToTrade;
+            current.energy -= Energy;
+            trade.energy += Energy;
+            UpdateTradeUI();
         }
     }
 
     public void TakeEnergyBack(int Energy)
     {
-        if (energyToTrade != 0)
+        if (trade.energy != 0)
         {
-            currentEnergy += Energy;
-            energyToTrade -= Energy;
-            energyToTradeDisplay.text = "To Trade: " + energyToTrade;
+            current.energy += Energy;
+            trade.energy -= Energy;
+            UpdateTradeUI();
         }
     }
 
     public void TradePopsAway(int Pops)
     {
-        if (currentPops != 0)
+        if (current.population != 0)
         {
-            currentPops -= Pops;
-            popsToTrade += Pops;
-            popsToTradeDisplay.text = "To Trade: " + popsToTrade;
+            current.population -= Pops;
+            trade.population += Pops;
+            UpdateTradeUI();
         }
     }
 
     public void TakePopsBack(int Pops)
     {
-        if (popsToTrade != 0)
+        if (trade.population != 0)
         {
-            currentPops += Pops;
-            popsToTrade -= Pops;
-            popsToTradeDisplay.text = "To Trade: " + popsToTrade;
+            current.population += Pops;
+            trade.population -= Pops;
+            UpdateTradeUI();
         }
     }
 
     public void GetFoodFromTrade(int Food)
     {
-        currentFood += Food;
+        current.food += Food;
     }
 
     public void GetEnergyFromTrade(int Energy)
     {
-        currentEnergy += Energy;
+        current.energy += Energy;
     }
 
     public void GetPopsFromTrade(int Pops)
     {
-        currentPops += Pops;
+        current.population += Pops;
     }
 
     // Update is called once per frame

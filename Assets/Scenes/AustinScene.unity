@@ -1367,13 +1367,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5100432d9e2dbad49b49a8a89f97e0ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentFood: 7
-  currentEnergy: 7
-  currentPops: 7
-  currentPopsAngry: 2
-  foodToTrade: 0
-  energyToTrade: 0
-  popsToTrade: 0
+  current:
+    food: 0
+    energy: 0
+    polution: 0
+    population: 0
+    populationAngry: 0
+  trade:
+    food: 0
+    energy: 0
+    polution: 0
+    population: 0
+    populationAngry: 0
   foodToTradeDisplay: {fileID: 2011302821}
   energyToTradeDisplay: {fileID: 1999226778}
   popsToTradeDisplay: {fileID: 430575799}
@@ -3261,13 +3266,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5100432d9e2dbad49b49a8a89f97e0ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentFood: 5
-  currentEnergy: 5
-  currentPops: 5
-  currentPopsAngry: 0
-  foodToTrade: 0
-  energyToTrade: 0
-  popsToTrade: 0
+  current:
+    food: 0
+    energy: 0
+    polution: 0
+    population: 0
+    populationAngry: 0
+  trade:
+    food: 0
+    energy: 0
+    polution: 0
+    population: 0
+    populationAngry: 0
   foodToTradeDisplay: {fileID: 1018891761}
   energyToTradeDisplay: {fileID: 1963616537}
   popsToTradeDisplay: {fileID: 749209054}
