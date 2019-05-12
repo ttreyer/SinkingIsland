@@ -45,23 +45,41 @@ public class ResourceController : MonoBehaviour
     {
         current.Reset();
         current.Add(newResources);
-        //check food and energy deficits
-        if (current.food <= current.population)
+
+        //check food and energy deficits of initial resource pool
+        if (current.food < current.population)
         {
             popFoodDifference = (current.population - current.food);
-
         }
 
-        if (current.energy <= current.population)
+        if (current.energy < current.population)
         {
-            popEnergyDifference = (current.population - current.energy);
-
+            popEnergyDifference = (current.population - current.energy);  
         }
 
-        //calculate final total pop loss
+        //calculate subsequent food and energy loss based off population
+        current.food -= current.population;
+        if (current.food < 0)
+        {
+            current.food = 0;
+        }
+
+        current.energy -= current.population;
+        if (current.energy < 0)
+        {
+            current.energy = 0;
+        }
+
+        //calculate final total pop loss based off any deficits found
         popsLostToAnger = Math.Max(popFoodDifference,popEnergyDifference);
-        current.population -= popsLostToAnger;
-        current.populationAngry += popsLostToAnger;
+        if (current.population != 0)
+        {
+            current.population -= popsLostToAnger;
+            current.populationAngry += popsLostToAnger;
+        }
+
+        
+
 
         //clear trades
         trade.Reset();
