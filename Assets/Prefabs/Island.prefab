@@ -3330,10 +3330,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e381d2e26be784590bd7ac7ba00018ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  island: {fileID: 0}
-  policies: []
+  cardPrefab: {fileID: 1741719470422608192, guid: a6d83be4a118c466681a307356959030,
+    type: 3}
+  policies:
+  - {fileID: 7255516337725252108, guid: a92960b9b7975d84498cb0ed4ff631c9, type: 3}
+  - {fileID: 4350606691771379544, guid: b27ac82b1c509c040b6ca11f81182a85, type: 3}
+  - {fileID: 7720826846394263370, guid: 4933d1d8adc4edc4baccbe20459efffd, type: 3}
+  - {fileID: 7999623121415842383, guid: 08b108b41708da7458fd27691ca85c87, type: 3}
+  - {fileID: 20927042114159646, guid: edbd24346abc6454abeef9d4062e05b2, type: 3}
+  - {fileID: 7108436559191267680, guid: 5dfbbcd04b4d37f44b22dc8712322d6f, type: 3}
+  - {fileID: 3234286468674845384, guid: 6e7cf3a2b2fc9f249b2e9819dd0683d3, type: 3}
+  - {fileID: 5725393185706021524, guid: 446f410cef7e4434d99546b86f1e6a7d, type: 3}
+  - {fileID: 3092505616308487281, guid: 91736411dfdcc6a4183361e97aec8553, type: 3}
+  - {fileID: 2539679510254225783, guid: 6b24ea3c611f0f74a96162acd4a7c672, type: 3}
   maxEcologyLevel: 10
   ecologyWindow: 2
+  currentHand:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &4345628682908689232
 GameObject:
   m_ObjectHideFlags: 0

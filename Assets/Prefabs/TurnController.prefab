@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 1647946298471245301}
   m_Layer: 0
   m_Name: TurnController
-  m_TagString: Untagged
+  m_TagString: GameController
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -53,7 +53,9 @@ MonoBehaviour:
   playerTwoTradeController: {fileID: 0}
   playerOneWaterLevelController: {fileID: 0}
   playerTwoWaterLevelController: {fileID: 0}
-  seaLevelController: {fileID: 0}
+  seaLevelController: {fileID: 1249987677227113146}
+  playerOneProductionController: {fileID: 0}
+  playerTwoProductionController: {fileID: 0}
   p1Cards: {fileID: 0}
   p2Cards: {fileID: 0}
   currentTurn: 0
