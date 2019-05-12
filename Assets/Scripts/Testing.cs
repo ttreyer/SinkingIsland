@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Testing : MonoBehaviour
 {
-    public IslandProductionController prodController;
+    public ProductionController prodController;
 
     public Resource newResourcePrefab;
 

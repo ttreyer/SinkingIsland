@@ -25,6 +25,13 @@ public struct ResourceValues {
 
         return this;
     }
+
+    public bool LessEqual(ResourceValues v) {
+        return food <= v.food
+            && energy <= v.energy
+            && polution <= v.polution
+            && population <= v.population;
+    }
 }
 
 public class Resource : MonoBehaviour {

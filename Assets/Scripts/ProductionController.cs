@@ -3,12 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
 
-public class IslandProductionController : MonoBehaviour {
+public class ProductionController : MonoBehaviour {
     public ResourceValues production;
 
-    // Update is called once per frame
-    void Update() {
+    void Start() {
         UpdateProduction();
+    }
+
+    public void UpdateUI() {
+        /* ... */
     }
 
     public void UpdateProduction() {
@@ -19,6 +22,8 @@ public class IslandProductionController : MonoBehaviour {
             production.Add(r.baseValues);
             production.Add(r.bonusValues);
         }
+
+        UpdateUI();
     }
 
     public void UpgradeTypeWithValues(ResourceType type, ResourceValues addValues) {
