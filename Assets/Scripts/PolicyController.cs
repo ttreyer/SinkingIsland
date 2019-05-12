@@ -13,11 +13,13 @@ public class PolicyController : MonoBehaviour {
         return resourceRequirements.LessEqual(pc.production);
     }
 
-    public void Execute(bool checkRequirements = true) {
+    public bool Execute(bool checkRequirements = true) {
         if (checkRequirements && !CheckRequirements())
-            return;
+            return false;
 
         foreach (PolicyComponent component in GetComponents<PolicyComponent>())
             component.Execute(this);
+
+        return true;
     }
 }

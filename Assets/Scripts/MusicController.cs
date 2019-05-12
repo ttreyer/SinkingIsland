@@ -22,12 +22,7 @@ public class MusicController : MonoBehaviour {
             level.loop.LoadAudioData();
         }
 
-        PlayLevel(1);
-    }
-
-    void StartLevel(int level) {
-        StopCoroutine("PlayLevel");
-        StartCoroutine("PlayLevel", level);
+        PlayLevel(0);
     }
 
     void PlayLevel(int level) {
