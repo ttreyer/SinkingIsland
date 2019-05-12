@@ -4,9 +4,9 @@ using UnityEngine;
 
 public enum ResourceType {
     Unknown,
-    ___FOOD__, Crops, SuperCrops, Hydroponic,
-    ___ENERGY__, CoalPower, Windmill,
-    ___POPULATION__, Town, City
+    ___FOOD__, Crops, SuperCrops, Hydroponic, Cows, Rice, Banana, Corn,
+    ___ENERGY__, CoalPower, Windmill, Hydro, Nuclear,
+    ___POPULATION__, Town, City, Village
 }
 
 [System.Serializable]
