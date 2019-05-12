@@ -253,6 +253,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4984537569489797754, guid: 0cac7fbf80cca4c98ab9125aec449fcd,
+        type: 3}
+      propertyPath: baseValues.polution
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0cac7fbf80cca4c98ab9125aec449fcd, type: 3}
 --- !u!1001 &223355988
@@ -731,6 +736,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8947302117385332484, guid: 30155d1aea4104258b2e69ac0fbc4edb,
+        type: 3}
+      propertyPath: baseValues.polution
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 30155d1aea4104258b2e69ac0fbc4edb, type: 3}
 --- !u!1 &1057382894
@@ -896,6 +906,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentPollutionLevel: 0
   currentWaterHeight: 0
+  island1: {fileID: 1433163872}
+  island2: {fileID: 1777917425}
 --- !u!4 &1261574524
 Transform:
   m_ObjectHideFlags: 0

@@ -54,6 +54,7 @@ public class TurnController : MonoBehaviour
             currentTurn += 1;
             //turnDisplay.text = "Current Turn: " + currentTurn;
             //sea level calculations
+            seaLevelControllerScript.DrawPollutionFromIslands();
             if (seaLevelControllerScript.currentPollutionLevel >= 10 && seaLevelControllerScript.currentWaterHeight == 0)
             {
                 playerOneWaterLevelControllerScript.RaiseWaterLevel();
