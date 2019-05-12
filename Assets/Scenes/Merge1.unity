@@ -782,6 +782,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3546728080401809845, guid: e6315f16c77324ef4b7e271bdac5a525,
+        type: 3}
+      propertyPath: targetResourceController
+      value: 
+      objectReference: {fileID: 1777917425}
     - target: {fileID: 4345628682664060060, guid: e6315f16c77324ef4b7e271bdac5a525,
         type: 3}
       propertyPath: m_Name
@@ -868,54 +873,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1433163868}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1433163873
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1433163872}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5d3652fa3ccf3cb459ee77997b2f898b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sourceResourceController: {fileID: 1433163872}
-  targetResourceController: {fileID: 1777917425}
-  sourceFood: 0
-  sourceEnergy: 0
-  sourcePops: 0
---- !u!114 &1433163874
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1433163872}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5100432d9e2dbad49b49a8a89f97e0ce, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  current:
-    food: 0
-    energy: 0
-    polution: 0
-    population: 0
-    populationAngry: 0
-  trade:
-    food: 0
-    energy: 0
-    polution: 0
-    population: 0
-    populationAngry: 0
-  foodToTradeDisplay: {fileID: 0}
-  energyToTradeDisplay: {fileID: 0}
-  popsToTradeDisplay: {fileID: 0}
-  currentFoodDisplay: {fileID: 0}
-  currentEnergyDisplay: {fileID: 0}
-  currentPopsDisplay: {fileID: 0}
-  currentPopsAngryDisplay: {fileID: 0}
 --- !u!1001 &1662152445
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1061,6 +1018,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3546728080401809845, guid: e6315f16c77324ef4b7e271bdac5a525,
+        type: 3}
+      propertyPath: targetResourceController
+      value: 
+      objectReference: {fileID: 1433163872}
     - target: {fileID: 4345628682664060060, guid: e6315f16c77324ef4b7e271bdac5a525,
         type: 3}
       propertyPath: m_Name
@@ -1157,54 +1119,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1777917421}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1777917426
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1777917425}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5d3652fa3ccf3cb459ee77997b2f898b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sourceResourceController: {fileID: 1777917425}
-  targetResourceController: {fileID: 1433163872}
-  sourceFood: 0
-  sourceEnergy: 0
-  sourcePops: 0
---- !u!114 &1777917427
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1777917425}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5100432d9e2dbad49b49a8a89f97e0ce, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  current:
-    food: 0
-    energy: 0
-    polution: 0
-    population: 0
-    populationAngry: 0
-  trade:
-    food: 0
-    energy: 0
-    polution: 0
-    population: 0
-    populationAngry: 0
-  foodToTradeDisplay: {fileID: 0}
-  energyToTradeDisplay: {fileID: 0}
-  popsToTradeDisplay: {fileID: 0}
-  currentFoodDisplay: {fileID: 0}
-  currentEnergyDisplay: {fileID: 0}
-  currentPopsDisplay: {fileID: 0}
-  currentPopsAngryDisplay: {fileID: 0}
 --- !u!1001 &1779958167
 PrefabInstance:
   m_ObjectHideFlags: 0

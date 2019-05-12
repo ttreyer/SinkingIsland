@@ -51,6 +51,7 @@ MonoBehaviour:
     energy: 0
     polution: 0
     population: 0
+    populationAngry: 0
 --- !u!1 &4345628682135139311
 GameObject:
   m_ObjectHideFlags: 0
@@ -3203,6 +3204,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4345628682664060063}
   - component: {fileID: 4345628682664060062}
+  - component: {fileID: 9197841104071174490}
+  - component: {fileID: 3546728080401809845}
+  - component: {fileID: 536369249817733208}
   m_Layer: 0
   m_Name: Island
   m_TagString: Untagged
@@ -3249,6 +3253,67 @@ MonoBehaviour:
     inland: {fileID: 4345628682578808184}
     resources: {fileID: 4345628683350607154}
   height: 0
+--- !u!114 &9197841104071174490
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4345628682664060060}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7802c820a35f84fe0bb2fb3ed9129b7d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  opinion: 0
+--- !u!114 &3546728080401809845
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4345628682664060060}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d3652fa3ccf3cb459ee77997b2f898b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sourceResourceController: {fileID: 4345628682664060060}
+  targetResourceController: {fileID: 0}
+  sourceFood: 0
+  sourceEnergy: 0
+  sourcePops: 0
+--- !u!114 &536369249817733208
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4345628682664060060}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5100432d9e2dbad49b49a8a89f97e0ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  current:
+    food: 0
+    energy: 0
+    polution: 0
+    population: 0
+    populationAngry: 0
+  trade:
+    food: 0
+    energy: 0
+    polution: 0
+    population: 0
+    populationAngry: 0
+  foodToTradeDisplay: {fileID: 0}
+  energyToTradeDisplay: {fileID: 0}
+  popsToTradeDisplay: {fileID: 0}
+  currentFoodDisplay: {fileID: 0}
+  currentEnergyDisplay: {fileID: 0}
+  currentPopsDisplay: {fileID: 0}
+  currentPopsAngryDisplay: {fileID: 0}
 --- !u!1 &4345628682908689232
 GameObject:
   m_ObjectHideFlags: 0
