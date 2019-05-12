@@ -27,11 +27,6 @@ public class ResourceController : MonoBehaviour
     private int popEnergyDifference;
     private int popsLostToAnger;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
 
     ////this is called to check the carrying capacity of the island's resources, affected by modifiers and sea level rise
     ////will need to be amending this a lot once we integrate the prototype
@@ -41,9 +36,12 @@ public class ResourceController : MonoBehaviour
     //    current.energy = islandEnergy;
     //}
 
+    public void ResetCurrentResource() {
+        current.Reset();
+    }
+
     public void UpdateResourceCount(string player, ResourceValues newResources)
     {
-        current.Reset();
         current.Add(newResources);
 
         //check food and energy deficits of initial resource pool

@@ -7,7 +7,7 @@ public class ChangeProduction : PolicyComponent
     public ResourceValues changes;
 
     public override void Execute(PolicyController controller) {
-        TradeController tc = controller.island.GetComponentInChildren<TradeController>();
-        tc.source.Add(changes);
+        ResourceController rc = controller.island.GetComponentInChildren<ResourceController>();
+        rc.current.Add(changes);
     }
 }

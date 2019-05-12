@@ -57,6 +57,7 @@ public class TurnController : MonoBehaviour
         if ((currentTurn != turnLimit) && (gameOver == false))
         {
             currentTurn += 1;
+
             //turnDisplay.text = "Current Turn: " + currentTurn;
 
             //sea level calculations
@@ -82,6 +83,9 @@ public class TurnController : MonoBehaviour
                 playerTwoWaterLevelControllerScript.RaiseWaterLevel();
                 seaLevelControllerScript.currentWaterHeight = 3;
             }
+
+            playerOneResourceControllerScript.ResetCurrentResource();
+            playerOneResourceControllerScript.ResetCurrentResource();
 
             // When do we want to handle the delayed actions?
             foreach (Action action in ActionsForTurn(currentTurn))
