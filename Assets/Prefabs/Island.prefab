@@ -3207,6 +3207,7 @@ GameObject:
   - component: {fileID: 9197841104071174490}
   - component: {fileID: 3546728080401809845}
   - component: {fileID: 536369249817733208}
+  - component: {fileID: 7891252766135415999}
   m_Layer: 0
   m_Name: Island
   m_TagString: Untagged
@@ -3280,9 +3281,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sourceResourceController: {fileID: 4345628682664060060}
   targetResourceController: {fileID: 0}
-  sourceFood: 0
-  sourceEnergy: 0
-  sourcePops: 0
+  source:
+    food: 0
+    energy: 0
+    polution: 0
+    population: 0
+    populationAngry: 0
 --- !u!114 &536369249817733208
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3314,6 +3318,22 @@ MonoBehaviour:
   currentEnergyDisplay: {fileID: 0}
   currentPopsDisplay: {fileID: 0}
   currentPopsAngryDisplay: {fileID: 0}
+--- !u!114 &7891252766135415999
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4345628682664060060}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e381d2e26be784590bd7ac7ba00018ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  island: {fileID: 0}
+  policies: []
+  maxEcologyLevel: 10
+  ecologyWindow: 2
 --- !u!1 &4345628682908689232
 GameObject:
   m_ObjectHideFlags: 0

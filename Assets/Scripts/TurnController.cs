@@ -14,6 +14,8 @@ public class TurnController : MonoBehaviour
     public GameObject playerTwoWaterLevelController;
     public GameObject seaLevelController;
 
+    public CardController p1Cards, p2Cards;
+
     public int currentTurn;
     public int turnLimit;
     public Text turnDisplay;
@@ -86,6 +88,9 @@ public class TurnController : MonoBehaviour
             playerTwoResources.Add(playerTwoResourceController.GetComponentInChildren<ProductionController>().production);
             playerOneResourceControllerScript.UpdateResourceCount("P1", playerOneResources);
             playerTwoResourceControllerScript.UpdateResourceCount("P2", playerTwoResources);
+
+            p1Cards.DrawNewHand();
+            p2Cards.DrawNewHand();
         }
 
         else if (currentTurn == turnLimit)
@@ -109,6 +114,7 @@ public class TurnController : MonoBehaviour
     }
 
     public void DelayAction(int turn, Action action) {
-        ActionsForTurn(currentTurn + turn).Add(action);
+        if (currentTurn + turn <= turnActions.Length)
+            ActionsForTurn(currentTurn + turn).Add(action);
     }
 }
