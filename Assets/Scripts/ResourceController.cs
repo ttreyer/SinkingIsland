@@ -101,17 +101,16 @@ public class ResourceController : MonoBehaviour
     }
 
     public void UpdateCurrentUI(string player) {
-        return;
         //update mockup UI
-        currentFoodDisplay.text = player + " Current Food: " + current.food;
-        currentEnergyDisplay.text = player + " Current Energy: " + current.energy;
-        currentPopsDisplay.text = player + " Current Pops: " + current.population;
-        currentPopsAngryDisplay.text = player + " Current Angry: " + current.populationAngry;
+        currentFoodDisplay.text = current.food.ToString();
+        currentEnergyDisplay.text = current.energy.ToString();
+        currentPopsDisplay.text = current.population.ToString();
+        currentPopsAngryDisplay.text = current.populationAngry.ToString();
 
     }
 
-    public void UpdateTradeUI() {
-        return;
+    public void UpdateTradeUI()
+    {
         foodToTradeDisplay.text = "To Trade: " + trade.food;
         energyToTradeDisplay.text = "To Trade: " + trade.energy;
         popsToTradeDisplay.text = "To Trade: " + trade.population;
