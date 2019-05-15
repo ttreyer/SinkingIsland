@@ -35,6 +35,7 @@ public class TurnController : MonoBehaviour
         p2Production = islandB.GetComponentInChildren<ProductionController>();
 
         seaLevel = GetComponent<SeaLevelController>();
+        musicController = GetComponent<MusicController>();
 
         started = gameOver = false;
 
@@ -77,8 +78,10 @@ public class TurnController : MonoBehaviour
 
             p1Cards.DrawNewHand();
             p2Cards.DrawNewHand();
-        } else if (currentTurn == turnLimit)
+        } else if (currentTurn == turnLimit) {
+            musicController.PlayLevel(4);
             GameOver("You win!");
+        }
     }
 
     // Update is called once per frame
