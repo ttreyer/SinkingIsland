@@ -19,7 +19,8 @@ public class MusicController : MonoBehaviour {
     void Start() {
         foreach (MusicLevel level in levels) {
             level.intro.LoadAudioData();
-            level.loop.LoadAudioData();
+            if (level.loop)
+                level.loop.LoadAudioData();
         }
 
         PlayLevel(0);
@@ -31,9 +32,11 @@ public class MusicController : MonoBehaviour {
         audioLoop.Stop();
 
         audioIntro.clip = levels[level].intro;
-        audioLoop.clip = levels[level].loop;
+        if (levels[level].loop)
+            audioLoop.clip = levels[level].loop;
 
         audioIntro.Play();
-        audioLoop.PlayDelayed(audioIntro.clip.length + levels[level].introOffset);
+        if (levels[level].loop)
+            audioLoop.PlayDelayed(audioIntro.clip.length + levels[level].introOffset);
     }
 }

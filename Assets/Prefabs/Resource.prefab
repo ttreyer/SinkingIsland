@@ -67,7 +67,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 10
+  m_SortingOrder: 100
   m_Sprite: {fileID: -5420605128151106109, guid: a9a56aeea4fb942cd9710c6b99cd1d46,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -125,7 +125,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 0
-  food: 0
-  energy: 0
-  polution: 0
-  population: 0
+  baseValues:
+    food: 0
+    energy: 0
+    polution: 0
+    population: 0
+    populationAngry: 0
+  bonusValues:
+    food: 0
+    energy: 0
+    polution: 0
+    population: 0
+    populationAngry: 0

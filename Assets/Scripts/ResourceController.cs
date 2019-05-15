@@ -44,55 +44,31 @@ public class ResourceController : MonoBehaviour
     {
         current.Add(newResources);
 
-        //check food and energy deficits of initial resource pool
-        if (current.food < current.population)
-        {
-            popFoodDifference = (current.population - current.food);
-        }
-
-        if (current.energy < current.population)
-        {
-            popEnergyDifference = (current.population - current.energy);  
-        }
+        Debug.Log("---");
+        Debug.Log(current.population);
+        Debug.Log(current.populationAngry);
+        Debug.Log(current.TotalPopulation);
+        Debug.Log(current.food);
+        Debug.Log(current.energy);
 
         //calculate subsequent food and energy loss based off population
-        current.food -= current.population;
-        if (current.food < 0)
-        {
-            current.food = 0;
-        }
+        current.food -= current.TotalPopulation;
+        current.energy -= current.TotalPopulation;
 
-        current.energy -= current.population;
-        if (current.energy < 0)
-        {
-            current.energy = 0;
-        }
+        Debug.Log(current.food);
+        Debug.Log(current.energy);
 
-        if (current.polution < 0)
-        {
-            current.polution = 0;
-        }
+        // Take the biggest discontent or 0 if none
+        int popUnsatisfied = Math.Max(0, Math.Max(-current.food, -current.energy));
 
-        if (current.population < 0)
-        {
-            current.population = 0;
-        }
+        // Cap population turning angry by the current happy population
+        int popTurningAngry = Math.Min(current.population, popUnsatisfied);
 
-        if (current.populationAngry < 0)
-        {
-            current.populationAngry = 0;
-        }
+        current.population -= popTurningAngry;
+        current.populationAngry += popTurningAngry;
 
-        //calculate final total pop loss based off any deficits found
-        popsLostToAnger = Math.Max(popFoodDifference,popEnergyDifference);
-        if (current.population != 0)
-        {
-            current.population -= popsLostToAnger;
-            current.populationAngry += popsLostToAnger;
-        }
-
-        
-
+        // Ensure we don't have any negative value
+        current.SetMin(0);
 
         //clear trades
         trade.Reset();

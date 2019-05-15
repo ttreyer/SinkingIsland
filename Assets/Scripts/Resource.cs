@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public enum ResourceType {
     Unknown,
@@ -12,6 +13,8 @@ public enum ResourceType {
 [System.Serializable]
 public struct ResourceValues {
     public int food, energy, polution, population, populationAngry;
+
+    public int TotalPopulation { get { return population + populationAngry; } }
 
     public void Reset() {
         food = energy = polution = population = populationAngry = 0;
@@ -33,6 +36,14 @@ public struct ResourceValues {
             && polution <= v.polution
             && population <= v.population
             && populationAngry <= v.populationAngry;
+    }
+
+    public void SetMin(int min = 0) {
+        food = Math.Max(min, food);
+        energy = Math.Max(min, energy);
+        polution = Math.Max(min, polution);
+        population = Math.Max(min, population);
+        populationAngry = Math.Max(min, populationAngry);
     }
 }
 

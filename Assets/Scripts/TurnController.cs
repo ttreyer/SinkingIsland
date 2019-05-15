@@ -6,15 +6,7 @@ using UnityEngine.UI;
 
 public class TurnController : MonoBehaviour
 {
-    public GameObject playerOneResourceController;
-    public GameObject playerTwoResourceController;
-    public GameObject playerOneTradeController;
-    public GameObject playerTwoTradeController;
-    public GameObject playerOneWaterLevelController;
-    public GameObject playerTwoWaterLevelController;
-    public GameObject seaLevelController;
-    public GameObject playerOneProductionController;
-    public GameObject playerTwoProductionController;
+    public GameObject islandA, islandB;
 
     public CardController p1Cards, p2Cards;
 
@@ -22,31 +14,28 @@ public class TurnController : MonoBehaviour
     public int turnLimit;
     public Text turnDisplay;
 
-    public List<Action>[] turnActions;
+    private List<Action>[] turnActions;
 
     private bool started, gameOver;
-    private ResourceController playerOneResourceControllerScript;
-    private ResourceController playerTwoResourceControllerScript;
-    private TradeController playerOneTradeControllerScript;
-    private TradeController playerTwoTradeControllerScript;
-    private WaterLevelController playerOneWaterLevelControllerScript;
-    private WaterLevelController playerTwoWaterLevelControllerScript;
-    private SeaLevelController seaLevelControllerScript;
-    private ProductionController playerOneProductionControllerScript;
-    private ProductionController playerTwoProductionControllerScript;
-
+    private ResourceController p1Resources, p2Resources;
+    private TradeController p1Trades, p2Trades;
+    private WaterLevelController p1Water, p2Water;
+    private ProductionController p1Production, p2Production;
+    private SeaLevelController seaLevel;
+    private MusicController musicController;
+    
     // Start is called before the first frame update
     void Start()
     {
-        playerOneResourceControllerScript = playerOneResourceController.GetComponent<ResourceController>();
-        playerTwoResourceControllerScript = playerTwoResourceController.GetComponent<ResourceController>();
-        playerOneTradeControllerScript = playerOneTradeController.GetComponent<TradeController>();
-        playerTwoTradeControllerScript = playerTwoTradeController.GetComponent<TradeController>();
-        playerOneWaterLevelControllerScript = playerOneWaterLevelController.GetComponent<WaterLevelController>();
-        playerTwoWaterLevelControllerScript = playerTwoWaterLevelController.GetComponent<WaterLevelController>();
-        playerOneProductionControllerScript = playerOneProductionController.GetComponent<ProductionController>();
-        playerTwoProductionControllerScript = playerTwoProductionController.GetComponent<ProductionController>();
-        seaLevelControllerScript = seaLevelController.GetComponent<SeaLevelController>();
+        p1Resources = islandA.GetComponentInChildren<ResourceController>();
+        p2Resources = islandB.GetComponentInChildren<ResourceController>();
+        p1Trades = islandA.GetComponentInChildren<TradeController>();
+        p2Trades = islandB.GetComponentInChildren<TradeController>();
+        p1Production = islandA.GetComponentInChildren<ProductionController>();
+        p2Production = islandB.GetComponentInChildren<ProductionController>();
+
+        seaLevel = GetComponent<SeaLevelController>();
+
         started = gameOver = false;
 
         turnActions = new List<Action>[turnLimit];
@@ -57,71 +46,42 @@ public class TurnController : MonoBehaviour
     //turn execution
     public void Clicked()
     {
-        if ((currentTurn != turnLimit) && (gameOver == false))
-        {
+        if ((currentTurn != turnLimit) && (gameOver == false)) {
             currentTurn += 1;
 
             turnDisplay.text = "Current Turn: " + currentTurn;
 
             //sea level calculations
-            seaLevelControllerScript.DrawPollutionFromIslands();
-            if (seaLevelControllerScript.currentPollutionLevel >= 20 && seaLevelControllerScript.currentWaterHeight == 0)
-            {
-                playerOneWaterLevelControllerScript.RaiseWaterLevel();
-                playerTwoWaterLevelControllerScript.RaiseWaterLevel();
-                seaLevelControllerScript.currentWaterHeight = 1;
-                playerOneProductionControllerScript.UpdateProduction();
-                playerTwoProductionControllerScript.UpdateProduction();
+            seaLevel.UpdateSeaLevel();
 
-                gameObject.GetComponent<MusicController>().PlayLevel(1);
-            }
+            /* Collect current production */
+            p1Production.UpdateProduction();
+            p2Production.UpdateProduction();
 
-            if (seaLevelControllerScript.currentPollutionLevel >= 30 && seaLevelControllerScript.currentWaterHeight == 1)
-            {
-                playerOneWaterLevelControllerScript.RaiseWaterLevel();
-                playerTwoWaterLevelControllerScript.RaiseWaterLevel();
-                seaLevelControllerScript.currentWaterHeight = 2;
-                playerOneProductionControllerScript.UpdateProduction();
-                playerTwoProductionControllerScript.UpdateProduction();
-                gameObject.GetComponent<MusicController>().PlayLevel(2);
+            Debug.Log(p1Production.production.TotalPopulation);
+            Debug.Log(p2Production.production.TotalPopulation);
 
-            }
+            /* Reset current resource, as we'll add the production and the trade */
+            p1Resources.ResetCurrentResource();
+            p2Resources.ResetCurrentResource();
 
-            if (seaLevelControllerScript.currentPollutionLevel >= 40 && seaLevelControllerScript.currentWaterHeight == 2)
-            {
-                playerOneWaterLevelControllerScript.RaiseWaterLevel();
-                playerTwoWaterLevelControllerScript.RaiseWaterLevel();
-                seaLevelControllerScript.currentWaterHeight = 3;
-                playerOneProductionControllerScript.UpdateProduction();
-                playerTwoProductionControllerScript.UpdateProduction();
-                gameObject.GetComponent<MusicController>().PlayLevel(3);
-
-            }
-
-            playerOneResourceControllerScript.ResetCurrentResource();
-            playerTwoResourceControllerScript.ResetCurrentResource();
-
-            // When do we want to handle the delayed actions?
+            /* Apply delayed actions first */
             foreach (Action action in ActionsForTurn(currentTurn))
                 action();
 
-            ResourceValues playerOneResources = playerOneTradeControllerScript.ProcessTrades();
-            ResourceValues playerTwoResources = playerTwoTradeControllerScript.ProcessTrades();
-            playerOneResources.Add(playerOneResourceController.GetComponentInChildren<ProductionController>().production);
+            ResourceValues playerOneResources = p1Trades.ProcessTrades();
+            ResourceValues playerTwoResources = p2Trades.ProcessTrades();
 
-            playerTwoResources.Add(playerTwoResourceController.GetComponentInChildren<ProductionController>().production);
-            playerOneResourceControllerScript.UpdateResourceCount("P1", playerOneResources);
-            playerTwoResourceControllerScript.UpdateResourceCount("P2", playerTwoResources);
+            playerOneResources.Add(p1Production.production);
+            playerTwoResources.Add(p2Production.production);
+
+            p1Resources.UpdateResourceCount("P1", playerOneResources);
+            p2Resources.UpdateResourceCount("P2", playerTwoResources);
 
             p1Cards.DrawNewHand();
             p2Cards.DrawNewHand();
-        }
-
-        else if (currentTurn == turnLimit)
-        {
-            gameOver = true;
-            turnDisplay.text = "Game has ended!";
-        }
+        } else if (currentTurn == turnLimit)
+            GameOver("You win!");
     }
 
     // Update is called once per frame
@@ -131,6 +91,11 @@ public class TurnController : MonoBehaviour
             started = true;
             Clicked();
         }
+    }
+
+    public void GameOver(String reason) {
+        gameOver = true;
+        turnDisplay.text = "Game has ended! " + reason;
     }
 
     private List<Action> ActionsForTurn(int turn) {

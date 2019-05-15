@@ -6,6 +6,7 @@ using UnityEngine;
 public struct HeightMap {
     public GameObject border;
     public GameObject inland;
+    public GameObject decoration;
     public GameObject resources;
 }
 
@@ -21,6 +22,7 @@ public class WaterLevelController : MonoBehaviour {
             HeightMap hm = heights[h];
             hm.border.SetActive(h == height);
             hm.inland.SetActive(h >= height);
+            hm.decoration.SetActive(h >= height);
             hm.resources.SetActive(h >= height);
         }
     }

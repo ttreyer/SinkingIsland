@@ -8,17 +8,39 @@ public class SeaLevelController : MonoBehaviour
     public int currentWaterHeight;
     public GameObject island1;
     public GameObject island2;
+    public int[] pollutionLimitPerLevels;
     private ResourceController island1ResourceControllerScript;
     private ResourceController island2ResourceControllerScript;
+    private WaterLevelController p1WaterLevel, p2WaterLevel;
+    private MusicController musicController;
 
     // Start is called before the first frame update
     void Start()
     {
         island1ResourceControllerScript = island1.GetComponent<ResourceController>();
         island2ResourceControllerScript = island2.GetComponent<ResourceController>();
+        p1WaterLevel = island1.GetComponent<WaterLevelController>();
+        p2WaterLevel = island2.GetComponent<WaterLevelController>();
+        musicController = GetComponent<MusicController>();
     }
 
-    public void DrawPollutionFromIslands()
+    public void UpdateSeaLevel() {
+        DrawPollutionFromIslands();
+
+        if (currentPollutionLevel >= pollutionLimitPerLevels[currentWaterHeight]) {
+            currentWaterHeight++;
+
+            p1WaterLevel.RaiseWaterLevel();
+            p2WaterLevel.RaiseWaterLevel();
+
+            musicController.PlayLevel(currentWaterHeight);
+
+            if (currentWaterHeight >= pollutionLimitPerLevels.Length)
+                GetComponent<TurnController>().GameOver("You drown!");
+        }
+    }
+
+    private void DrawPollutionFromIslands()
     {
         currentPollutionLevel = (island1ResourceControllerScript.current.polution + island2ResourceControllerScript.current.polution);
         if(currentPollutionLevel < 0)
