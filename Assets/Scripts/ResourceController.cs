@@ -40,23 +40,15 @@ public class ResourceController : MonoBehaviour
         current.Reset();
     }
 
-    public void UpdateResourceCount(string player, ResourceValues newResources)
+    public void UpdateResourceCount(ResourceValues newResources)
     {
         current.Add(newResources);
-
-        Debug.Log("---");
-        Debug.Log(current.population);
-        Debug.Log(current.populationAngry);
-        Debug.Log(current.TotalPopulation);
-        Debug.Log(current.food);
-        Debug.Log(current.energy);
+        trade.Revert();
+        current.Add(trade);
 
         //calculate subsequent food and energy loss based off population
         current.food -= current.TotalPopulation;
         current.energy -= current.TotalPopulation;
-
-        Debug.Log(current.food);
-        Debug.Log(current.energy);
 
         // Take the biggest discontent or 0 if none
         int popUnsatisfied = Math.Max(0, Math.Max(-current.food, -current.energy));
@@ -73,10 +65,11 @@ public class ResourceController : MonoBehaviour
         //clear trades
         trade.Reset();
 
-        UpdateCurrentUI(player);
+        UpdateCurrentUI();
+        UpdateTradeUI();
     }
 
-    public void UpdateCurrentUI(string player) {
+    public void UpdateCurrentUI() {
         //update mockup UI
         currentFoodDisplay.text = current.food.ToString();
         currentEnergyDisplay.text = current.energy.ToString();
@@ -99,6 +92,7 @@ public class ResourceController : MonoBehaviour
         {
             current.food -= Food;
             trade.food += Food;
+            UpdateCurrentUI();
             UpdateTradeUI();
         }
     }
@@ -109,6 +103,7 @@ public class ResourceController : MonoBehaviour
         {
             current.food += Food;
             trade.food -= Food;
+            UpdateCurrentUI();
             UpdateTradeUI();
         }
     }
@@ -119,6 +114,7 @@ public class ResourceController : MonoBehaviour
         {
             current.energy -= Energy;
             trade.energy += Energy;
+            UpdateCurrentUI();
             UpdateTradeUI();
         }
     }
@@ -129,6 +125,7 @@ public class ResourceController : MonoBehaviour
         {
             current.energy += Energy;
             trade.energy -= Energy;
+            UpdateCurrentUI();
             UpdateTradeUI();
         }
     }
@@ -139,6 +136,7 @@ public class ResourceController : MonoBehaviour
         {
             current.population -= Pops;
             trade.population += Pops;
+            UpdateCurrentUI();
             UpdateTradeUI();
         }
     }
@@ -149,6 +147,7 @@ public class ResourceController : MonoBehaviour
         {
             current.population += Pops;
             trade.population -= Pops;
+            UpdateCurrentUI();
             UpdateTradeUI();
         }
     }

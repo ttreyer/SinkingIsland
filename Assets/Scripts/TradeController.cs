@@ -6,8 +6,8 @@ public class TradeController : MonoBehaviour
 {
     public GameObject sourceResourceController;
     public GameObject targetResourceController;
-    private ResourceController sourceResourceControllerScript;
-    private ResourceController targetResourceControllerScript;
+    public ResourceController sourceResourceControllerScript;
+    public ResourceController targetResourceControllerScript;
 
     public ResourceValues source;
 

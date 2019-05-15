@@ -45,6 +45,14 @@ public struct ResourceValues {
         population = Math.Max(min, population);
         populationAngry = Math.Max(min, populationAngry);
     }
+
+    public void Revert() {
+        food = -food;
+        energy = -energy;
+        polution = -polution;
+        population = -population;
+        populationAngry = -populationAngry;
+    }
 }
 
 public class Resource : MonoBehaviour {

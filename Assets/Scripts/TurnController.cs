@@ -49,7 +49,7 @@ public class TurnController : MonoBehaviour
         if ((currentTurn != turnLimit) && (gameOver == false)) {
             currentTurn += 1;
 
-            turnDisplay.text = "Current Turn: " + currentTurn;
+            turnDisplay.text = "End turn " + currentTurn;
 
             //sea level calculations
             seaLevel.UpdateSeaLevel();
@@ -66,14 +66,14 @@ public class TurnController : MonoBehaviour
             foreach (Action action in ActionsForTurn(currentTurn))
                 action();
 
-            ResourceValues playerOneResources = p1Trades.ProcessTrades();
-            ResourceValues playerTwoResources = p2Trades.ProcessTrades();
+            ResourceValues playerOneResources = p2Trades.ProcessTrades();
+            ResourceValues playerTwoResources = p1Trades.ProcessTrades();
 
             playerOneResources.Add(p1Production.production);
             playerTwoResources.Add(p2Production.production);
 
-            p1Resources.UpdateResourceCount("P1", playerOneResources);
-            p2Resources.UpdateResourceCount("P2", playerTwoResources);
+            p1Resources.UpdateResourceCount(playerOneResources);
+            p2Resources.UpdateResourceCount(playerTwoResources);
 
             p1Cards.DrawNewHand();
             p2Cards.DrawNewHand();
