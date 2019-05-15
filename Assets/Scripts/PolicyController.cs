@@ -9,8 +9,8 @@ public class PolicyController : MonoBehaviour {
     public int ecologyLevel;
 
     private bool CheckRequirements() {
-        ProductionController pc = island.GetComponentInChildren<ProductionController>();
-        return resourceRequirements.LessEqual(pc.production);
+        ResourceController pc = island.GetComponentInChildren<ResourceController>();
+        return resourceRequirements.LessEqual(pc.current);
     }
 
     public bool Execute(bool checkRequirements = true) {
