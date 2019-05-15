@@ -21,37 +21,37 @@ public class TradeController : MonoBehaviour
     public void TradeFoodFromSource(int foodToSend)
     {
         sourceResourceControllerScript.TradeFoodAway(foodToSend);
-        source.food = sourceResourceController.GetComponent<ResourceController>().trade.food;
+        source.food = sourceResourceControllerScript.trade.food;
     }
 
     public void TakeFoodBackToSource(int foodToTake)
     {
         sourceResourceControllerScript.TakeFoodBack(foodToTake);
-        source.food = sourceResourceController.GetComponent<ResourceController>().trade.food;
+        source.food = sourceResourceControllerScript.trade.food;
     }
 
     public void TradeEnergyFromSource(int energyToSend)
     {
         sourceResourceControllerScript.TradeEnergyAway(energyToSend);
-        source.energy = sourceResourceController.GetComponent<ResourceController>().trade.energy;
+        source.energy = sourceResourceControllerScript.trade.energy;
     }
 
     public void TakeEnergyBackToSource(int energyToTake)
     {
         sourceResourceControllerScript.TakeEnergyBack(energyToTake);
-        source.energy = sourceResourceController.GetComponent<ResourceController>().trade.energy;
+        source.energy = sourceResourceControllerScript.trade.energy;
     }
 
     public void TradePopsFromSource(int popsToSend)
     {
         sourceResourceControllerScript.TradePopsAway(popsToSend);
-        source.population = sourceResourceController.GetComponent<ResourceController>().trade.population;
+        source.population = sourceResourceControllerScript.trade.population;
     }
 
     public void TakePopsBackToSource(int popsToTake)
     {
         sourceResourceControllerScript.TakePopsBack(popsToTake);
-        source.population = sourceResourceController.GetComponent<ResourceController>().trade.population;
+        source.population = sourceResourceControllerScript.trade.population;
     }
 
     public ResourceValues ProcessTrades()
