@@ -1,5 +1,23 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-1944535234841311662
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3355487361568198985}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa8cbee54c1bc4d63b253fe1950b94dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  changes:
+    food: -4
+    energy: -2
+    polution: 0
+    population: -2
+    populationAngry: 0
 --- !u!114 &-1431679405172076083
 MonoBehaviour:
   m_ObjectHideFlags: 0

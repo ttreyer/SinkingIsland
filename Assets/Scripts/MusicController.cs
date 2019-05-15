@@ -25,7 +25,8 @@ public class MusicController : MonoBehaviour {
         PlayLevel(0);
     }
 
-    void PlayLevel(int level) {
+    public void PlayLevel(int level) {
+        if (level >= levels.Length) return;
         audioIntro.Stop();
         audioLoop.Stop();
 

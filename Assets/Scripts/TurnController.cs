@@ -65,31 +65,37 @@ public class TurnController : MonoBehaviour
 
             //sea level calculations
             seaLevelControllerScript.DrawPollutionFromIslands();
-            if (seaLevelControllerScript.currentPollutionLevel >= 10 && seaLevelControllerScript.currentWaterHeight == 0)
+            if (seaLevelControllerScript.currentPollutionLevel >= 20 && seaLevelControllerScript.currentWaterHeight == 0)
             {
                 playerOneWaterLevelControllerScript.RaiseWaterLevel();
                 playerTwoWaterLevelControllerScript.RaiseWaterLevel();
                 seaLevelControllerScript.currentWaterHeight = 1;
                 playerOneProductionControllerScript.UpdateProduction();
                 playerTwoProductionControllerScript.UpdateProduction();
+
+                gameObject.GetComponent<MusicController>().PlayLevel(1);
             }
 
-            if (seaLevelControllerScript.currentPollutionLevel >= 20 && seaLevelControllerScript.currentWaterHeight == 1)
+            if (seaLevelControllerScript.currentPollutionLevel >= 30 && seaLevelControllerScript.currentWaterHeight == 1)
             {
                 playerOneWaterLevelControllerScript.RaiseWaterLevel();
                 playerTwoWaterLevelControllerScript.RaiseWaterLevel();
                 seaLevelControllerScript.currentWaterHeight = 2;
                 playerOneProductionControllerScript.UpdateProduction();
                 playerTwoProductionControllerScript.UpdateProduction();
+                gameObject.GetComponent<MusicController>().PlayLevel(2);
+
             }
 
-            if (seaLevelControllerScript.currentPollutionLevel >= 30 && seaLevelControllerScript.currentWaterHeight == 2)
+            if (seaLevelControllerScript.currentPollutionLevel >= 40 && seaLevelControllerScript.currentWaterHeight == 2)
             {
                 playerOneWaterLevelControllerScript.RaiseWaterLevel();
                 playerTwoWaterLevelControllerScript.RaiseWaterLevel();
                 seaLevelControllerScript.currentWaterHeight = 3;
                 playerOneProductionControllerScript.UpdateProduction();
                 playerTwoProductionControllerScript.UpdateProduction();
+                gameObject.GetComponent<MusicController>().PlayLevel(3);
+
             }
 
             playerOneResourceControllerScript.ResetCurrentResource();
