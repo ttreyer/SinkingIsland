@@ -58,9 +58,6 @@ public class TurnController : MonoBehaviour
             p1Production.UpdateProduction();
             p2Production.UpdateProduction();
 
-            Debug.Log(p1Production.production.TotalPopulation);
-            Debug.Log(p2Production.production.TotalPopulation);
-
             /* Reset current resource, as we'll add the production and the trade */
             p1Resources.ResetCurrentResource();
             p2Resources.ResetCurrentResource();
