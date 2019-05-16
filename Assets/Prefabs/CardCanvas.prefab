@@ -722,6 +722,7 @@ MonoBehaviour:
   foodReq: {fileID: 1741719470188536853}
   energyReq: {fileID: 1741719469240562624}
   popReq: {fileID: 1741719470191227333}
+  tooltip: {fileID: 7610311343174485643}
 --- !u!1 &1741719470649525954
 GameObject:
   m_ObjectHideFlags: 0
