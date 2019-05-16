@@ -6,11 +6,6 @@ using UnityEngine.UI;
 
 public class ResourceController : MonoBehaviour
 {
-    //public int islandFood;
-    //public int islandEnergy;
-    //public int islandPops;
-    //public int islandPopsAngry;
-
     public ResourceValues current;
     public ResourceValues trade;
 
@@ -26,15 +21,6 @@ public class ResourceController : MonoBehaviour
     private int popFoodDifference;
     private int popEnergyDifference;
     private int popsLostToAnger;
-
-
-    ////this is called to check the carrying capacity of the island's resources, affected by modifiers and sea level rise
-    ////will need to be amending this a lot once we integrate the prototype
-    //public void AssessIslandResources()
-    //{
-    //    current.food = islandFood;
-    //    current.energy = islandEnergy;
-    //}
 
     public void ResetCurrentResource() {
         current.Reset();

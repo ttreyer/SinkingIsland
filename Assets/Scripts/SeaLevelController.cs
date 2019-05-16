@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SeaLevelController : MonoBehaviour
 {
@@ -9,6 +10,8 @@ public class SeaLevelController : MonoBehaviour
     public GameObject island1;
     public GameObject island2;
     public int[] pollutionLimitPerLevels;
+    public Text pollutionDisplay;
+
     private ResourceController island1ResourceControllerScript;
     private ResourceController island2ResourceControllerScript;
     private WaterLevelController p1WaterLevel, p2WaterLevel;
@@ -26,6 +29,7 @@ public class SeaLevelController : MonoBehaviour
 
     public void UpdateSeaLevel() {
         DrawPollutionFromIslands();
+        UpdatePollutionGUI();
 
         if (currentPollutionLevel >= pollutionLimitPerLevels[currentWaterHeight]) {
             currentWaterHeight++;
@@ -47,6 +51,11 @@ public class SeaLevelController : MonoBehaviour
         {
             currentPollutionLevel = 0;
         }
+    }
+
+    private void UpdatePollutionGUI()
+    {
+        //pollutionDisplay.text = "Pollution Level " + currentPollutionLevel + ";
     }
 
     // Update is called once per frame
