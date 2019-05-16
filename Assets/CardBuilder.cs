@@ -8,6 +8,7 @@ public class CardBuilder : MonoBehaviour {
     public Text title;
     public Text description;
     public Text foodReq, energyReq, popReq;
+    public TooltipController tooltip;
 
     public void BuildWithPolicy(PolicyController pc) {
         if (policy)
@@ -16,7 +17,10 @@ public class CardBuilder : MonoBehaviour {
         policy = pc;
 
         title.text = pc.title;
-        description.text = pc.description;
+        description.text = pc.effect;
+
+        tooltip.SetContent(pc.title, pc.description);
+
         foodReq.text = pc.resourceRequirements.food.ToString();
         energyReq.text = pc.resourceRequirements.energy.ToString();
         popReq.text = pc.resourceRequirements.population.ToString();

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PolicyController : MonoBehaviour {
     public GameObject island;
-    public string title, description;
+    public string title, description, effect;
     public ResourceValues resourceRequirements;
     public int ecologyLevel;
 
