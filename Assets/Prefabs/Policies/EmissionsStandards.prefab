@@ -15,9 +15,25 @@ MonoBehaviour:
   changes:
     food: 0
     energy: 0
-    polution: -4
+    polution: 0
     population: 0
     populationAngry: 0
+--- !u!114 &8355114423422504259
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7746053212924034935}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78769cfb1fa6d43f79f3b6f1e2a8a66d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  turns: 1
+  repeat: 1
+  policyControllerPrefab: {fileID: 5314636643611849521, guid: 3af5cf42ca40e0240bb7718a4c289de3,
+    type: 3}
 --- !u!1001 &2455670745230239045
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -29,6 +45,28 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: EmissionsStandards
+      objectReference: {fileID: 0}
+    - target: {fileID: 5552961775738703626, guid: d951444cbb4ac4f2489b0c369ce518d2,
+        type: 3}
+      propertyPath: description
+      value: ' Our cars are some of the largest sources of greenhouse gases.  Stricter
+        emission standards might help us mitigate the problem until a more permanent
+        solution can be found.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 5552961775738703626, guid: d951444cbb4ac4f2489b0c369ce518d2,
+        type: 3}
+      propertyPath: title
+      value: Raise Emission Standards
+      objectReference: {fileID: 0}
+    - target: {fileID: 5552961775738703626, guid: d951444cbb4ac4f2489b0c369ce518d2,
+        type: 3}
+      propertyPath: resourceRequirements.population
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5552961775738703626, guid: d951444cbb4ac4f2489b0c369ce518d2,
+        type: 3}
+      propertyPath: resourceRequirements.energy
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8622840098911840902, guid: d951444cbb4ac4f2489b0c369ce518d2,
         type: 3}
@@ -84,28 +122,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5552961775738703626, guid: d951444cbb4ac4f2489b0c369ce518d2,
-        type: 3}
-      propertyPath: description
-      value: ' Our cars are some of the largest sources of greenhouse gases.  Stricter
-        emission standards might help us mitigate the problem until a more permanent
-        solution can be found.'
-      objectReference: {fileID: 0}
-    - target: {fileID: 5552961775738703626, guid: d951444cbb4ac4f2489b0c369ce518d2,
-        type: 3}
-      propertyPath: title
-      value: Raise Emission Standards
-      objectReference: {fileID: 0}
-    - target: {fileID: 5552961775738703626, guid: d951444cbb4ac4f2489b0c369ce518d2,
-        type: 3}
-      propertyPath: resourceRequirements.population
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5552961775738703626, guid: d951444cbb4ac4f2489b0c369ce518d2,
-        type: 3}
-      propertyPath: resourceRequirements.energy
-      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d951444cbb4ac4f2489b0c369ce518d2, type: 3}

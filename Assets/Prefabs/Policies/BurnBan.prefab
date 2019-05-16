@@ -1,5 +1,21 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-162832580182148300
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4043011180071647840}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78769cfb1fa6d43f79f3b6f1e2a8a66d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  turns: 1
+  repeat: 0
+  policyControllerPrefab: {fileID: 7384071459714327530, guid: c540ea2c85cf33841b70480f0966aee7,
+    type: 3}
 --- !u!114 &1356204741868257277
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15,9 +31,9 @@ MonoBehaviour:
   changes:
     food: 0
     energy: 0
-    polution: -4
-    population: 0
-    populationAngry: 4
+    polution: -5
+    population: -1
+    populationAngry: 1
 --- !u!1001 &8174139891383410770
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -29,6 +45,28 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: BurnBan
+      objectReference: {fileID: 0}
+    - target: {fileID: 5552961775738703626, guid: d951444cbb4ac4f2489b0c369ce518d2,
+        type: 3}
+      propertyPath: description
+      value: Forest fires are a major climate change problem and damage large sections
+        of critical natural environments.   We can attempt to mitigate this by introducing
+        a burn ban, but this may be unpopular.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5552961775738703626, guid: d951444cbb4ac4f2489b0c369ce518d2,
+        type: 3}
+      propertyPath: title
+      value: Enact Burn Ban
+      objectReference: {fileID: 0}
+    - target: {fileID: 5552961775738703626, guid: d951444cbb4ac4f2489b0c369ce518d2,
+        type: 3}
+      propertyPath: resourceRequirements.populationAngry
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5552961775738703626, guid: d951444cbb4ac4f2489b0c369ce518d2,
+        type: 3}
+      propertyPath: resourceRequirements.energy
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8622840098911840902, guid: d951444cbb4ac4f2489b0c369ce518d2,
         type: 3}
@@ -83,23 +121,6 @@ PrefabInstance:
     - target: {fileID: 8622840098911840902, guid: d951444cbb4ac4f2489b0c369ce518d2,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5552961775738703626, guid: d951444cbb4ac4f2489b0c369ce518d2,
-        type: 3}
-      propertyPath: description
-      value: Forest fires are a major climate change problem and damage large sections
-        of critical natural environments.   We can attempt to mitigate this by introducing
-        a burn ban, but this may be unpopular.
-      objectReference: {fileID: 0}
-    - target: {fileID: 5552961775738703626, guid: d951444cbb4ac4f2489b0c369ce518d2,
-        type: 3}
-      propertyPath: title
-      value: Enact Burn Ban
-      objectReference: {fileID: 0}
-    - target: {fileID: 5552961775738703626, guid: d951444cbb4ac4f2489b0c369ce518d2,
-        type: 3}
-      propertyPath: resourceRequirements.populationAngry
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
