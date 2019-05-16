@@ -32,7 +32,7 @@ MonoBehaviour:
   repeat: 0
   policyControllerPrefab: {fileID: 4520757893622494099, guid: 5b4f58296a8986440a729a02f57c41ae,
     type: 3}
---- !u!114 &3143240372518847499
+--- !u!114 &6624489626748208820
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -41,13 +41,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 302169484742365478}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78769cfb1fa6d43f79f3b6f1e2a8a66d, type: 3}
+  m_Script: {fileID: 11500000, guid: fa8cbee54c1bc4d63b253fe1950b94dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  turns: 3
-  repeat: 0
-  policyControllerPrefab: {fileID: 4520757893622494099, guid: 5b4f58296a8986440a729a02f57c41ae,
-    type: 3}
+  changes:
+    food: 3
+    energy: 0
+    polution: 0
+    population: 0
+    populationAngry: 0
 --- !u!1001 &5573851432908507924
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -59,6 +61,22 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: FarmerSubsidies
+      objectReference: {fileID: 0}
+    - target: {fileID: 5552961775738703626, guid: d951444cbb4ac4f2489b0c369ce518d2,
+        type: 3}
+      propertyPath: title
+      value: Farmer Subsidies
+      objectReference: {fileID: 0}
+    - target: {fileID: 5552961775738703626, guid: d951444cbb4ac4f2489b0c369ce518d2,
+        type: 3}
+      propertyPath: description
+      value: Offering farmers a financial incentive to produce more might result in
+        higher yields while the subsidies are in effect.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5552961775738703626, guid: d951444cbb4ac4f2489b0c369ce518d2,
+        type: 3}
+      propertyPath: resourceRequirements.energy
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8622840098911840902, guid: d951444cbb4ac4f2489b0c369ce518d2,
         type: 3}
@@ -114,17 +132,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5552961775738703626, guid: d951444cbb4ac4f2489b0c369ce518d2,
-        type: 3}
-      propertyPath: title
-      value: Farmer Subsidies
-      objectReference: {fileID: 0}
-    - target: {fileID: 5552961775738703626, guid: d951444cbb4ac4f2489b0c369ce518d2,
-        type: 3}
-      propertyPath: description
-      value: Offering farmers a financial incentive to produce more might result in
-        higher yields while the subsidies are in effect.
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d951444cbb4ac4f2489b0c369ce518d2, type: 3}

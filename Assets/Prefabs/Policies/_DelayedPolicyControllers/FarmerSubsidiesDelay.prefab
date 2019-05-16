@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   changes:
-    food: 1
+    food: 3
     energy: 0
     polution: 0
     population: 0

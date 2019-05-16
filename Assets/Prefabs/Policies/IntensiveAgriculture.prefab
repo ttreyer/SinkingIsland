@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &4146038797422807056
+--- !u!114 &-7488370828934584870
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -9,17 +9,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 2925548564435529712}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d62c018f8dc1e4064a53b3e259d4c55f, type: 3}
+  m_Script: {fileID: 11500000, guid: fa8cbee54c1bc4d63b253fe1950b94dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  type: 6
-  upgradeValues:
+  changes:
     food: 1
     energy: 0
-    polution: 4
+    polution: 1
     population: 0
     populationAngry: 0
---- !u!114 &5360827546770615303
+--- !u!114 &-4783814789730170999
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -28,17 +27,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 2925548564435529712}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d62c018f8dc1e4064a53b3e259d4c55f, type: 3}
+  m_Script: {fileID: 11500000, guid: 78769cfb1fa6d43f79f3b6f1e2a8a66d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  type: 7
-  upgradeValues:
-    food: 1
-    energy: 0
-    polution: 4
-    population: 0
-    populationAngry: 0
---- !u!114 &6622029778458421130
+  turns: 1
+  repeat: 0
+  policyControllerPrefab: {fileID: 1816903561538211737, guid: 9287aeef2630f8a40889f266e8e418e3,
+    type: 3}
+--- !u!114 &-4374152980894268640
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -47,35 +43,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 2925548564435529712}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d62c018f8dc1e4064a53b3e259d4c55f, type: 3}
+  m_Script: {fileID: 11500000, guid: 78769cfb1fa6d43f79f3b6f1e2a8a66d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  type: 5
-  upgradeValues:
-    food: 1
-    energy: 0
-    polution: 4
-    population: 0
-    populationAngry: 0
---- !u!114 &8734300935054792886
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2925548564435529712}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d62c018f8dc1e4064a53b3e259d4c55f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  type: 8
-  upgradeValues:
-    food: 1
-    energy: 0
-    polution: 4
-    population: 0
-    populationAngry: 0
+  turns: 2
+  repeat: 0
+  policyControllerPrefab: {fileID: 1816903561538211737, guid: 9287aeef2630f8a40889f266e8e418e3,
+    type: 3}
 --- !u!1001 &7057821455061169602
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -87,6 +61,23 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: IntensiveAgriculture
+      objectReference: {fileID: 0}
+    - target: {fileID: 5552961775738703626, guid: d951444cbb4ac4f2489b0c369ce518d2,
+        type: 3}
+      propertyPath: description
+      value: Our current agricultural system produces insanely high yields.  We can
+        probably push it farther with more advanced chemicals and refinement of our
+        monoculture system.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5552961775738703626, guid: d951444cbb4ac4f2489b0c369ce518d2,
+        type: 3}
+      propertyPath: title
+      value: Intensive Agriculture
+      objectReference: {fileID: 0}
+    - target: {fileID: 5552961775738703626, guid: d951444cbb4ac4f2489b0c369ce518d2,
+        type: 3}
+      propertyPath: resourceRequirements.energy
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8622840098911840902, guid: d951444cbb4ac4f2489b0c369ce518d2,
         type: 3}
@@ -142,18 +133,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5552961775738703626, guid: d951444cbb4ac4f2489b0c369ce518d2,
-        type: 3}
-      propertyPath: description
-      value: Our current agricultural system produces insanely high yields.  We can
-        probably push it farther with more advanced chemicals and refinement of our
-        monoculture system.
-      objectReference: {fileID: 0}
-    - target: {fileID: 5552961775738703626, guid: d951444cbb4ac4f2489b0c369ce518d2,
-        type: 3}
-      propertyPath: title
-      value: Intensive Agriculture
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d951444cbb4ac4f2489b0c369ce518d2, type: 3}

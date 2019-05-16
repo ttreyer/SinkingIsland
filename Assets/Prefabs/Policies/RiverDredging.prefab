@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-1944535234841311662
+--- !u!114 &-1653785455485231314
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   changes:
-    food: -4
-    energy: -2
+    food: 1
+    energy: -1
     polution: 0
-    population: -2
+    population: 0
     populationAngry: 0
 --- !u!114 &-1431679405172076083
 MonoBehaviour:
@@ -50,22 +50,6 @@ MonoBehaviour:
   repeat: 0
   policyControllerPrefab: {fileID: 3727195085773474407, guid: 10f3f5d6e079aaf459c2d2f2fcee0bf7,
     type: 3}
---- !u!114 &8718457970965863876
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3355487361568198985}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78769cfb1fa6d43f79f3b6f1e2a8a66d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  turns: 3
-  repeat: 0
-  policyControllerPrefab: {fileID: 3727195085773474407, guid: 10f3f5d6e079aaf459c2d2f2fcee0bf7,
-    type: 3}
 --- !u!1001 &7492543000007773051
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -77,6 +61,32 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: RiverDredging
+      objectReference: {fileID: 0}
+    - target: {fileID: 5552961775738703626, guid: d951444cbb4ac4f2489b0c369ce518d2,
+        type: 3}
+      propertyPath: title
+      value: River Dredging
+      objectReference: {fileID: 0}
+    - target: {fileID: 5552961775738703626, guid: d951444cbb4ac4f2489b0c369ce518d2,
+        type: 3}
+      propertyPath: description
+      value: If we spend time cleaning up the shorelines of our rivers, we can restore
+        the aquatic habitat of many creatures.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5552961775738703626, guid: d951444cbb4ac4f2489b0c369ce518d2,
+        type: 3}
+      propertyPath: resourceRequirements.food
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5552961775738703626, guid: d951444cbb4ac4f2489b0c369ce518d2,
+        type: 3}
+      propertyPath: resourceRequirements.energy
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5552961775738703626, guid: d951444cbb4ac4f2489b0c369ce518d2,
+        type: 3}
+      propertyPath: resourceRequirements.population
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8622840098911840902, guid: d951444cbb4ac4f2489b0c369ce518d2,
         type: 3}
@@ -132,32 +142,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5552961775738703626, guid: d951444cbb4ac4f2489b0c369ce518d2,
-        type: 3}
-      propertyPath: title
-      value: River Dredging
-      objectReference: {fileID: 0}
-    - target: {fileID: 5552961775738703626, guid: d951444cbb4ac4f2489b0c369ce518d2,
-        type: 3}
-      propertyPath: description
-      value: If we spend time cleaning up the shorelines of our rivers, we can restore
-        the aquatic habitat of many creatures.
-      objectReference: {fileID: 0}
-    - target: {fileID: 5552961775738703626, guid: d951444cbb4ac4f2489b0c369ce518d2,
-        type: 3}
-      propertyPath: resourceRequirements.food
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 5552961775738703626, guid: d951444cbb4ac4f2489b0c369ce518d2,
-        type: 3}
-      propertyPath: resourceRequirements.energy
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5552961775738703626, guid: d951444cbb4ac4f2489b0c369ce518d2,
-        type: 3}
-      propertyPath: resourceRequirements.population
-      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d951444cbb4ac4f2489b0c369ce518d2, type: 3}
