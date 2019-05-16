@@ -3139,23 +3139,28 @@ PrefabInstance:
     - target: {fileID: 2032346846531807667, guid: e15cf517c2fba403590dfdef887a0fcd,
         type: 3}
       propertyPath: pollutionLimitPerLevels.Array.data[0]
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 2032346846531807667, guid: e15cf517c2fba403590dfdef887a0fcd,
-        type: 3}
-      propertyPath: pollutionLimitPerLevels.Array.data[1]
       value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 2032346846531807667, guid: e15cf517c2fba403590dfdef887a0fcd,
         type: 3}
+      propertyPath: pollutionLimitPerLevels.Array.data[1]
+      value: 80
+      objectReference: {fileID: 0}
+    - target: {fileID: 2032346846531807667, guid: e15cf517c2fba403590dfdef887a0fcd,
+        type: 3}
       propertyPath: pollutionLimitPerLevels.Array.data[2]
-      value: 60
+      value: 120
       objectReference: {fileID: 0}
     - target: {fileID: 2032346846531807667, guid: e15cf517c2fba403590dfdef887a0fcd,
         type: 3}
       propertyPath: pollutionLimitPerLevels.Array.data[3]
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2032346846531807667, guid: e15cf517c2fba403590dfdef887a0fcd,
+        type: 3}
+      propertyPath: pollutionDisplay
+      value: 
+      objectReference: {fileID: 339091843}
     - target: {fileID: 1647946298471245301, guid: e15cf517c2fba403590dfdef887a0fcd,
         type: 3}
       propertyPath: levels.Array.size

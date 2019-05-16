@@ -55,7 +55,7 @@ public class SeaLevelController : MonoBehaviour
 
     private void UpdatePollutionGUI()
     {
-        //pollutionDisplay.text = "Pollution Level " + currentPollutionLevel + ";
+        pollutionDisplay.text = "Pollution Level " + currentPollutionLevel + "/" + pollutionLimitPerLevels[pollutionLimitPerLevels.Length - 1];
     }
 
     // Update is called once per frame
