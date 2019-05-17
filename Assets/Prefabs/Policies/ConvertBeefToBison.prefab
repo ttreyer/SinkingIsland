@@ -43,6 +43,22 @@ PrefabInstance:
       propertyPath: resourceRequirements.energy
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5552961775738703626, guid: d951444cbb4ac4f2489b0c369ce518d2,
+        type: 3}
+      propertyPath: description
+      value: Red meat is culturally a part of the American diet, and the vast majority
+        of that currently comes from cows. However, if cattle ranchers switched to
+        bison, there would be environmental and health benefits. Bison is significantly
+        lower and fat and also higher in protein. Furthermore, it is believed that
+        bison will cause less trampling and erosion damage than cows and a more balanced
+        consumption of resources. It is important to remember, however, that both
+        animals due produce methane, a greenhouse gas.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5552961775738703626, guid: d951444cbb4ac4f2489b0c369ce518d2,
+        type: 3}
+      propertyPath: effect
+      value: 1 turn to institute, then +2 Food and -1 Pollution per Cow Farm permanently
+      objectReference: {fileID: 0}
     - target: {fileID: 8622840098911840902, guid: d951444cbb4ac4f2489b0c369ce518d2,
         type: 3}
       propertyPath: m_LocalPosition.x

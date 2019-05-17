@@ -38,6 +38,21 @@ PrefabInstance:
       propertyPath: resourceRequirements.population
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 5552961775738703626, guid: d951444cbb4ac4f2489b0c369ce518d2,
+        type: 3}
+      propertyPath: description
+      value: Government-sponsored research has brought us many of our greatest discoveries
+        of the modern era, from strategic advances in military and energy to medical
+        advances and improvement of quality of life. In the United States in 2013,
+        the government spent $456 billion on research and development, whereas the
+        private sector contributed only $322.5 billion. Public investment in research
+        is key to opening the doors to tomorrow.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5552961775738703626, guid: d951444cbb4ac4f2489b0c369ce518d2,
+        type: 3}
+      propertyPath: effect
+      value: 1 turn to implement, then +1 Food, -1 Angry permanently
+      objectReference: {fileID: 0}
     - target: {fileID: 8622840098911840902, guid: d951444cbb4ac4f2489b0c369ce518d2,
         type: 3}
       propertyPath: m_LocalPosition.x

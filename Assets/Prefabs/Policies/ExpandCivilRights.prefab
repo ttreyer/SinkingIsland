@@ -56,6 +56,20 @@ PrefabInstance:
       propertyPath: resourceRequirements.population
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 5552961775738703626, guid: d951444cbb4ac4f2489b0c369ce518d2,
+        type: 3}
+      propertyPath: description
+      value: "Civil rights are the ability of citizens to engage in political processes
+        and to enjoy social freedom and legal equality. As the world moves away from
+        monarchies and dictatorships towards democracies, civil rights - sometimes
+        called human rights \u2014 have taken on increased importance. Civil rights
+        ultimately led to a more stable political system and a happier citizenry."
+      objectReference: {fileID: 0}
+    - target: {fileID: 5552961775738703626, guid: d951444cbb4ac4f2489b0c369ce518d2,
+        type: 3}
+      propertyPath: effect
+      value: -1 Anger permanently
+      objectReference: {fileID: 0}
     - target: {fileID: 8622840098911840902, guid: d951444cbb4ac4f2489b0c369ce518d2,
         type: 3}
       propertyPath: m_LocalPosition.x

@@ -61,6 +61,21 @@ PrefabInstance:
       propertyPath: resourceRequirements.energy
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 5552961775738703626, guid: d951444cbb4ac4f2489b0c369ce518d2,
+        type: 3}
+      propertyPath: description
+      value: "The first modern attempt at universal health care was in Germany in
+        1883 with something called the Sickness Insurance Law. Since then, most modern
+        countries have adopted some form of universal or near-universal health care,
+        ranging from full public funding to a mix of private and public contributions
+        and to various other schemes as well. Universal health care provides financial
+        protection for all off least the vast majority of a country\u2019s citizens."
+      objectReference: {fileID: 0}
+    - target: {fileID: 5552961775738703626, guid: d951444cbb4ac4f2489b0c369ce518d2,
+        type: 3}
+      propertyPath: effect
+      value: -1 Energy, -1 Anger permanently
+      objectReference: {fileID: 0}
     - target: {fileID: 8622840098911840902, guid: d951444cbb4ac4f2489b0c369ce518d2,
         type: 3}
       propertyPath: m_LocalPosition.x

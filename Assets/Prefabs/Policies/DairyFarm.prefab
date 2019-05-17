@@ -41,6 +41,18 @@ PrefabInstance:
       propertyPath: resourceRequirements.population
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5552961775738703626, guid: d951444cbb4ac4f2489b0c369ce518d2,
+        type: 3}
+      propertyPath: description
+      value: Increasing the amount of resources dedicated to producing dairy products
+        will flood the market with additional food items, but encourages unsustainable
+        methods of production.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5552961775738703626, guid: d951444cbb4ac4f2489b0c369ce518d2,
+        type: 3}
+      propertyPath: effect
+      value: +2 Food and +1 Pollution per Cow Farm permanently
+      objectReference: {fileID: 0}
     - target: {fileID: 8622840098911840902, guid: d951444cbb4ac4f2489b0c369ce518d2,
         type: 3}
       propertyPath: m_LocalPosition.x

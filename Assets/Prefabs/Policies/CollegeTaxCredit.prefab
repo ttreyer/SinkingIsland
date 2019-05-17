@@ -61,6 +61,20 @@ PrefabInstance:
       propertyPath: resourceRequirements.energy
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5552961775738703626, guid: d951444cbb4ac4f2489b0c369ce518d2,
+        type: 3}
+      propertyPath: description
+      value: Countries across the world have different approaches to funding higher
+        education. In America, for example, individuals are responsible for covering
+        most education costs through a combination of individual contributions, loans,
+        and scholarships. Norway has completely subsidized higher education, whereas
+        countries such as France and Brazil charge nominal fees
+      objectReference: {fileID: 0}
+    - target: {fileID: 5552961775738703626, guid: d951444cbb4ac4f2489b0c369ce518d2,
+        type: 3}
+      propertyPath: effect
+      value: -1 Anger permanently
+      objectReference: {fileID: 0}
     - target: {fileID: 8622840098911840902, guid: d951444cbb4ac4f2489b0c369ce518d2,
         type: 3}
       propertyPath: m_LocalPosition.x

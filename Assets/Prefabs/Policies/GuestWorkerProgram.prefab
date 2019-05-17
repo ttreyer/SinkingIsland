@@ -70,13 +70,23 @@ PrefabInstance:
     - target: {fileID: 5552961775738703626, guid: d951444cbb4ac4f2489b0c369ce518d2,
         type: 3}
       propertyPath: description
-      value: 'Offering migrant workers the ability to live here and contribute to
-        the economy of the island might be beneficial for everyone involved. '
+      value: Offering migrant workers the ability to live here and contribute to the
+        economy of the island might be beneficial for everyone involved. Guest worker
+        programs were designed with the intent of boosting national economies while
+        providing opportunities for skilled and unskilled labor across borders. These
+        laws do spur reactionary nationalist sentiments and abuse of such laws has
+        sometimes led to unsafe labor conditions. Still, they are overall seen as
+        beneficial.
       objectReference: {fileID: 0}
     - target: {fileID: 5552961775738703626, guid: d951444cbb4ac4f2489b0c369ce518d2,
         type: 3}
       propertyPath: resourceRequirements.population
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5552961775738703626, guid: d951444cbb4ac4f2489b0c369ce518d2,
+        type: 3}
+      propertyPath: effect
+      value: +1 Food, Energy, Population for 3 turns
       objectReference: {fileID: 0}
     - target: {fileID: 8622840098911840902, guid: d951444cbb4ac4f2489b0c369ce518d2,
         type: 3}

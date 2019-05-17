@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   turns: 1
-  repeat: 1
+  repeat: 0
   policyControllerPrefab: {fileID: 1643163172486296591, guid: cdb1d2f43e64f6c45ab90f07e443f22b,
     type: 3}
 --- !u!1001 &4071563914471554847
@@ -37,6 +37,20 @@ PrefabInstance:
         type: 3}
       propertyPath: resourceRequirements.population
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5552961775738703626, guid: d951444cbb4ac4f2489b0c369ce518d2,
+        type: 3}
+      propertyPath: description
+      value: Bicycle lanes serve the needs of all manner of non-motorized cycles in
+        urban and suburban areas. Typically the curb-most lane, roughly 5-feet wide,
+        they help reduce traffic congestion and reduce the carbon footprint of the
+        citizens. As an additional benefit, they provide invaluable exercise and health
+        benefits for those who choose to use them.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5552961775738703626, guid: d951444cbb4ac4f2489b0c369ce518d2,
+        type: 3}
+      propertyPath: effect
+      value: 1 turn to implement, then -2 Pollution from each City and Town permanently
       objectReference: {fileID: 0}
     - target: {fileID: 8622840098911840902, guid: d951444cbb4ac4f2489b0c369ce518d2,
         type: 3}

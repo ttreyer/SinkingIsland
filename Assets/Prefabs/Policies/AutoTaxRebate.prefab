@@ -93,6 +93,21 @@ PrefabInstance:
       propertyPath: resourceRequirements.energy
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 5552961775738703626, guid: d951444cbb4ac4f2489b0c369ce518d2,
+        type: 3}
+      propertyPath: description
+      value: Automobiles were first invented in Germany by Karl Benz in 1886. The
+        American Model T, created with the help of assembly line production in 1908,
+        was regarded as the first affordable car and it opened up travel as never
+        before. Cars remain persistently expensive throughout the developed world,
+        and instituting tax credits to purchase them helps citizenry and industry
+        alike.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5552961775738703626, guid: d951444cbb4ac4f2489b0c369ce518d2,
+        type: 3}
+      propertyPath: effect
+      value: Population and Pollution +2, Anger -2 for 4 turns
+      objectReference: {fileID: 0}
     - target: {fileID: 8622840098911840902, guid: d951444cbb4ac4f2489b0c369ce518d2,
         type: 3}
       propertyPath: m_LocalPosition.x

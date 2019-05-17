@@ -36,6 +36,22 @@ PrefabInstance:
       propertyPath: title
       value: Nuclear Power Focus
       objectReference: {fileID: 0}
+    - target: {fileID: 5552961775738703626, guid: d951444cbb4ac4f2489b0c369ce518d2,
+        type: 3}
+      propertyPath: description
+      value: Nuclear fission harnesses the release of atomic energy to generate heat,
+        which in turn powers wind turbines. An incredibly useful power source, touted
+        as clean by proponents, it nevertheless provides an incredibly risk of contamination
+        and loss of life. Chernobyl, the most contaminated radioactive site in the
+        world, became permanently uninhabitable after a cataclysmic accident  in 1986.
+        The second most contaminated site is Hanford in Washington State, the site
+        of the Manhattan Project.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5552961775738703626, guid: d951444cbb4ac4f2489b0c369ce518d2,
+        type: 3}
+      propertyPath: effect
+      value: +5 Energy per nuclear plant permanently
+      objectReference: {fileID: 0}
     - target: {fileID: 8622840098911840902, guid: d951444cbb4ac4f2489b0c369ce518d2,
         type: 3}
       propertyPath: m_LocalPosition.x

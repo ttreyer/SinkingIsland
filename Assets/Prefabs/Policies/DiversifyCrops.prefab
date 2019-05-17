@@ -43,6 +43,21 @@ PrefabInstance:
       propertyPath: resourceRequirements.food
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5552961775738703626, guid: d951444cbb4ac4f2489b0c369ce518d2,
+        type: 3}
+      propertyPath: description
+      value: 'Diversification to include other crops would be a beneficial policy.
+        As a general policy, diversification helps mitigate the impacts of environmental
+        degradation as different plants have different, and sometimes complementary
+        effects on the habitat. Quinoa and taro are particularly healthy crops for
+        humans, as they are naturally occurring carbohydrates with high protein content,
+        and contain other important nutrients such as vitamins and minerals.  '
+      objectReference: {fileID: 0}
+    - target: {fileID: 5552961775738703626, guid: d951444cbb4ac4f2489b0c369ce518d2,
+        type: 3}
+      propertyPath: effect
+      value: 1 turn to institute, then +1 food from each Rice, Corn, Banana Farm permanently
+      objectReference: {fileID: 0}
     - target: {fileID: 8622840098911840902, guid: d951444cbb4ac4f2489b0c369ce518d2,
         type: 3}
       propertyPath: m_LocalPosition.x

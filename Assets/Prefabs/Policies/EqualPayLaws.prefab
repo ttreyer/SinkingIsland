@@ -56,6 +56,21 @@ PrefabInstance:
       propertyPath: resourceRequirements.population
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 5552961775738703626, guid: d951444cbb4ac4f2489b0c369ce518d2,
+        type: 3}
+      propertyPath: description
+      value: 'Since women joined the workforce in their largest historical numbers
+        during World War II, an ongoing struggle has emerged to address the ensuing
+        pay disparity between men and women. Legislation has ranged from the Equal
+        Pay Act of 1963 to the Lilly Ledbetter Fair Pay Act of 2009. While efforts
+        so far have largely failed to address this socioeconomic challenge, doing
+        so remains the business of the well-developed world. '
+      objectReference: {fileID: 0}
+    - target: {fileID: 5552961775738703626, guid: d951444cbb4ac4f2489b0c369ce518d2,
+        type: 3}
+      propertyPath: effect
+      value: -1 Anger permanently
+      objectReference: {fileID: 0}
     - target: {fileID: 8622840098911840902, guid: d951444cbb4ac4f2489b0c369ce518d2,
         type: 3}
       propertyPath: m_LocalPosition.x

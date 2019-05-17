@@ -36,9 +36,17 @@ PrefabInstance:
     - target: {fileID: 5552961775738703626, guid: d951444cbb4ac4f2489b0c369ce518d2,
         type: 3}
       propertyPath: description
-      value: Offering tax credits to working families with children might help our
-        population thrive and succeed, but the bill comes at the expense of offering
-        subsidies to wealthy corporations as well.
+      value: The Child Tax Credit relieves the economic burden on parents or guardians
+        of minors. This in turn encourages procreation, and therefore ultimately expands
+        the workforce and the gross domestic product of a country. Offering tax credits
+        to working families with children might help our population thrive and succeed,
+        but the bill comes at the expense of offering subsidies to wealthy corporations
+        as well.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5552961775738703626, guid: d951444cbb4ac4f2489b0c369ce518d2,
+        type: 3}
+      propertyPath: effect
+      value: 1 turn to institute, then +1 Pollution and Population permanently
       objectReference: {fileID: 0}
     - target: {fileID: 8622840098911840902, guid: d951444cbb4ac4f2489b0c369ce518d2,
         type: 3}

@@ -38,6 +38,20 @@ PrefabInstance:
       propertyPath: resourceRequirements.population
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 5552961775738703626, guid: d951444cbb4ac4f2489b0c369ce518d2,
+        type: 3}
+      propertyPath: description
+      value: High speed rail is typically considered to include rail speeds greater
+        than 120-160 mph. Such infrastructure can move people with far better fuel
+        efficiency than comparable air or automotive travel at medium distances. Improving
+        infrastructure with high speed rail also provide resource surpluses as a result
+        of the increases efficiencies.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5552961775738703626, guid: d951444cbb4ac4f2489b0c369ce518d2,
+        type: 3}
+      propertyPath: effect
+      value: 1 turn to institute, +1 Food and +1 Energy permanently
+      objectReference: {fileID: 0}
     - target: {fileID: 8622840098911840902, guid: d951444cbb4ac4f2489b0c369ce518d2,
         type: 3}
       propertyPath: m_LocalPosition.x

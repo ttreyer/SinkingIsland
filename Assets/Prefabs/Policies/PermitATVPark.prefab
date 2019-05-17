@@ -53,6 +53,20 @@ PrefabInstance:
       propertyPath: resourceRequirements.polution
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5552961775738703626, guid: d951444cbb4ac4f2489b0c369ce518d2,
+        type: 3}
+      propertyPath: description
+      value: Permitting snowmobiles and all-terrain vehicles in our national parks
+        pits the notion of human recreation against the preservation of natural lands
+        and wildlife. Producing pollution and interfering with the activities and
+        migration of wildlife, fuel-powered vehicles nevertheless are one way people
+        choose to enjoy the natural world around them.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5552961775738703626, guid: d951444cbb4ac4f2489b0c369ce518d2,
+        type: 3}
+      propertyPath: effect
+      value: +1 Energy, +1 Pollution, -2 Anger permanently
+      objectReference: {fileID: 0}
     - target: {fileID: 8622840098911840902, guid: d951444cbb4ac4f2489b0c369ce518d2,
         type: 3}
       propertyPath: m_LocalPosition.x

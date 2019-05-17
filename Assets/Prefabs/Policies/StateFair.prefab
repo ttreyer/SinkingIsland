@@ -56,6 +56,20 @@ PrefabInstance:
       propertyPath: resourceRequirements.energy
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5552961775738703626, guid: d951444cbb4ac4f2489b0c369ce518d2,
+        type: 3}
+      propertyPath: description
+      value: A state fair is an annual competitive and recreational gathering of a
+        regional population. State fairs began in the 19th century in the United States
+        in order to promote agriculture, often by introducing competitions for display
+        of livestock and farm products. They come at little to no cost to the government,
+        and they also provide a source of civic pride.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5552961775738703626, guid: d951444cbb4ac4f2489b0c369ce518d2,
+        type: 3}
+      propertyPath: effect
+      value: -2 Anger for 2 turns
+      objectReference: {fileID: 0}
     - target: {fileID: 8622840098911840902, guid: d951444cbb4ac4f2489b0c369ce518d2,
         type: 3}
       propertyPath: m_LocalPosition.x

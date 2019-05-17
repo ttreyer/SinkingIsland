@@ -48,6 +48,20 @@ PrefabInstance:
       propertyPath: title
       value: Solar Investment
       objectReference: {fileID: 0}
+    - target: {fileID: 5552961775738703626, guid: d951444cbb4ac4f2489b0c369ce518d2,
+        type: 3}
+      propertyPath: description
+      value: 'Photovoltaic solar panels convert light from the sun into electricity.
+        A renewable resource, solar energy most commonly serves agriculture and solar
+        water heating systems, but can be applied to multiple uses. Using technologies
+        such as crystalline silicon and newly emergent thin-film cell, the development
+        of solar technology has required considerable research investments.  '
+      objectReference: {fileID: 0}
+    - target: {fileID: 5552961775738703626, guid: d951444cbb4ac4f2489b0c369ce518d2,
+        type: 3}
+      propertyPath: effect
+      value: 1 turn to institute, then +2 Energy and -1 Pollution permanently
+      objectReference: {fileID: 0}
     - target: {fileID: 8622840098911840902, guid: d951444cbb4ac4f2489b0c369ce518d2,
         type: 3}
       propertyPath: m_LocalPosition.x

@@ -38,6 +38,21 @@ PrefabInstance:
       propertyPath: resourceRequirements.population
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 5552961775738703626, guid: d951444cbb4ac4f2489b0c369ce518d2,
+        type: 3}
+      propertyPath: description
+      value: Defined loosely as the collection of parks, sports recreation areas as
+        well as naturally occurring meadows and wetlands which complement an urban
+        space. Urban green spaces facilitate relaxation and physical fitness, and
+        are in greater and greater in demand in cities that have otherwise become
+        more and more disconnected from nature.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5552961775738703626, guid: d951444cbb4ac4f2489b0c369ce518d2,
+        type: 3}
+      propertyPath: effect
+      value: 1 turn to implement, then +1 Food and Energy from each City and Town
+        permanently
+      objectReference: {fileID: 0}
     - target: {fileID: 8622840098911840902, guid: d951444cbb4ac4f2489b0c369ce518d2,
         type: 3}
       propertyPath: m_LocalPosition.x

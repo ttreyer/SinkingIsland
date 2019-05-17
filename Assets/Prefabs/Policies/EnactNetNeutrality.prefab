@@ -56,6 +56,19 @@ PrefabInstance:
       propertyPath: title
       value: Enact Net Neutrality
       objectReference: {fileID: 0}
+    - target: {fileID: 5552961775738703626, guid: d951444cbb4ac4f2489b0c369ce518d2,
+        type: 3}
+      propertyPath: description
+      value: 'Net neutrality is the concept that internet service providers should
+        enable access to all content irrespective of its source or origin, and without
+        providing greater access based on economic or other similar power-based considerations.
+        Net neutrality is seen by some as the democratization of the Information Age. '
+      objectReference: {fileID: 0}
+    - target: {fileID: 5552961775738703626, guid: d951444cbb4ac4f2489b0c369ce518d2,
+        type: 3}
+      propertyPath: effect
+      value: -1 Anger permanently
+      objectReference: {fileID: 0}
     - target: {fileID: 8622840098911840902, guid: d951444cbb4ac4f2489b0c369ce518d2,
         type: 3}
       propertyPath: m_LocalPosition.x

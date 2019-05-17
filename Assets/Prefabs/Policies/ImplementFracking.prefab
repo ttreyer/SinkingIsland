@@ -43,6 +43,20 @@ PrefabInstance:
       propertyPath: resourceRequirements.population
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 5552961775738703626, guid: d951444cbb4ac4f2489b0c369ce518d2,
+        type: 3}
+      propertyPath: description
+      value: Fracking is the process of injecting water at great pressure into underground
+        rocks, boreholes, and other stone formations so as to take advantage of existing
+        fissures to extract oil and gas. Wildly touted as an efficient means of harnessing
+        natural resources, fracking nevertheless has a deleterious effect on the environment
+        and contributes to the creation of greenhouse gases.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5552961775738703626, guid: d951444cbb4ac4f2489b0c369ce518d2,
+        type: 3}
+      propertyPath: effect
+      value: 1 turn to implement, then +2 Energy and +1 Pollution permanently
+      objectReference: {fileID: 0}
     - target: {fileID: 8622840098911840902, guid: d951444cbb4ac4f2489b0c369ce518d2,
         type: 3}
       propertyPath: m_LocalPosition.x

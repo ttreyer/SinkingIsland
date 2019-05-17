@@ -77,6 +77,21 @@ PrefabInstance:
       propertyPath: resourceRequirements.food
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5552961775738703626, guid: d951444cbb4ac4f2489b0c369ce518d2,
+        type: 3}
+      propertyPath: description
+      value: "National holidays typically commemorate historical events which helped
+        shaped the nation\u2019s boundaries, laws, culture, and more. New Year\u2019s
+        Day, Memorial Day, Independence Day, Labor Day, and Thanksgiving are examples
+        of American national holidays. Holidays provide workers with more time to
+        spend on leisure, and typically provide an increased quality of life without
+        a loss in production, studies have shown."
+      objectReference: {fileID: 0}
+    - target: {fileID: 5552961775738703626, guid: d951444cbb4ac4f2489b0c369ce518d2,
+        type: 3}
+      propertyPath: effect
+      value: +1 Pollution, -6 Angry for 3 turns
+      objectReference: {fileID: 0}
     - target: {fileID: 8622840098911840902, guid: d951444cbb4ac4f2489b0c369ce518d2,
         type: 3}
       propertyPath: m_LocalPosition.x

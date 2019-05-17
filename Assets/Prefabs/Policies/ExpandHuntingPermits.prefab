@@ -41,6 +41,18 @@ PrefabInstance:
       propertyPath: resourceRequirements.population
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5552961775738703626, guid: d951444cbb4ac4f2489b0c369ce518d2,
+        type: 3}
+      propertyPath: description
+      value: Allowing citizens to hunt more game in remote areas will probably raise
+        morale and add to the market, but will see a rise in vehicle movement and
+        a fall in the affected animal populations.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5552961775738703626, guid: d951444cbb4ac4f2489b0c369ce518d2,
+        type: 3}
+      propertyPath: effect
+      value: +1 Food, +1 Pollution, -2 Anger from each Village permanently
+      objectReference: {fileID: 0}
     - target: {fileID: 8622840098911840902, guid: d951444cbb4ac4f2489b0c369ce518d2,
         type: 3}
       propertyPath: m_LocalPosition.x

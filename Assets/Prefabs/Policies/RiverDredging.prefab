@@ -70,8 +70,12 @@ PrefabInstance:
     - target: {fileID: 5552961775738703626, guid: d951444cbb4ac4f2489b0c369ce518d2,
         type: 3}
       propertyPath: description
-      value: If we spend time cleaning up the shorelines of our rivers, we can restore
-        the aquatic habitat of many creatures.
+      value: Polluted riverways are full of life, and provide sustenance for those
+        who rely on fishing in at least small part to stock their kitchen tables.
+        Because more income individuals live near polluted water sources, cleaning
+        them up in the long term is a social justice issue. Dredging is an expensive,
+        time-consuming task, but is necessary to restore the nature balance to our
+        food habitat and waterways.
       objectReference: {fileID: 0}
     - target: {fileID: 5552961775738703626, guid: d951444cbb4ac4f2489b0c369ce518d2,
         type: 3}
@@ -87,6 +91,11 @@ PrefabInstance:
         type: 3}
       propertyPath: resourceRequirements.population
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5552961775738703626, guid: d951444cbb4ac4f2489b0c369ce518d2,
+        type: 3}
+      propertyPath: effect
+      value: +1 Food, -1 Energy for 3 turns
       objectReference: {fileID: 0}
     - target: {fileID: 8622840098911840902, guid: d951444cbb4ac4f2489b0c369ce518d2,
         type: 3}

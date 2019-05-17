@@ -49,9 +49,12 @@ PrefabInstance:
     - target: {fileID: 5552961775738703626, guid: d951444cbb4ac4f2489b0c369ce518d2,
         type: 3}
       propertyPath: description
-      value: Forest fires are a major climate change problem and damage large sections
-        of critical natural environments.   We can attempt to mitigate this by introducing
-        a burn ban, but this may be unpopular.
+      value: In drought conditions, when air humidity is very low, forest fires can
+        run rampant. Forest fires are a major climate change problem and damage large
+        sections of critical natural environments. The 2003 Siberian Taiga Fires,
+        the largest forest fire in history, burned 47 million acres in Russia. We
+        can attempt to mitigate future risk of these disasters by introducing a burn
+        ban, but this may be unpopular.
       objectReference: {fileID: 0}
     - target: {fileID: 5552961775738703626, guid: d951444cbb4ac4f2489b0c369ce518d2,
         type: 3}
@@ -67,6 +70,11 @@ PrefabInstance:
         type: 3}
       propertyPath: resourceRequirements.energy
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5552961775738703626, guid: d951444cbb4ac4f2489b0c369ce518d2,
+        type: 3}
+      propertyPath: effect
+      value: -5 Pollution, +1 Anger for 2 turns
       objectReference: {fileID: 0}
     - target: {fileID: 8622840098911840902, guid: d951444cbb4ac4f2489b0c369ce518d2,
         type: 3}

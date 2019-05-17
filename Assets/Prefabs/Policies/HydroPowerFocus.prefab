@@ -36,6 +36,22 @@ PrefabInstance:
       propertyPath: title
       value: Hydro Power Focus
       objectReference: {fileID: 0}
+    - target: {fileID: 5552961775738703626, guid: d951444cbb4ac4f2489b0c369ce518d2,
+        type: 3}
+      propertyPath: description
+      value: Hydroelectric power involves harnessing naturally flowing waterways behind
+        a dam or reservoir -- the water is slowly released into turbines which in
+        turn power a generator. In areas with access to riverways and waterfalls,
+        this can provide a substantial amount of electricity for farms and cities.
+        However, there is a cost to the natural habitat, is it restricts the ability
+        of migrating species such salmon from procreating. This in turn costs the
+        citizens some reliable sources of food.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5552961775738703626, guid: d951444cbb4ac4f2489b0c369ce518d2,
+        type: 3}
+      propertyPath: effect
+      value: -2 Food and +4 Energy per Hydro plant permanently
+      objectReference: {fileID: 0}
     - target: {fileID: 8622840098911840902, guid: d951444cbb4ac4f2489b0c369ce518d2,
         type: 3}
       propertyPath: m_LocalPosition.x

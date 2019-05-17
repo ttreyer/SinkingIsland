@@ -70,13 +70,22 @@ PrefabInstance:
     - target: {fileID: 5552961775738703626, guid: d951444cbb4ac4f2489b0c369ce518d2,
         type: 3}
       propertyPath: description
-      value: We can convert some of our staple crops to fuel for our vehicles in an
-        effort to stave off fuel shortages.
+      value: Biodiesel is the use of vegetable oil or fat-based diesel fuel. Biodiesel
+        has benefits over petroleum in the form of reduced greenhouse emissions, reduced
+        deforestation, and reduced biodegradation. We can convert some of our staple
+        crops to fuel for our vehicles in an effort to stave off fuel shortages. Despite
+        the benefits, some worry that biodiesel shorterns engine life and causes increased
+        need for vehicle maintenance.
       objectReference: {fileID: 0}
     - target: {fileID: 5552961775738703626, guid: d951444cbb4ac4f2489b0c369ce518d2,
         type: 3}
       propertyPath: resourceRequirements.population
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5552961775738703626, guid: d951444cbb4ac4f2489b0c369ce518d2,
+        type: 3}
+      propertyPath: effect
+      value: Food -1, Energy +1 for 3 turns
       objectReference: {fileID: 0}
     - target: {fileID: 8622840098911840902, guid: d951444cbb4ac4f2489b0c369ce518d2,
         type: 3}

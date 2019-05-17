@@ -56,6 +56,21 @@ PrefabInstance:
       propertyPath: title
       value: Permit Firework Displays
       objectReference: {fileID: 0}
+    - target: {fileID: 5552961775738703626, guid: d951444cbb4ac4f2489b0c369ce518d2,
+        type: 3}
+      propertyPath: description
+      value: Believed to have first been invented in China, dazzling fireworks displays
+        have been lighting up skies all over the world for more than a thousand years.
+        Oftener the center of civic or cultural displays, fireworks inspire and delight
+        people of all ages. Still, they emit greenhouse gases, and dust and residue
+        from fireworks may contain heavy metals, sulfur-coal compounds, and low-concentration
+        toxic chemicals.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5552961775738703626, guid: d951444cbb4ac4f2489b0c369ce518d2,
+        type: 3}
+      propertyPath: effect
+      value: +1 Pollution, -2 Anger permanently
+      objectReference: {fileID: 0}
     - target: {fileID: 8622840098911840902, guid: d951444cbb4ac4f2489b0c369ce518d2,
         type: 3}
       propertyPath: m_LocalPosition.x

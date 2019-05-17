@@ -36,6 +36,21 @@ PrefabInstance:
       propertyPath: title
       value: Coal Power Focus
       objectReference: {fileID: 0}
+    - target: {fileID: 5552961775738703626, guid: d951444cbb4ac4f2489b0c369ce518d2,
+        type: 3}
+      propertyPath: description
+      value: Coal provides power to thermal power stations which burn fossil fuels
+        (the other primary such fuel is natural gas). These stations have the machinery
+        to transform heat into mechanical energy, which in turn generates electricity
+        for agriculture and cities. While coal power has provided considerable power
+        since the dawn of the industrial revolution, maintaining it requires ongoing
+        mining efforts and release of considerable greenhouse gases.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5552961775738703626, guid: d951444cbb4ac4f2489b0c369ce518d2,
+        type: 3}
+      propertyPath: effect
+      value: +4 Energy and +2 Pollution from all Coal Plants permanently
+      objectReference: {fileID: 0}
     - target: {fileID: 8622840098911840902, guid: d951444cbb4ac4f2489b0c369ce518d2,
         type: 3}
       propertyPath: m_LocalPosition.x

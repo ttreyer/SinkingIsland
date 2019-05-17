@@ -56,6 +56,19 @@ PrefabInstance:
       propertyPath: resourceRequirements.energy
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 5552961775738703626, guid: d951444cbb4ac4f2489b0c369ce518d2,
+        type: 3}
+      propertyPath: description
+      value: The original Olympic Games were hosted in Olympia, Greece, from 776 BC
+        to 393 AD. The modern Olympic games began in 1896 and consist of summer, winter
+        and paralympic sporting events. International games provide considerable social
+        and economic benefits to cities which are selected to host them.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5552961775738703626, guid: d951444cbb4ac4f2489b0c369ce518d2,
+        type: 3}
+      propertyPath: effect
+      value: +1 Energy, -4 Angry for 2 turns
+      objectReference: {fileID: 0}
     - target: {fileID: 8622840098911840902, guid: d951444cbb4ac4f2489b0c369ce518d2,
         type: 3}
       propertyPath: m_LocalPosition.x

@@ -56,6 +56,18 @@ PrefabInstance:
       propertyPath: title
       value: Higher Recycling Standards
       objectReference: {fileID: 0}
+    - target: {fileID: 5552961775738703626, guid: d951444cbb4ac4f2489b0c369ce518d2,
+        type: 3}
+      propertyPath: description
+      value: While recycling is a wide-spread activity in the United States, there
+        is no national law that mandates recycling, although the EPA oversees a variety
+        of waste regulation issue.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5552961775738703626, guid: d951444cbb4ac4f2489b0c369ce518d2,
+        type: 3}
+      propertyPath: effect
+      value: -1 Pollution, +1 Angry permanently
+      objectReference: {fileID: 0}
     - target: {fileID: 8622840098911840902, guid: d951444cbb4ac4f2489b0c369ce518d2,
         type: 3}
       propertyPath: m_LocalPosition.x

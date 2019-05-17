@@ -49,7 +49,7 @@ PrefabInstance:
     - target: {fileID: 5552961775738703626, guid: d951444cbb4ac4f2489b0c369ce518d2,
         type: 3}
       propertyPath: title
-      value: Permit Plastic Usage
+      value: Permit Plastic Straws
       objectReference: {fileID: 0}
     - target: {fileID: 5552961775738703626, guid: d951444cbb4ac4f2489b0c369ce518d2,
         type: 3}
@@ -60,6 +60,21 @@ PrefabInstance:
         type: 3}
       propertyPath: resourceRequirements.population
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5552961775738703626, guid: d951444cbb4ac4f2489b0c369ce518d2,
+        type: 3}
+      propertyPath: description
+      value: Since its invention in 1888, the drinking straw has been providing gratuitous
+        convenience to people in many forms - made from ryegrass at one point in the
+        1800s to its more ubiquitous plastic form in recent years. Although alternatives
+        such as wax paper and wheat stem exist, it has thus been impossible to replicate
+        the cost efficiencies and convenience of the plastic straw such that they
+        are universally popular.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5552961775738703626, guid: d951444cbb4ac4f2489b0c369ce518d2,
+        type: 3}
+      propertyPath: effect
+      value: +1 Pollution, -1 Anger permanently
       objectReference: {fileID: 0}
     - target: {fileID: 8622840098911840902, guid: d951444cbb4ac4f2489b0c369ce518d2,
         type: 3}

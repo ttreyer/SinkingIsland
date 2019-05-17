@@ -93,6 +93,20 @@ PrefabInstance:
       propertyPath: title
       value: Build Sea Walls
       objectReference: {fileID: 0}
+    - target: {fileID: 5552961775738703626, guid: d951444cbb4ac4f2489b0c369ce518d2,
+        type: 3}
+      propertyPath: description
+      value: 'A seawall is a coastal defense system designed to protect populations
+        and habitat from the deleterious effects of tides, waves, tsunamis, and general
+        sea rise. While a seawall does not actually effect greenhouse gases nor does
+        it slow sea rise, it can mitigate the effects of such, and effectively delay
+        the damage caused by systemic coastal flooding. '
+      objectReference: {fileID: 0}
+    - target: {fileID: 5552961775738703626, guid: d951444cbb4ac4f2489b0c369ce518d2,
+        type: 3}
+      propertyPath: effect
+      value: -3 Pollution for 4 turns
+      objectReference: {fileID: 0}
     - target: {fileID: 8622840098911840902, guid: d951444cbb4ac4f2489b0c369ce518d2,
         type: 3}
       propertyPath: m_LocalPosition.x

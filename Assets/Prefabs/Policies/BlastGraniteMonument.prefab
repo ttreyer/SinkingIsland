@@ -93,6 +93,21 @@ PrefabInstance:
       propertyPath: title
       value: Blast Granite Monument
       objectReference: {fileID: 0}
+    - target: {fileID: 5552961775738703626, guid: d951444cbb4ac4f2489b0c369ce518d2,
+        type: 3}
+      propertyPath: description
+      value: Using explosives to blast a hillside into a beautifully sculpted monuments
+        is exactly what the United States effectively did when Mount Rushmore National
+        Memorial was built between 1927 and 1941. Sometimes mentioned as a wonder
+        of the modern world, the granite monument has inspired generations. Still,
+        the creation of the monument nevertheless trampled over nature as well as
+        agreements with indigenous people.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5552961775738703626, guid: d951444cbb4ac4f2489b0c369ce518d2,
+        type: 3}
+      propertyPath: effect
+      value: Population and Pollution +1, Anger -1 for 4 turns
+      objectReference: {fileID: 0}
     - target: {fileID: 8622840098911840902, guid: d951444cbb4ac4f2489b0c369ce518d2,
         type: 3}
       propertyPath: m_LocalPosition.x

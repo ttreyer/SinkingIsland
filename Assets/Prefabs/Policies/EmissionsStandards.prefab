@@ -1,23 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-5071725397144178630
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7746053212924034935}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fa8cbee54c1bc4d63b253fe1950b94dd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  changes:
-    food: 0
-    energy: 0
-    polution: 0
-    population: 0
-    populationAngry: 0
 --- !u!114 &8355114423422504259
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -49,9 +31,12 @@ PrefabInstance:
     - target: {fileID: 5552961775738703626, guid: d951444cbb4ac4f2489b0c369ce518d2,
         type: 3}
       propertyPath: description
-      value: ' Our cars are some of the largest sources of greenhouse gases.  Stricter
-        emission standards might help us mitigate the problem until a more permanent
-        solution can be found.'
+      value: 'Pollution standards involve the enactment of restrictions on specific
+        air pollutants found in automobile exhaust. The Environmental Protection Agency
+        (EPA) created in 1970 under President Richard Nixon manages national emissions
+        standards in the United States. Some states, notably California, have stricter
+        standards than the nation as a whole. While automobiles drive large sectors
+        of the economy, they also are a major producer of greenhouse gases. '
       objectReference: {fileID: 0}
     - target: {fileID: 5552961775738703626, guid: d951444cbb4ac4f2489b0c369ce518d2,
         type: 3}
@@ -67,6 +52,11 @@ PrefabInstance:
         type: 3}
       propertyPath: resourceRequirements.energy
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5552961775738703626, guid: d951444cbb4ac4f2489b0c369ce518d2,
+        type: 3}
+      propertyPath: effect
+      value: 1 turn to institute, then -2 Energy and -4 Pollution permanently
       objectReference: {fileID: 0}
     - target: {fileID: 8622840098911840902, guid: d951444cbb4ac4f2489b0c369ce518d2,
         type: 3}

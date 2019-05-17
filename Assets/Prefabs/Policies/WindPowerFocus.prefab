@@ -36,9 +36,17 @@ PrefabInstance:
     - target: {fileID: 5552961775738703626, guid: d951444cbb4ac4f2489b0c369ce518d2,
         type: 3}
       propertyPath: description
-      value: Wind power is currently unpopular with residents who live near the towers.  If
-        we could increase community interest and investment, we might be able to also
-        come up with support for additional towers.
+      value: Wind power harnesses kinetic wind energy into mechanical power. The mechanical
+        power can be used either for specific tasks, such as transporting water, or
+        converted to electricity to power cities. Wind power is currently unpopular
+        with residents who live near the towers.  If we could increase community interest
+        and investment, we might be able to also come up with support for additional
+        towers.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5552961775738703626, guid: d951444cbb4ac4f2489b0c369ce518d2,
+        type: 3}
+      propertyPath: effect
+      value: 2 turns to implement, then +2 Energy from Wind plants permanently
       objectReference: {fileID: 0}
     - target: {fileID: 8622840098911840902, guid: d951444cbb4ac4f2489b0c369ce518d2,
         type: 3}
