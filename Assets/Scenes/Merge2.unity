@@ -3170,7 +3170,7 @@ PrefabInstance:
         type: 3}
       propertyPath: levels.Array.data[3].intro
       value: 
-      objectReference: {fileID: 8300000, guid: fe43d05ed654743fd92bf10176163c70, type: 3}
+      objectReference: {fileID: 8300000, guid: 3bb093ac406f8244e9cd730003e2eba8, type: 3}
     - target: {fileID: 1647946298471245301, guid: e15cf517c2fba403590dfdef887a0fcd,
         type: 3}
       propertyPath: levels.Array.data[3].loop
@@ -3180,12 +3180,42 @@ PrefabInstance:
         type: 3}
       propertyPath: levels.Array.data[4].intro
       value: 
-      objectReference: {fileID: 8300000, guid: ea26f1ab244174ab3bb05349d4d84939, type: 3}
+      objectReference: {fileID: 8300000, guid: 6084a1d268b511e42b5e57cda7bb218e, type: 3}
     - target: {fileID: 1647946298471245301, guid: e15cf517c2fba403590dfdef887a0fcd,
         type: 3}
       propertyPath: levels.Array.data[4].loop
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 1647946298471245301, guid: e15cf517c2fba403590dfdef887a0fcd,
+        type: 3}
+      propertyPath: levels.Array.data[0].intro
+      value: 
+      objectReference: {fileID: 8300000, guid: 96349cc7725037447abfed7a525345f1, type: 3}
+    - target: {fileID: 1647946298471245301, guid: e15cf517c2fba403590dfdef887a0fcd,
+        type: 3}
+      propertyPath: levels.Array.data[0].loop
+      value: 
+      objectReference: {fileID: 8300000, guid: 4ae8d406563c3614db51faefbe86368a, type: 3}
+    - target: {fileID: 1647946298471245301, guid: e15cf517c2fba403590dfdef887a0fcd,
+        type: 3}
+      propertyPath: levels.Array.data[1].intro
+      value: 
+      objectReference: {fileID: 8300000, guid: 1bbcfe86bda2a0d458b3ae7de3fa1183, type: 3}
+    - target: {fileID: 1647946298471245301, guid: e15cf517c2fba403590dfdef887a0fcd,
+        type: 3}
+      propertyPath: levels.Array.data[1].loop
+      value: 
+      objectReference: {fileID: 8300000, guid: 0e0d9463447bf3c4c82330c85dd6e074, type: 3}
+    - target: {fileID: 1647946298471245301, guid: e15cf517c2fba403590dfdef887a0fcd,
+        type: 3}
+      propertyPath: levels.Array.data[2].intro
+      value: 
+      objectReference: {fileID: 8300000, guid: 6b349a9d43d2de14fa1873e20e0333bb, type: 3}
+    - target: {fileID: 1647946298471245301, guid: e15cf517c2fba403590dfdef887a0fcd,
+        type: 3}
+      propertyPath: levels.Array.data[2].loop
+      value: 
+      objectReference: {fileID: 8300000, guid: 1c90b72cdc2452d4384a414cdbfcb233, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e15cf517c2fba403590dfdef887a0fcd, type: 3}
 --- !u!1 &790373422 stripped
