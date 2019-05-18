@@ -37,6 +37,14 @@ public class CardController : MonoBehaviour {
         }
     }
 
+    public void RemovePolicyInstance(PolicyController pc) {
+        // Use title to find the policy to remove
+        int pcid = policiesByEcology[pc.ecologyLevel]
+            .FindIndex((spc) => spc.title == pc.title);
+        if (pcid >= 0)
+            policiesByEcology[pc.ecologyLevel].RemoveAt(pcid);
+    }
+
     private List<PolicyController> GetRandomPolicies(int ecologyLevel, int policyCount) {
         List<PolicyController> results = new List<PolicyController>();
         List<PolicyController> reasonablePolicies = GetPoliciesAroundLevel(ecologyLevel);

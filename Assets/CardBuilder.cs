@@ -9,6 +9,7 @@ public class CardBuilder : MonoBehaviour {
     public Text description;
     public Text foodReq, energyReq, popReq;
     public TooltipController tooltip;
+    public CardController deck;
 
     public void BuildWithPolicy(PolicyController pc) {
         if (policy)
@@ -28,8 +29,10 @@ public class CardBuilder : MonoBehaviour {
 
     public void ExecutePolicy() {
         if (policy) {
-            if (policy.Execute())
+            if (policy.Execute()) {
                 gameObject.SetActive(false);
+                deck.RemovePolicyInstance(policy);
+            }
         }
     }
 }
