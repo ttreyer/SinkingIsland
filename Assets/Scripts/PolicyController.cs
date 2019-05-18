@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PolicyController : MonoBehaviour {
     public GameObject island;
+    public int cardCountPerDeck = 1;
     public string title, description, effect;
     public ResourceValues resourceRequirements;
     public int ecologyLevel;

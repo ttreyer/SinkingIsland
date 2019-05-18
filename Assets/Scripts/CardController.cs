@@ -21,7 +21,8 @@ public class CardController : MonoBehaviour {
             policiesByEcology[i] = new List<PolicyController>();
 
         foreach (PolicyController pc in policies)
-            policiesByEcology[pc.ecologyLevel].Add(pc);
+            for (int i = 0; i < pc.cardCountPerDeck; i++)
+                policiesByEcology[pc.ecologyLevel].Add(pc);
     }
 
     public void DrawNewHand() {
@@ -35,6 +36,14 @@ public class CardController : MonoBehaviour {
             pci.island = gameObject;
             card.BuildWithPolicy(pci);
         }
+    }
+
+    public void RemovePolicyInstance(PolicyController pc) {
+        // Use title to find the policy to remove
+        int pcid = policiesByEcology[pc.ecologyLevel]
+            .FindIndex((spc) => spc.title == pc.title);
+        if (pcid >= 0)
+            policiesByEcology[pc.ecologyLevel].RemoveAt(pcid);
     }
 
     private List<PolicyController> GetRandomPolicies(int ecologyLevel, int policyCount) {
