@@ -21,7 +21,8 @@ public class CardController : MonoBehaviour {
             policiesByEcology[i] = new List<PolicyController>();
 
         foreach (PolicyController pc in policies)
-            policiesByEcology[pc.ecologyLevel].Add(pc);
+            for (int i = 0; i < pc.cardCountPerDeck; i++)
+                policiesByEcology[pc.ecologyLevel].Add(pc);
     }
 
     public void DrawNewHand() {
