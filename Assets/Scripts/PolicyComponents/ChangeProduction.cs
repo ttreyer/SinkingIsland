@@ -9,6 +9,7 @@ public class ChangeProduction : PolicyComponent
     public override void Execute(PolicyController controller) {
         ResourceController rc = controller.island.GetComponentInChildren<ResourceController>();
         rc.current.Add(changes);
+        rc.current.SetMin();
         rc.UpdateCurrentUI();
     }
 }
