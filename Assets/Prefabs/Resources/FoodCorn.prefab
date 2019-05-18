@@ -27,6 +27,11 @@ PrefabInstance:
       propertyPath: type
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 2919225804093738537, guid: 88b5276f3d65c4476a524af81d2cd3ef,
+        type: 3}
+      propertyPath: title
+      value: Corn
+      objectReference: {fileID: 0}
     - target: {fileID: 2919225804093738536, guid: 88b5276f3d65c4476a524af81d2cd3ef,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -88,5 +93,20 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: eaf30d3aeb4214844b64b1c15a208047,
         type: 3}
+    - target: {fileID: 6793905639100783628, guid: 88b5276f3d65c4476a524af81d2cd3ef,
+        type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6793905639100783628, guid: 88b5276f3d65c4476a524af81d2cd3ef,
+        type: 3}
+      propertyPath: m_FontData.m_MinSize
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6793905639100783628, guid: 88b5276f3d65c4476a524af81d2cd3ef,
+        type: 3}
+      propertyPath: m_Text
+      value: Corn
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 88b5276f3d65c4476a524af81d2cd3ef, type: 3}

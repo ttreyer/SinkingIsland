@@ -22,6 +22,11 @@ PrefabInstance:
       propertyPath: type
       value: 17
       objectReference: {fileID: 0}
+    - target: {fileID: 2919225804093738537, guid: 88b5276f3d65c4476a524af81d2cd3ef,
+        type: 3}
+      propertyPath: title
+      value: Village
+      objectReference: {fileID: 0}
     - target: {fileID: 2919225804093738536, guid: 88b5276f3d65c4476a524af81d2cd3ef,
         type: 3}
       propertyPath: m_LocalPosition.x

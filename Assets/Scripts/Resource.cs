@@ -59,9 +59,27 @@ public class Resource : MonoBehaviour {
     public ResourceType type;
     public ResourceValues baseValues;
     public ResourceValues bonusValues;
+    public string title, description;
+    public TooltipController tooltip;
+
+    void Start()
+    {
+        tooltip.SetContent(title,
+            "Food: " + baseValues.food.ToString() +
+            "\nEnergy: " + baseValues.energy.ToString() +
+            "\nPopulation: " + baseValues.population.ToString() +
+            "\nAnger: " + baseValues.populationAngry.ToString() +
+            "\nPollution: " + baseValues.polution.ToString());
+    }
 
     public void UpgradeValues(ResourceValues addedValues) {
         bonusValues.Add(addedValues);
+        tooltip.SetContent(title,
+    "Food: " + (baseValues.food + addedValues.food).ToString() +
+    "\nEnergy: " + (baseValues.energy + addedValues.energy).ToString() +
+    "\nPopulation: " + (baseValues.population + addedValues.population).ToString() +
+    "\nAnger: " + (baseValues.populationAngry + addedValues.populationAngry).ToString() +
+    "\nPollution: " + (baseValues.polution + addedValues.polution).ToString());
     }
 
     public ResourceValues GetValues() {

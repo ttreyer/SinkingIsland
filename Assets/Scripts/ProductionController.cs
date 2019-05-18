@@ -5,6 +5,7 @@ using System.Linq;
 
 public class ProductionController : MonoBehaviour {
     public ResourceValues production;
+    //public TooltipController tooltip;
 
     void Start() {
         UpdateProduction();
@@ -21,6 +22,7 @@ public class ProductionController : MonoBehaviour {
         foreach (Resource r in GetResources()) {
             production.Add(r.baseValues);
             production.Add(r.bonusValues);
+            //tooltip.SetContent(r.title, r.description);
         }
 
         UpdateUI();
