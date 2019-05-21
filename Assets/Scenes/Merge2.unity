@@ -405,6 +405,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 0.00938
       objectReference: {fileID: 0}
+    - target: {fileID: 1741719470422608192, guid: a6d83be4a118c466681a307356959030,
+        type: 3}
+      propertyPath: deck
+      value: 
+      objectReference: {fileID: 1433163878}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a6d83be4a118c466681a307356959030, type: 3}
 --- !u!224 &32371152 stripped
@@ -797,6 +802,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 0.00938
       objectReference: {fileID: 0}
+    - target: {fileID: 1741719470422608192, guid: a6d83be4a118c466681a307356959030,
+        type: 3}
+      propertyPath: deck
+      value: 
+      objectReference: {fileID: 1777917426}
     - target: {fileID: 3586008659485290899, guid: a6d83be4a118c466681a307356959030,
         type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -2262,6 +2272,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 0.00938
       objectReference: {fileID: 0}
+    - target: {fileID: 1741719470422608192, guid: a6d83be4a118c466681a307356959030,
+        type: 3}
+      propertyPath: deck
+      value: 
+      objectReference: {fileID: 1777917426}
     - target: {fileID: 3586008659485290899, guid: a6d83be4a118c466681a307356959030,
         type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -3361,6 +3376,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 0.00938
       objectReference: {fileID: 0}
+    - target: {fileID: 1741719470422608192, guid: a6d83be4a118c466681a307356959030,
+        type: 3}
+      propertyPath: deck
+      value: 
+      objectReference: {fileID: 1777917426}
     - target: {fileID: 3586008659485290899, guid: a6d83be4a118c466681a307356959030,
         type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -3582,6 +3602,11 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 1741719470422608192, guid: a6d83be4a118c466681a307356959030,
+        type: 3}
+      propertyPath: deck
+      value: 
+      objectReference: {fileID: 1433163878}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a6d83be4a118c466681a307356959030, type: 3}
 --- !u!224 &873007539 stripped
@@ -4749,6 +4774,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PowerPlantCoal
+      objectReference: {fileID: 0}
+    - target: {fileID: 530030436065260878, guid: ae59910d7f3ff1b42804e709591cfb06,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 530030436065260877, guid: ae59910d7f3ff1b42804e709591cfb06,
         type: 3}
@@ -29576,6 +29606,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 0.00938
       objectReference: {fileID: 0}
+    - target: {fileID: 1741719470422608192, guid: a6d83be4a118c466681a307356959030,
+        type: 3}
+      propertyPath: deck
+      value: 
+      objectReference: {fileID: 1433163878}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a6d83be4a118c466681a307356959030, type: 3}
 --- !u!224 &1374726215 stripped
@@ -31298,6 +31333,11 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 1741719470422608192, guid: a6d83be4a118c466681a307356959030,
+        type: 3}
+      propertyPath: deck
+      value: 
+      objectReference: {fileID: 1777917426}
     - target: {fileID: 3586008659485290899, guid: a6d83be4a118c466681a307356959030,
         type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -44878,6 +44918,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 0.00938
       objectReference: {fileID: 0}
+    - target: {fileID: 1741719470422608192, guid: a6d83be4a118c466681a307356959030,
+        type: 3}
+      propertyPath: deck
+      value: 
+      objectReference: {fileID: 1433163878}
     - target: {fileID: 1741719469463339166, guid: a6d83be4a118c466681a307356959030,
         type: 3}
       propertyPath: m_Name
