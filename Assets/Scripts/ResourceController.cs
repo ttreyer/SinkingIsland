@@ -22,15 +22,14 @@ public class ResourceController : MonoBehaviour
     private int popEnergyDifference;
     private int popsLostToAnger;
 
-    public void ResetCurrentResource() {
-        current.Reset();
-    }
-
     public void UpdateResourceCount(ResourceValues newResources)
     {
-        current.Add(newResources);
-        trade.Revert();
-        current.Add(trade);
+        ResourceValues stock = current;
+        current = new ResourceValues();
+
+        current.AddProduced(stock); // Add previous produced resources
+        current.Add(newResources);  // Add current production and poulation
+        current.AddPopulation(trade.Revert());// Remove what was traded last turn
 
         //calculate subsequent food and energy loss based off population
         current.food -= current.TotalPopulation;

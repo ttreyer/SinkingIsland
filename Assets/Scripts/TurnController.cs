@@ -68,10 +68,6 @@ public class TurnController : MonoBehaviour
             p1Production.UpdateProduction();
             p2Production.UpdateProduction();
 
-            /* Reset current resource, as we'll add the production and the trade */
-            p1Resources.ResetCurrentResource();
-            p2Resources.ResetCurrentResource();
-
             /* Apply delayed actions first */
             foreach (Action action in ActionsForTurn(currentTurn))
                 action();

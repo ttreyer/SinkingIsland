@@ -30,6 +30,21 @@ public struct ResourceValues {
         return this;
     }
 
+    public ResourceValues AddProduced(ResourceValues v) {
+        food += v.food;
+        energy += v.energy;
+        //polution += v.polution;
+
+        return this;
+    }
+
+    public ResourceValues AddPopulation(ResourceValues v) {
+        population += v.population;
+        populationAngry += v.populationAngry;
+
+        return this;
+    }
+
     public bool LessEqual(ResourceValues v) {
         return food <= v.food
             && energy <= v.energy
@@ -46,12 +61,14 @@ public struct ResourceValues {
         populationAngry = Math.Max(min, populationAngry);
     }
 
-    public void Revert() {
+    public ResourceValues Revert() {
         food = -food;
         energy = -energy;
         polution = -polution;
         population = -population;
         populationAngry = -populationAngry;
+
+        return this;
     }
 }
 
