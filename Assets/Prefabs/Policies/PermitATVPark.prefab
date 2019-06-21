@@ -16,6 +16,24 @@ MonoBehaviour:
   repeat: 1
   policyControllerPrefab: {fileID: 3269713042433743364, guid: d82b4a6a652ff1e429148fb47ac0b115,
     type: 3}
+--- !u!114 &697789300959592296
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6346557494545528707}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa8cbee54c1bc4d63b253fe1950b94dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  changes:
+    food: 0
+    energy: 1
+    polution: 1
+    population: 2
+    populationAngry: -2
 --- !u!1001 &1258837155063721393
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -36,22 +54,22 @@ PrefabInstance:
     - target: {fileID: 5552961775738703626, guid: d951444cbb4ac4f2489b0c369ce518d2,
         type: 3}
       propertyPath: resourceRequirements.energy
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5552961775738703626, guid: d951444cbb4ac4f2489b0c369ce518d2,
         type: 3}
       propertyPath: resourceRequirements.population
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5552961775738703626, guid: d951444cbb4ac4f2489b0c369ce518d2,
         type: 3}
       propertyPath: resourceRequirements.populationAngry
-      value: -2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5552961775738703626, guid: d951444cbb4ac4f2489b0c369ce518d2,
         type: 3}
       propertyPath: resourceRequirements.polution
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5552961775738703626, guid: d951444cbb4ac4f2489b0c369ce518d2,
         type: 3}

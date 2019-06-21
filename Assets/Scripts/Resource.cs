@@ -20,7 +20,8 @@ public struct ResourceValues {
         food = energy = polution = population = populationAngry = 0;
     }
 
-    public ResourceValues Add(ResourceValues v) {
+    public ResourceValues Add(ResourceValues v)
+    {
         food += v.food;
         energy += v.energy;
         polution += v.polution;
@@ -28,6 +29,7 @@ public struct ResourceValues {
         populationAngry += v.populationAngry;
 
         return this;
+
     }
 
     public ResourceValues AddProduced(ResourceValues v) {
@@ -44,6 +46,16 @@ public struct ResourceValues {
 
         return this;
     }
+
+    //only used for Policy requirements
+    public ResourceValues Subtract(ResourceValues v)
+        {
+            food -= v.food;
+            energy -= v.energy;
+            population -= v.population;
+
+            return this;
+        }
 
     public bool LessEqual(ResourceValues v) {
         return food <= v.food

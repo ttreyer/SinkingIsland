@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PolicyController : MonoBehaviour {
     public GameObject island;
+
     public int cardCountPerDeck = 1;
     public string title, description, effect;
     public ResourceValues resourceRequirements;
@@ -20,6 +21,11 @@ public class PolicyController : MonoBehaviour {
 
         foreach (PolicyComponent component in GetComponents<PolicyComponent>())
             component.Execute(this);
+
+        ResourceController rc = island.GetComponentInChildren<ResourceController>();
+        rc.current.Subtract(resourceRequirements);
+        rc.current.SetMin();
+        rc.UpdateCurrentUI();
 
         return true;
     }

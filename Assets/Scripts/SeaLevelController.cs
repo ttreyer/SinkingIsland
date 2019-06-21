@@ -53,7 +53,7 @@ public class SeaLevelController : MonoBehaviour
         }
     }
 
-    private void UpdatePollutionGUI()
+    public void UpdatePollutionGUI()
     {
         pollutionDisplay.text = "Pollution Level " + currentPollutionLevel + "/" + pollutionLimitPerLevels[pollutionLimitPerLevels.Length - 1];
     }
