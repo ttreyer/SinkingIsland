@@ -62,24 +62,40 @@ public class Resource : MonoBehaviour {
     public string title, description;
     public TooltipController tooltip;
 
-    void Start()
-    {
-        tooltip.SetContent(title,
-            "Food: " + baseValues.food.ToString() +
-            "\nEnergy: " + baseValues.energy.ToString() +
-            "\nPopulation: " + baseValues.population.ToString() +
-            "\nAnger: " + baseValues.populationAngry.ToString() +
-            "\nPollution: " + baseValues.polution.ToString());
+    void Start() {
+        UpdateTooltip();
     }
 
     public void UpgradeValues(ResourceValues addedValues) {
         bonusValues.Add(addedValues);
-        tooltip.SetContent(title,
-    "Food: " + (baseValues.food + addedValues.food).ToString() +
-    "\nEnergy: " + (baseValues.energy + addedValues.energy).ToString() +
-    "\nPopulation: " + (baseValues.population + addedValues.population).ToString() +
-    "\nAnger: " + (baseValues.populationAngry + addedValues.populationAngry).ToString() +
-    "\nPollution: " + (baseValues.polution + addedValues.polution).ToString());
+        UpdateTooltip();
+    }
+
+    private string NUMBER_FORMAT = "+#;-#";
+    private void UpdateTooltip() {
+        List<string> resources = new List<string>();
+
+        int food = baseValues.food + bonusValues.food;
+        if (food != 0)
+            resources.Add("Food: " + food.ToString(NUMBER_FORMAT));
+
+        int energy = baseValues.energy + bonusValues.energy;
+        if (energy != 0)
+            resources.Add("Energy: " + energy.ToString(NUMBER_FORMAT));
+
+        int polution = baseValues.polution + bonusValues.polution;
+        if (polution != 0)
+            resources.Add("Pollution: " + polution.ToString(NUMBER_FORMAT));
+
+        int population = baseValues.population + bonusValues.population;
+        if (population != 0)
+            resources.Add("Population: " + population.ToString(NUMBER_FORMAT));
+
+        int populationAngry = baseValues.populationAngry + bonusValues.populationAngry;
+        if (populationAngry != 0)
+            resources.Add("Population ngry: " + populationAngry.ToString(NUMBER_FORMAT));
+
+        tooltip.SetContent(title, String.Join("\n", resources));
     }
 
     public ResourceValues GetValues() {
