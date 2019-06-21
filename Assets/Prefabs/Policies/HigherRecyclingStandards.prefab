@@ -32,7 +32,7 @@ MonoBehaviour:
     food: 0
     energy: 0
     polution: -1
-    population: -1
+    population: 0
     populationAngry: 1
 --- !u!1001 &8603746452288256448
 PrefabInstance:
@@ -67,6 +67,11 @@ PrefabInstance:
         type: 3}
       propertyPath: effect
       value: -1 Pollution, +1 Angry permanently
+      objectReference: {fileID: 0}
+    - target: {fileID: 5552961775738703626, guid: d951444cbb4ac4f2489b0c369ce518d2,
+        type: 3}
+      propertyPath: resourceRequirements.population
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8622840098911840902, guid: d951444cbb4ac4f2489b0c369ce518d2,
         type: 3}

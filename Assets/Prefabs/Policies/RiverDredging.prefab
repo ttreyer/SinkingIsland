@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   changes:
     food: 1
-    energy: -1
+    energy: 0
     polution: 0
     population: 0
     populationAngry: 0
@@ -85,7 +85,7 @@ PrefabInstance:
     - target: {fileID: 5552961775738703626, guid: d951444cbb4ac4f2489b0c369ce518d2,
         type: 3}
       propertyPath: resourceRequirements.energy
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 5552961775738703626, guid: d951444cbb4ac4f2489b0c369ce518d2,
         type: 3}
