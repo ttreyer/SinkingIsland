@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 public class CardBuilder : MonoBehaviour {
@@ -10,6 +11,8 @@ public class CardBuilder : MonoBehaviour {
     public Text foodReq, energyReq, popReq;
     public TooltipController tooltip;
     public CardController deck;
+    public Button cardButton;
+    public bool isHeld;
 
     public void BuildWithPolicy(PolicyController pc) {
         if (policy)
@@ -32,7 +35,25 @@ public class CardBuilder : MonoBehaviour {
             if (policy.Execute()) {
                 gameObject.SetActive(false);
                 deck.RemovePolicyInstance(policy);
+                isHeld = false;
+                cardButton.image.color = Color.white;
             }
         }
     }
+
+    public void HoldPolicy()
+    {
+        if (isHeld == false)
+        {
+            cardButton.image.color = Color.yellow;
+            isHeld = true;
+        }
+        else if (isHeld == true)
+        {
+            cardButton.image.color = Color.white;
+            isHeld = false;
+        }
+    }
+
+ 
 }

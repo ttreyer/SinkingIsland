@@ -32,9 +32,12 @@ public class CardController : MonoBehaviour {
         List<PolicyController> currentPolicies = GetRandomPolicies(0, currentHand.Length);
         for (int i = 0; i < currentHand.Length; ++i) {
             CardBuilder card = currentHand[i];
-            PolicyController pci = Instantiate(currentPolicies[i], card.transform);
-            pci.island = gameObject;
-            card.BuildWithPolicy(pci);
+            if (card.isHeld == false)
+            {
+                PolicyController pci = Instantiate(currentPolicies[i], card.transform);
+                pci.island = gameObject;
+                card.BuildWithPolicy(pci);
+            }
         }
     }
 
