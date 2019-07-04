@@ -65,9 +65,9 @@ public class ResourceController : MonoBehaviour
 
     public void UpdateTradeUI()
     {
-        foodToTradeDisplay.text = "To Trade: " + trade.food;
-        energyToTradeDisplay.text = "To Trade: " + trade.energy;
-        popsToTradeDisplay.text = "To Trade: " + trade.population;
+        foodToTradeDisplay.text = trade.food.ToString();
+        energyToTradeDisplay.text = trade.energy.ToString();
+        popsToTradeDisplay.text = trade.population.ToString();
     }
 
     //there's probably a super easy way to refactor these 6 trade methods but for now it works so I leave it as is
