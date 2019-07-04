@@ -100,8 +100,7 @@ public class Resource : MonoBehaviour {
         UpdateTooltip();
     }
 
-    private string NUMBER_FORMAT = "+#;-#";
-    private void UpdateTooltip() {
+    public override string ToString() {
         List<string> resources = new List<string>();
 
         int food = baseValues.food + bonusValues.food;
@@ -124,7 +123,13 @@ public class Resource : MonoBehaviour {
         if (populationAngry != 0)
             resources.Add("Population ngry: " + populationAngry.ToString(NUMBER_FORMAT));
 
-        tooltip.SetContent(title, String.Join("\n", resources));
+        return String.Join("\n", resources);
+    }
+
+    private string NUMBER_FORMAT = "+#;-#";
+    private void UpdateTooltip() {
+        if (tooltip)
+            tooltip.SetContent(title, ToString());
     }
 
     public ResourceValues GetValues() {
