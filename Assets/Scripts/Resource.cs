@@ -35,6 +35,7 @@ public struct ResourceValues {
     public ResourceValues AddProduced(ResourceValues v) {
         food += v.food;
         energy += v.energy;
+        population += v.population;
         //polution += v.polution;
 
         return this;

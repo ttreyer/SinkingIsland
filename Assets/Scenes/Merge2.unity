@@ -1862,7 +1862,7 @@ PrefabInstance:
     - target: {fileID: 7066110914297955283, guid: 8d0b4ce054143ab4ca33a66e3b1a5414,
         type: 3}
       propertyPath: baseValues.population
-      value: 40
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8d0b4ce054143ab4ca33a66e3b1a5414, type: 3}
@@ -5438,7 +5438,7 @@ PrefabInstance:
     - target: {fileID: 7066110914297955283, guid: 8d0b4ce054143ab4ca33a66e3b1a5414,
         type: 3}
       propertyPath: baseValues.population
-      value: 40
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8d0b4ce054143ab4ca33a66e3b1a5414, type: 3}
@@ -31949,6 +31949,11 @@ PrefabInstance:
       propertyPath: popsToTradeDisplay
       value: 
       objectReference: {fileID: 48570659}
+    - target: {fileID: 536369249817733208, guid: e6315f16c77324ef4b7e271bdac5a525,
+        type: 3}
+      propertyPath: initialPopulation
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 3546728080401809845, guid: e6315f16c77324ef4b7e271bdac5a525,
         type: 3}
       propertyPath: targetResourceController
@@ -35470,6 +35475,11 @@ PrefabInstance:
       propertyPath: energyToTradeDisplay
       value: 
       objectReference: {fileID: 660116664}
+    - target: {fileID: 536369249817733208, guid: e6315f16c77324ef4b7e271bdac5a525,
+        type: 3}
+      propertyPath: initialPopulation
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 3546728080401809845, guid: e6315f16c77324ef4b7e271bdac5a525,
         type: 3}
       propertyPath: targetResourceController

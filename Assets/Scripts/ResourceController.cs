@@ -8,6 +8,7 @@ public class ResourceController : MonoBehaviour
 {
     public ResourceValues current;
     public ResourceValues trade;
+    public int initialPopulation;
 
     public Text foodToTradeDisplay;
     public Text energyToTradeDisplay;
@@ -30,6 +31,7 @@ public class ResourceController : MonoBehaviour
         current.AddProduced(stock); // Add previous produced resources
         current.Add(newResources);  // Add current production and poulation
         current.AddPopulation(trade.Revert());// Remove what was traded last turn
+        //ag does this trade work?
 
         //calculate subsequent food and energy loss based off population
         current.food -= current.TotalPopulation;
