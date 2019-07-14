@@ -14,6 +14,8 @@ public class TurnController : MonoBehaviour
     public int turnLimit;
     public Text turnDisplay;
 
+    public ResourceValues source;
+
     private List<Action>[] turnActions;
 
     private bool started, gameOver;
@@ -75,13 +77,38 @@ public class TurnController : MonoBehaviour
             ResourceValues playerOneResources = p2Trades.ProcessTrades();
             ResourceValues playerTwoResources = p1Trades.ProcessTrades();
 
+            //collecting all the resources
             playerOneResources.Add(p1Production.production);
             playerTwoResources.Add(p2Production.production);
 
-            p1Resources.UpdateResourceCount(playerOneResources);
-            p2Resources.UpdateResourceCount(playerTwoResources);
+            //define resources for first turn to have higher population than production level
+            ResourceValues playerOneResourcesInitial = new ResourceValues
+            {
+                food = playerOneResources.food,
+                energy = playerOneResources.energy,
+                population = p1Resources.initialPopulation,
+            };
+            ResourceValues playerTwoResourcesInitial = new ResourceValues
+            {
+                food = playerTwoResources.food,
+                energy = playerTwoResources.energy,
+                population = p2Resources.initialPopulation,
+            };
 
-            p1Cards.DrawNewHand();
+            //update game with new amount of resources from production on every turn but 1st
+            if (currentTurn > 1)
+            {
+                p1Resources.UpdateResourceCount(playerOneResources);
+                p2Resources.UpdateResourceCount(playerTwoResources);
+            }
+            //on first turn, start game with larger amount of population than should be set from production
+            else if (currentTurn == 1)
+            {
+                p1Resources.UpdateResourceCount(playerTwoResourcesInitial);
+                p2Resources.UpdateResourceCount(playerTwoResourcesInitial);
+        }
+
+        p1Cards.DrawNewHand();
             p2Cards.DrawNewHand();
         } else if (currentTurn == turnLimit) {
             musicController.PlayLevel(4);
