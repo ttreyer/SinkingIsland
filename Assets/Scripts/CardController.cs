@@ -27,7 +27,7 @@ public class CardController : MonoBehaviour {
 
     public void DrawNewHand() {
         foreach (CardBuilder card in currentHand)
-            card.gameObject.SetActive(true);
+            card.SetEnabled(true);
 
         List<PolicyController> currentPolicies = GetRandomPolicies(0, currentHand.Length);
         for (int i = 0; i < currentHand.Length; ++i) {
