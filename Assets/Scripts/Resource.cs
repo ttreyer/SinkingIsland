@@ -83,6 +83,18 @@ public struct ResourceValues {
 
         return this;
     }
+
+    public override string ToString() {
+        List<string> resources = new List<string>();
+
+        resources.Add("Food: " + food);
+        resources.Add("Energy: " + energy);
+        resources.Add("Pollution: " + polution);
+        resources.Add("Population: " + population);
+        resources.Add("Population angry: " + populationAngry);
+
+        return String.Join(", ", resources);
+    }
 }
 
 public class Resource : MonoBehaviour {
@@ -122,7 +134,7 @@ public class Resource : MonoBehaviour {
 
         int populationAngry = baseValues.populationAngry + bonusValues.populationAngry;
         if (populationAngry != 0)
-            resources.Add("Population ngry: " + populationAngry.ToString(NUMBER_FORMAT));
+            resources.Add("Population angry: " + populationAngry.ToString(NUMBER_FORMAT));
 
         return String.Join("\n", resources);
     }

@@ -46,7 +46,7 @@ public class SeaLevelController : MonoBehaviour
 
     private void DrawPollutionFromIslands()
     {
-        currentPollutionLevel = (currentPollutionLevel + island1ResourceControllerScript.current.polution + island2ResourceControllerScript.current.polution);
+        currentPollutionLevel += island1ResourceControllerScript.current.polution + island2ResourceControllerScript.current.polution;
         if(currentPollutionLevel < 0)
         {
             currentPollutionLevel = 0;

@@ -25,15 +25,10 @@ public class ResourceController : MonoBehaviour
     private int popEnergyDifference;
     private int popsLostToAnger;
 
-    public void UpdateResourceCount(ResourceValues newResources)
+    public void UpdateResourceCount(ResourceValues changes)
     {
-        ResourceValues stock = current;
-        current = new ResourceValues();
-
-        current.AddProduced(stock); // Add previous produced resources
-        current.Add(newResources);  // Add current production and poulation
-        current.AddPopulation(trade.Revert());// Remove what was traded last turn
-        //ag does this trade work?
+        current.Add(changes);
+        current.polution = changes.polution; // Polution is tracked by the SeaLevelController
 
         //calculate subsequent food and energy loss based off population
         current.food -= current.TotalPopulation;

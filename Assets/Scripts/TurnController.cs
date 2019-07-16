@@ -66,7 +66,7 @@ public class TurnController : MonoBehaviour
             //sea level calculations
             seaLevel.UpdateSeaLevel();
 
-            /* Collect current production */
+            /* Collect effective production after eventual flood */
             p1Production.UpdateProduction();
             p2Production.UpdateProduction();
 
@@ -81,34 +81,12 @@ public class TurnController : MonoBehaviour
             playerOneResources.Add(p1Production.production);
             playerTwoResources.Add(p2Production.production);
 
-            //define resources for first turn to have higher population than production level
-            ResourceValues playerOneResourcesInitial = new ResourceValues
-            {
-                food = playerOneResources.food,
-                energy = playerOneResources.energy,
-                population = p1Resources.initialPopulation,
-            };
-            ResourceValues playerTwoResourcesInitial = new ResourceValues
-            {
-                food = playerTwoResources.food,
-                energy = playerTwoResources.energy,
-                population = p2Resources.initialPopulation,
-            };
-
             //update game with new amount of resources from production on every turn but 1st
-            if (currentTurn > 1)
-            {
-                p1Resources.UpdateResourceCount(playerOneResources);
-                p2Resources.UpdateResourceCount(playerTwoResources);
-            }
-            //on first turn, start game with larger amount of population than should be set from production
-            else if (currentTurn == 1)
-            {
-                p1Resources.UpdateResourceCount(playerTwoResourcesInitial);
-                p2Resources.UpdateResourceCount(playerTwoResourcesInitial);
-        }
 
-        p1Cards.DrawNewHand();
+            p1Resources.UpdateResourceCount(playerOneResources);
+            p2Resources.UpdateResourceCount(playerTwoResources);
+
+            p1Cards.DrawNewHand();
             p2Cards.DrawNewHand();
         } else if (currentTurn == turnLimit) {
             musicController.PlayLevel(4);
