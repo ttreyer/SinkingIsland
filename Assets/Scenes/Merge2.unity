@@ -35689,6 +35689,11 @@ PrefabInstance:
       propertyPath: initialPopulation
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 536369249817733208, guid: e6315f16c77324ef4b7e271bdac5a525,
+        type: 3}
+      propertyPath: current.population
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 3546728080401809845, guid: e6315f16c77324ef4b7e271bdac5a525,
         type: 3}
       propertyPath: targetResourceController
@@ -38262,6 +38267,11 @@ PrefabInstance:
     - target: {fileID: 536369249817733208, guid: e6315f16c77324ef4b7e271bdac5a525,
         type: 3}
       propertyPath: initialPopulation
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 536369249817733208, guid: e6315f16c77324ef4b7e271bdac5a525,
+        type: 3}
+      propertyPath: current.population
       value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 3546728080401809845, guid: e6315f16c77324ef4b7e271bdac5a525,

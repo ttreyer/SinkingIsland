@@ -8,7 +8,6 @@ public class ResourceController : MonoBehaviour
 {
     public ResourceValues current;
     public ResourceValues trade;
-    public int initialPopulation;
 
     [Header("Trade UI")]
     public Text foodToTradeDisplay;
