@@ -27,13 +27,8 @@ public class ResourceController : MonoBehaviour
 
     public void UpdateResourceCount(ResourceValues changes)
     {
-        // The TurnController put the production and the received trades in `changes`
+        // The TurnController did put the production and the received trades in `changes`
         current.Add(changes);
-
-        // Don't accumulate the polution
-        // The SeaLevelController uses this value to do the accumulation
-        // So we set it to the production of the polution
-        current.polution = changes.polution;
 
         // Calculate subsequent food and energy loss based off population
         current.food -= current.TotalPopulation;

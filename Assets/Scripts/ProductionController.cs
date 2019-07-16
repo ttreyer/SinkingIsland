@@ -16,10 +16,6 @@ public class ProductionController : MonoBehaviour {
 
     private string NUMBER_FORMAT = "+#;-#;+0";
 
-    void Start() {
-        UpdateProduction();
-    }
-
     public void UpdateUI() {
         foodDisplay.text = production.food.ToString(NUMBER_FORMAT);
         energyDisplay.text = production.energy.ToString(NUMBER_FORMAT);

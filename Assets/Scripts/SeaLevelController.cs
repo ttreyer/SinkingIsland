@@ -12,16 +12,16 @@ public class SeaLevelController : MonoBehaviour
     public int[] pollutionLimitPerLevels;
     public Text pollutionDisplay;
 
-    private ResourceController island1ResourceControllerScript;
-    private ResourceController island2ResourceControllerScript;
+    private ProductionController p1Production;
+    private ProductionController p2Production;
     private WaterLevelController p1WaterLevel, p2WaterLevel;
     private MusicController musicController;
 
     // Start is called before the first frame update
     void Start()
     {
-        island1ResourceControllerScript = island1.GetComponent<ResourceController>();
-        island2ResourceControllerScript = island2.GetComponent<ResourceController>();
+        p1Production = island1.GetComponentInChildren<ProductionController>();
+        p2Production = island2.GetComponentInChildren<ProductionController>();
         p1WaterLevel = island1.GetComponent<WaterLevelController>();
         p2WaterLevel = island2.GetComponent<WaterLevelController>();
         musicController = GetComponent<MusicController>();
@@ -46,7 +46,7 @@ public class SeaLevelController : MonoBehaviour
 
     private void DrawPollutionFromIslands()
     {
-        currentPollutionLevel += island1ResourceControllerScript.current.polution + island2ResourceControllerScript.current.polution;
+        currentPollutionLevel += p1Production.production.polution + p2Production.production.polution;
         if(currentPollutionLevel < 0)
         {
             currentPollutionLevel = 0;
