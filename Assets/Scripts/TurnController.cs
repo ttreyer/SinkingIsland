@@ -46,7 +46,7 @@ public class TurnController : MonoBehaviour
     //turn execution
     public void Clicked()
     {
-        if ((currentTurn != turnLimit) && (gameOver == false)) {
+        if ((currentTurn < turnLimit) && (gameOver == false)) {
             currentTurn += 1;
 
             turnDisplay.text = "End turn " + currentTurn;
@@ -77,6 +77,7 @@ public class TurnController : MonoBehaviour
             p1Cards.DrawNewHand();
             p2Cards.DrawNewHand();
         } else if (currentTurn == turnLimit) {
+            currentTurn += 1; // Increment so we don't restart the music each click
             musicController.PlayLevel(4);
             GameOver("You win!");
         }
