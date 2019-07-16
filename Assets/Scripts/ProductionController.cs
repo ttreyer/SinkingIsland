@@ -14,7 +14,7 @@ public class ProductionController : MonoBehaviour {
     public Text popsDisplay;
     public Text popsAngryDisplay;
 
-    private string NUMBER_FORMAT = "+#;-#;+0";
+    private string NUMBER_FORMAT = "(+#);(-#);(+0)";
 
     public void UpdateUI() {
         foodDisplay.text = production.food.ToString(NUMBER_FORMAT);
