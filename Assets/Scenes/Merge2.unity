@@ -246,7 +246,17 @@ PrefabInstance:
     - target: {fileID: 755012748390013900, guid: 91c12199bde584a03ae684b7e8fa650c,
         type: 3}
       propertyPath: m_AnchoredPosition.x
+      value: -300
+      objectReference: {fileID: 0}
+    - target: {fileID: 755012748390013903, guid: 91c12199bde584a03ae684b7e8fa650c,
+        type: 3}
+      propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 755012747863948405, guid: 91c12199bde584a03ae684b7e8fa650c,
+        type: 3}
+      propertyPath: m_Text
+      value: Anger growth
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 91c12199bde584a03ae684b7e8fa650c, type: 3}
@@ -382,7 +392,12 @@ PrefabInstance:
     - target: {fileID: 755012748390013900, guid: 91c12199bde584a03ae684b7e8fa650c,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: -300
+      objectReference: {fileID: 0}
+    - target: {fileID: 755012747863948405, guid: 91c12199bde584a03ae684b7e8fa650c,
+        type: 3}
+      propertyPath: m_Text
+      value: Population growth
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 91c12199bde584a03ae684b7e8fa650c, type: 3}
@@ -1653,6 +1668,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: f6bb1aa28b19b4812a32854e70d6fafd,
         type: 3}
+    - target: {fileID: 755012747863948405, guid: 91c12199bde584a03ae684b7e8fa650c,
+        type: 3}
+      propertyPath: m_Text
+      value: Energy production
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 91c12199bde584a03ae684b7e8fa650c, type: 3}
 --- !u!1001 &317657895
@@ -2500,7 +2520,12 @@ PrefabInstance:
     - target: {fileID: 755012748390013900, guid: 91c12199bde584a03ae684b7e8fa650c,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: -300
+      objectReference: {fileID: 0}
+    - target: {fileID: 755012747863948405, guid: 91c12199bde584a03ae684b7e8fa650c,
+        type: 3}
+      propertyPath: m_Text
+      value: Food production
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 91c12199bde584a03ae684b7e8fa650c, type: 3}
@@ -3007,6 +3032,18 @@ MonoBehaviour:
   m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &655607805 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 755012748819815175, guid: 91c12199bde584a03ae684b7e8fa650c,
+    type: 3}
+  m_PrefabInstance: {fileID: 766987657}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &678154408
 GameObject:
   m_ObjectHideFlags: 0
@@ -3138,6 +3175,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 678154408}
   m_CullTransparentMesh: 0
+--- !u!114 &679484310 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 755012748819815175, guid: 91c12199bde584a03ae684b7e8fa650c,
+    type: 3}
+  m_PrefabInstance: {fileID: 4460240}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &681558049
 GameObject:
   m_ObjectHideFlags: 0
@@ -3541,6 +3590,18 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!114 &745141602 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 755012748819815175, guid: 91c12199bde584a03ae684b7e8fa650c,
+    type: 3}
+  m_PrefabInstance: {fileID: 316306665}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &766987657
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3664,6 +3725,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: de9796b68b52c4f988638886b92a38d3,
         type: 3}
+    - target: {fileID: 755012747863948405, guid: 91c12199bde584a03ae684b7e8fa650c,
+        type: 3}
+      propertyPath: m_Text
+      value: Population growth
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 91c12199bde584a03ae684b7e8fa650c, type: 3}
 --- !u!224 &766987658 stripped
@@ -4241,6 +4307,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2302209af51784c3fb5bef406dfe1577, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &833674020 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 755012748819815175, guid: 91c12199bde584a03ae684b7e8fa650c,
+    type: 3}
+  m_PrefabInstance: {fileID: 6006228668497682683}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &834361470 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1741719469463339160, guid: a6d83be4a118c466681a307356959030,
@@ -4696,6 +4774,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1777917421}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &984642180 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 755012748819815175, guid: 91c12199bde584a03ae684b7e8fa650c,
+    type: 3}
+  m_PrefabInstance: {fileID: 1518016961}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &985502004 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6006228668307630379, guid: 91c12199bde584a03ae684b7e8fa650c,
@@ -4713,6 +4803,18 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6006228667228960261, guid: 91c12199bde584a03ae684b7e8fa650c,
     type: 3}
   m_PrefabInstance: {fileID: 4460240}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1044091254 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 755012748819815175, guid: 91c12199bde584a03ae684b7e8fa650c,
+    type: 3}
+  m_PrefabInstance: {fileID: 1736173531}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
@@ -4979,6 +5081,18 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6006228668307630379, guid: 91c12199bde584a03ae684b7e8fa650c,
     type: 3}
   m_PrefabInstance: {fileID: 412520885}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1169961068 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 755012748819815175, guid: 91c12199bde584a03ae684b7e8fa650c,
+    type: 3}
+  m_PrefabInstance: {fileID: 2567317}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
@@ -36399,6 +36513,26 @@ PrefabInstance:
       propertyPath: popsAngryDisplay
       value: 
       objectReference: {fileID: 1059449476}
+    - target: {fileID: 4345628681701702433, guid: e6315f16c77324ef4b7e271bdac5a525,
+        type: 3}
+      propertyPath: foodTooltip
+      value: 
+      objectReference: {fileID: 833674020}
+    - target: {fileID: 4345628681701702433, guid: e6315f16c77324ef4b7e271bdac5a525,
+        type: 3}
+      propertyPath: energyTooltip
+      value: 
+      objectReference: {fileID: 745141602}
+    - target: {fileID: 4345628681701702433, guid: e6315f16c77324ef4b7e271bdac5a525,
+        type: 3}
+      propertyPath: popsTooltip
+      value: 
+      objectReference: {fileID: 655607805}
+    - target: {fileID: 4345628681701702433, guid: e6315f16c77324ef4b7e271bdac5a525,
+        type: 3}
+      propertyPath: popsAngryTooltip
+      value: 
+      objectReference: {fileID: 984642180}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e6315f16c77324ef4b7e271bdac5a525, type: 3}
 --- !u!1 &1433163872 stripped
@@ -36638,6 +36772,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 2933f095bad1a49319ec10e18714ebd8,
         type: 3}
+    - target: {fileID: 755012747863948405, guid: 91c12199bde584a03ae684b7e8fa650c,
+        type: 3}
+      propertyPath: m_Text
+      value: Anger growth
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 91c12199bde584a03ae684b7e8fa650c, type: 3}
 --- !u!224 &1518016962 stripped
@@ -37044,6 +37183,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2302209af51784c3fb5bef406dfe1577, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1600667500 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 755012748819815175, guid: 91c12199bde584a03ae684b7e8fa650c,
+    type: 3}
+  m_PrefabInstance: {fileID: 412520885}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1614022533
@@ -37660,7 +37811,12 @@ PrefabInstance:
     - target: {fileID: 755012748390013900, guid: 91c12199bde584a03ae684b7e8fa650c,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: -300
+      objectReference: {fileID: 0}
+    - target: {fileID: 755012747863948405, guid: 91c12199bde584a03ae684b7e8fa650c,
+        type: 3}
+      propertyPath: m_Text
+      value: Energy production
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 91c12199bde584a03ae684b7e8fa650c, type: 3}
@@ -50021,6 +50177,26 @@ PrefabInstance:
       propertyPath: popsAngryDisplay
       value: 
       objectReference: {fileID: 44387876}
+    - target: {fileID: 4345628681701702433, guid: e6315f16c77324ef4b7e271bdac5a525,
+        type: 3}
+      propertyPath: foodTooltip
+      value: 
+      objectReference: {fileID: 1600667500}
+    - target: {fileID: 4345628681701702433, guid: e6315f16c77324ef4b7e271bdac5a525,
+        type: 3}
+      propertyPath: energyTooltip
+      value: 
+      objectReference: {fileID: 1044091254}
+    - target: {fileID: 4345628681701702433, guid: e6315f16c77324ef4b7e271bdac5a525,
+        type: 3}
+      propertyPath: popsTooltip
+      value: 
+      objectReference: {fileID: 679484310}
+    - target: {fileID: 4345628681701702433, guid: e6315f16c77324ef4b7e271bdac5a525,
+        type: 3}
+      propertyPath: popsAngryTooltip
+      value: 
+      objectReference: {fileID: 1169961068}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e6315f16c77324ef4b7e271bdac5a525, type: 3}
 --- !u!1 &1777917425 stripped
@@ -52100,6 +52276,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 755012747863948405, guid: 91c12199bde584a03ae684b7e8fa650c,
+        type: 3}
+      propertyPath: m_Text
+      value: Food production
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 91c12199bde584a03ae684b7e8fa650c, type: 3}

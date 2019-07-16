@@ -104,6 +104,14 @@ public class Resource : MonoBehaviour {
     public string title, description;
     public TooltipController tooltip;
 
+	public ResourceValues TotalValues { get
+		{
+			ResourceValues total = new ResourceValues();
+			total.Add(baseValues);
+			total.Add(bonusValues);
+			return total;
+		} }
+
     void Start() {
         UpdateTooltip();
     }
