@@ -10,10 +10,12 @@ public class ResourceController : MonoBehaviour
     public ResourceValues trade;
     public int initialPopulation;
 
+    [Header("Trade UI")]
     public Text foodToTradeDisplay;
     public Text energyToTradeDisplay;
     public Text popsToTradeDisplay;
 
+    [Header("Stock UI")]
     public Text currentFoodDisplay;
     public Text currentEnergyDisplay;
     public Text currentPopsDisplay;

@@ -127,7 +127,7 @@ public class Resource : MonoBehaviour {
         return String.Join("\n", resources);
     }
 
-    private string NUMBER_FORMAT = "+#;-#";
+    private string NUMBER_FORMAT = "+#;-#;0";
     private void UpdateTooltip() {
         if (tooltip)
             tooltip.SetContent(title, ToString());

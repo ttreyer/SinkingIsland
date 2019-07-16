@@ -2,17 +2,29 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
+using UnityEngine.UI;
 
 public class ProductionController : MonoBehaviour {
     public ResourceValues production;
     //public TooltipController tooltip;
+
+    [Header("Production UI")]
+    public Text foodDisplay;
+    public Text energyDisplay;
+    public Text popsDisplay;
+    public Text popsAngryDisplay;
+
+    private string NUMBER_FORMAT = "+#;-#;+0";
 
     void Start() {
         UpdateProduction();
     }
 
     public void UpdateUI() {
-        /* ... */
+        foodDisplay.text = production.food.ToString(NUMBER_FORMAT);
+        energyDisplay.text = production.energy.ToString(NUMBER_FORMAT);
+        popsDisplay.text = production.population.ToString(NUMBER_FORMAT);
+        popsAngryDisplay.text = production.populationAngry.ToString(NUMBER_FORMAT);
     }
 
     public void UpdateProduction() {
