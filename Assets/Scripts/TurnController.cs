@@ -24,8 +24,6 @@ public class TurnController : MonoBehaviour
     private ProductionController p1Production, p2Production;
     private SeaLevelController seaLevel;
     private MusicController musicController;
-
-    private Icon testIcon;
     
     // Start is called before the first frame update
     void Start()
@@ -43,13 +41,6 @@ public class TurnController : MonoBehaviour
         turnActions = new List<Action>[turnLimit];
         for (int i = 0; i < turnLimit; ++i)
             turnActions[i] = new List<Action>();
-
-        testIcon = new Icon(
-            IconType.Skill,
-            (Texture2D)Resources.Load("Sprites/Basic_button"),
-            new Rect(0, 0, 400, 400),
-            "Heal of Light"
-            );
     }
 
     //turn execution
@@ -79,10 +70,10 @@ public class TurnController : MonoBehaviour
             playerTwoResources.Add(p2Production.production);
 
             //update game with new amount of resources from production on every turn but 1st
-
             p1Resources.UpdateResourceCount(playerOneResources);
             p2Resources.UpdateResourceCount(playerTwoResources);
 
+            //draw a new hand of policies for each players
             p1Cards.DrawNewHand();
             p2Cards.DrawNewHand();
         } else if (currentTurn == turnLimit) {

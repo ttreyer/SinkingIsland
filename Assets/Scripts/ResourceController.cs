@@ -63,22 +63,19 @@ public class ResourceController : MonoBehaviour
     }
 
     public void UpdateCurrentUI() {
-        //update mockup UI
         currentFoodDisplay.text = current.food.ToString();
         currentEnergyDisplay.text = current.energy.ToString();
         currentPopsDisplay.text = current.population.ToString();
         currentPopsAngryDisplay.text = current.populationAngry.ToString();
-
     }
 
-    public void UpdateTradeUI()
-    {
+    public void UpdateTradeUI() {
         foodToTradeDisplay.text = trade.food.ToString();
         energyToTradeDisplay.text = trade.energy.ToString();
         popsToTradeDisplay.text = trade.population.ToString();
     }
 
-    //there's probably a super easy way to refactor these 6 trade methods but for now it works so I leave it as is
+    // Trade functions, use negative value for minus button
     public void TradeFood(int food) {
         if (current.food - food >= 0 && trade.food + food >= 0) {
             current.food -= food;
