@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[ExecuteInEditMode]
 public class CameraSizeScaler : MonoBehaviour {
     public float size16_9 = 6f;
     public float size5_4 = 7.5f;
