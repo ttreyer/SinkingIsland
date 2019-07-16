@@ -1270,8 +1270,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1433163874}
-        m_MethodName: TradePopsFromSource
+      - m_Target: {fileID: 1433163875}
+        m_MethodName: TradePopulation
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1401,13 +1401,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1433163874}
-        m_MethodName: TakeEnergyBackToSource
+      - m_Target: {fileID: 1433163875}
+        m_MethodName: TradeEnergy
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 1
+          m_IntArgument: -1
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -2256,13 +2256,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1777917428}
-        m_MethodName: TakePopsBackToSource
+      - m_Target: {fileID: 1433163875}
+        m_MethodName: TradePopulation
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 1
+          m_IntArgument: -1
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -2591,13 +2591,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1433163874}
-        m_MethodName: TakeFoodBackToSource
+      - m_Target: {fileID: 1433163875}
+        m_MethodName: TradeFood
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 1
+          m_IntArgument: -1
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -3088,8 +3088,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1433163874}
-        m_MethodName: TradeFoodFromSource
+      - m_Target: {fileID: 1433163875}
+        m_MethodName: TradeFood
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3988,8 +3988,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1777917428}
-        m_MethodName: TradePopsFromSource
+      - m_Target: {fileID: 1433163875}
+        m_MethodName: TradePopulation
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5079,13 +5079,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1433163874}
-        m_MethodName: TakePopsBackToSource
+      - m_Target: {fileID: 1433163875}
+        m_MethodName: TradePopulation
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 1
+          m_IntArgument: -1
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -5654,13 +5654,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1777917428}
-        m_MethodName: TakeFoodBackToSource
+      - m_Target: {fileID: 1777917429}
+        m_MethodName: TradeFood
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 1
+          m_IntArgument: -1
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -35211,8 +35211,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1777917428}
-        m_MethodName: TradeEnergyFromSource
+      - m_Target: {fileID: 1433163875}
+        m_MethodName: TradeEnergy
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -35694,6 +35694,11 @@ PrefabInstance:
       propertyPath: targetResourceController
       value: 
       objectReference: {fileID: 1777917425}
+    - target: {fileID: 3546728080401809845, guid: e6315f16c77324ef4b7e271bdac5a525,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4345628682664060063, guid: e6315f16c77324ef4b7e271bdac5a525,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -36397,16 +36402,16 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1433163868}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1433163874 stripped
+--- !u!114 &1433163875 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3546728080401809845, guid: e6315f16c77324ef4b7e271bdac5a525,
+  m_CorrespondingSourceObject: {fileID: 536369249817733208, guid: e6315f16c77324ef4b7e271bdac5a525,
     type: 3}
   m_PrefabInstance: {fileID: 1433163868}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1433163872}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5d3652fa3ccf3cb459ee77997b2f898b, type: 3}
+  m_Script: {fileID: 11500000, guid: 5100432d9e2dbad49b49a8a89f97e0ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &1433163878 stripped
@@ -37866,13 +37871,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1777917428}
-        m_MethodName: TakeEnergyBackToSource
+      - m_Target: {fileID: 1433163875}
+        m_MethodName: TradeEnergy
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 1
+          m_IntArgument: -1
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -38264,6 +38269,11 @@ PrefabInstance:
       propertyPath: targetResourceController
       value: 
       objectReference: {fileID: 1433163872}
+    - target: {fileID: 3546728080401809845, guid: e6315f16c77324ef4b7e271bdac5a525,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4345628682664060063, guid: e6315f16c77324ef4b7e271bdac5a525,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -50021,16 +50031,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e381d2e26be784590bd7ac7ba00018ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1777917428 stripped
+--- !u!114 &1777917429 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3546728080401809845, guid: e6315f16c77324ef4b7e271bdac5a525,
+  m_CorrespondingSourceObject: {fileID: 536369249817733208, guid: e6315f16c77324ef4b7e271bdac5a525,
     type: 3}
   m_PrefabInstance: {fileID: 1777917421}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1777917425}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5d3652fa3ccf3cb459ee77997b2f898b, type: 3}
+  m_Script: {fileID: 11500000, guid: 5100432d9e2dbad49b49a8a89f97e0ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1779667361
@@ -50942,8 +50952,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1777917428}
-        m_MethodName: TradeFoodFromSource
+      - m_Target: {fileID: 1777917429}
+        m_MethodName: TradeFood
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -51710,8 +51720,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1433163874}
-        m_MethodName: TradeEnergyFromSource
+      - m_Target: {fileID: 1433163875}
+        m_MethodName: TradeEnergy
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

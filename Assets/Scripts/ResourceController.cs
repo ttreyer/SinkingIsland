@@ -27,10 +27,15 @@ public class ResourceController : MonoBehaviour
 
     public void UpdateResourceCount(ResourceValues changes)
     {
+        // The TurnController put the production and the received trades in `changes`
         current.Add(changes);
-        current.polution = changes.polution; // Polution is tracked by the SeaLevelController
 
-        //calculate subsequent food and energy loss based off population
+        // Don't accumulate the polution
+        // The SeaLevelController uses this value to do the accumulation
+        // So we set it to the production of the polution
+        current.polution = changes.polution;
+
+        // Calculate subsequent food and energy loss based off population
         current.food -= current.TotalPopulation;
         current.energy -= current.TotalPopulation;
 
@@ -43,12 +48,16 @@ public class ResourceController : MonoBehaviour
         current.population -= popTurningAngry;
         current.populationAngry += popTurningAngry;
 
-        // Ensure we don't have any negative value
+        // Ensure we don't have any negative food or energy
         current.SetMin(0);
 
-        //clear trades
+        // Clear trades from last turn
         trade.Reset();
 
+        UpdateUI();
+    }
+
+    public void UpdateUI() {
         UpdateCurrentUI();
         UpdateTradeUI();
     }
@@ -70,90 +79,30 @@ public class ResourceController : MonoBehaviour
     }
 
     //there's probably a super easy way to refactor these 6 trade methods but for now it works so I leave it as is
-    public void TradeFoodAway(int Food)
-    {
-        if (current.food != 0)
-        {
-            current.food -= Food;
-            trade.food += Food;
-            UpdateCurrentUI();
-            UpdateTradeUI();
+    public void TradeFood(int food) {
+        if (current.food - food >= 0 && trade.food + food >= 0) {
+            current.food -= food;
+            trade.food += food;
+
+            UpdateUI();
         }
     }
 
-    public void TakeFoodBack(int Food)
-    {
-        if (trade.food != 0)
-        {
-            current.food += Food;
-            trade.food -= Food;
-            UpdateCurrentUI();
-            UpdateTradeUI();
+    public void TradeEnergy(int energy) {
+        if (current.energy - energy >= 0 && trade.energy + energy >= 0) {
+            current.energy -= energy;
+            trade.energy += energy;
+
+            UpdateUI();
         }
     }
 
-    public void TradeEnergyAway(int Energy)
-    {
-        if (current.energy != 0)
-        {
-            current.energy -= Energy;
-            trade.energy += Energy;
-            UpdateCurrentUI();
-            UpdateTradeUI();
+    public void TradePopulation(int population) {
+        if (current.population - population >= 0 && trade.population + population >= 0) {
+            current.population -= population;
+            trade.population += population;
+
+            UpdateUI();
         }
-    }
-
-    public void TakeEnergyBack(int Energy)
-    {
-        if (trade.energy != 0)
-        {
-            current.energy += Energy;
-            trade.energy -= Energy;
-            UpdateCurrentUI();
-            UpdateTradeUI();
-        }
-    }
-
-    public void TradePopsAway(int Pops)
-    {
-        if (current.population != 0)
-        {
-            current.population -= Pops;
-            trade.population += Pops;
-            UpdateCurrentUI();
-            UpdateTradeUI();
-        }
-    }
-
-    public void TakePopsBack(int Pops)
-    {
-        if (trade.population != 0)
-        {
-            current.population += Pops;
-            trade.population -= Pops;
-            UpdateCurrentUI();
-            UpdateTradeUI();
-        }
-    }
-
-    public void GetFoodFromTrade(int Food)
-    {
-        current.food += Food;
-    }
-
-    public void GetEnergyFromTrade(int Energy)
-    {
-        current.energy += Energy;
-    }
-
-    public void GetPopsFromTrade(int Pops)
-    {
-        current.population += Pops;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }

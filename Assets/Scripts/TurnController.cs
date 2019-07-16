@@ -20,7 +20,6 @@ public class TurnController : MonoBehaviour
 
     private bool started, gameOver;
     private ResourceController p1Resources, p2Resources;
-    private TradeController p1Trades, p2Trades;
     private WaterLevelController p1Water, p2Water;
     private ProductionController p1Production, p2Production;
     private SeaLevelController seaLevel;
@@ -33,8 +32,6 @@ public class TurnController : MonoBehaviour
     {
         p1Resources = islandA.GetComponentInChildren<ResourceController>();
         p2Resources = islandB.GetComponentInChildren<ResourceController>();
-        p1Trades = islandA.GetComponentInChildren<TradeController>();
-        p2Trades = islandB.GetComponentInChildren<TradeController>();
         p1Production = islandA.GetComponentInChildren<ProductionController>();
         p2Production = islandB.GetComponentInChildren<ProductionController>();
 
@@ -74,8 +71,8 @@ public class TurnController : MonoBehaviour
             foreach (Action action in ActionsForTurn(currentTurn))
                 action();
 
-            ResourceValues playerOneResources = p2Trades.ProcessTrades();
-            ResourceValues playerTwoResources = p1Trades.ProcessTrades();
+            ResourceValues playerOneResources = p2Resources.trade;
+            ResourceValues playerTwoResources = p1Resources.trade;
 
             //collecting all the resources
             playerOneResources.Add(p1Production.production);
