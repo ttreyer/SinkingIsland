@@ -16,6 +16,12 @@ public class CardBuilder : MonoBehaviour {
     public Button cardButton;
     public TooltipController tooltip;
 
+    private AudioSource executeSFX;
+
+    private void Start() {
+        executeSFX = GetComponent<AudioSource>();
+    }
+
     public void BuildWithPolicy(PolicyController pc) {
         if (policy)
             Destroy(policy.gameObject);
@@ -39,6 +45,7 @@ public class CardBuilder : MonoBehaviour {
                 deck.RemovePolicyInstance(policy);
                 isHeld = false;
                 cardButton.image.color = Color.white;
+                executeSFX.Play();
             }
         }
     }
