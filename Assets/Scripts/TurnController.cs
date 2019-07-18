@@ -41,6 +41,9 @@ public class TurnController : MonoBehaviour
         turnActions = new List<Action>[turnLimit];
         for (int i = 0; i < turnLimit; ++i)
             turnActions[i] = new List<Action>();
+
+        // Setup the first turn
+        Clicked();
     }
 
     //turn execution
@@ -80,15 +83,6 @@ public class TurnController : MonoBehaviour
             currentTurn += 1; // Increment so we don't restart the music each click
             musicController.PlayLevel(4);
             GameOver("You win!");
-        }
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        if (!started) {
-            started = true;
-            Clicked();
         }
     }
 
