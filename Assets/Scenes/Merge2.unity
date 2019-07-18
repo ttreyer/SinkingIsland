@@ -466,7 +466,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 36
+    m_FontSize: 32
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -608,6 +608,11 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 1741719470326531283, guid: a6d83be4a118c466681a307356959030,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -4.850006
+      objectReference: {fileID: 0}
     - target: {fileID: 1741719470422608192, guid: a6d83be4a118c466681a307356959030,
         type: 3}
       propertyPath: deck
@@ -618,11 +623,6 @@ PrefabInstance:
       propertyPath: cardButton
       value: 
       objectReference: {fileID: 1071971267}
-    - target: {fileID: 1741719470326531283, guid: a6d83be4a118c466681a307356959030,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -4.850006
-      objectReference: {fileID: 0}
     - target: {fileID: 3840551304909367850, guid: a6d83be4a118c466681a307356959030,
         type: 3}
       propertyPath: m_AspectRatio
@@ -864,16 +864,10 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 1741719470422608192, guid: a6d83be4a118c466681a307356959030,
-        type: 3}
-      propertyPath: deck
-      value: 
-      objectReference: {fileID: 1777917426}
-    - target: {fileID: 1741719470422608192, guid: a6d83be4a118c466681a307356959030,
-        type: 3}
-      propertyPath: cardButton
-      value: 
-      objectReference: {fileID: 1928135606}
+    - target: {fileID: 1904425109, guid: a6d83be4a118c466681a307356959030, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 1741719470326531283, guid: a6d83be4a118c466681a307356959030,
         type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -884,24 +878,30 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: -0.16999817
       objectReference: {fileID: 0}
-    - target: {fileID: 3840551304909367850, guid: a6d83be4a118c466681a307356959030,
-        type: 3}
-      propertyPath: m_AspectRatio
-      value: 1000
-      objectReference: {fileID: 0}
-    - target: {fileID: 3586008659485290899, guid: a6d83be4a118c466681a307356959030,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -150
-      objectReference: {fileID: 0}
     - target: {fileID: 1741719470188536858, guid: a6d83be4a118c466681a307356959030,
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 5.7100067
       objectReference: {fileID: 0}
-    - target: {fileID: 1904425109, guid: a6d83be4a118c466681a307356959030, type: 3}
-      propertyPath: m_RootOrder
-      value: 2
+    - target: {fileID: 1741719470422608192, guid: a6d83be4a118c466681a307356959030,
+        type: 3}
+      propertyPath: deck
+      value: 
+      objectReference: {fileID: 1777917426}
+    - target: {fileID: 1741719470422608192, guid: a6d83be4a118c466681a307356959030,
+        type: 3}
+      propertyPath: cardButton
+      value: 
+      objectReference: {fileID: 1928135606}
+    - target: {fileID: 3586008659485290899, guid: a6d83be4a118c466681a307356959030,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -150
+      objectReference: {fileID: 0}
+    - target: {fileID: 3840551304909367850, guid: a6d83be4a118c466681a307356959030,
+        type: 3}
+      propertyPath: m_AspectRatio
+      value: 1000
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a6d83be4a118c466681a307356959030, type: 3}
@@ -1525,7 +1525,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 36
+    m_FontSize: 32
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -1909,7 +1909,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 36
+    m_FontSize: 32
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -2063,7 +2063,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 7
+  orthographic size: 6.75
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -2943,16 +2943,10 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 1741719470422608192, guid: a6d83be4a118c466681a307356959030,
-        type: 3}
-      propertyPath: deck
-      value: 
-      objectReference: {fileID: 1777917426}
-    - target: {fileID: 1741719470422608192, guid: a6d83be4a118c466681a307356959030,
-        type: 3}
-      propertyPath: cardButton
-      value: 
-      objectReference: {fileID: 653017289}
+    - target: {fileID: 1904425109, guid: a6d83be4a118c466681a307356959030, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 1741719470326531283, guid: a6d83be4a118c466681a307356959030,
         type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -2963,24 +2957,30 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: -0.16999817
       objectReference: {fileID: 0}
-    - target: {fileID: 3840551304909367850, guid: a6d83be4a118c466681a307356959030,
-        type: 3}
-      propertyPath: m_AspectRatio
-      value: 1000
-      objectReference: {fileID: 0}
-    - target: {fileID: 3586008659485290899, guid: a6d83be4a118c466681a307356959030,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -150
-      objectReference: {fileID: 0}
     - target: {fileID: 1741719470188536858, guid: a6d83be4a118c466681a307356959030,
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 5.7100067
       objectReference: {fileID: 0}
-    - target: {fileID: 1904425109, guid: a6d83be4a118c466681a307356959030, type: 3}
-      propertyPath: m_RootOrder
-      value: 2
+    - target: {fileID: 1741719470422608192, guid: a6d83be4a118c466681a307356959030,
+        type: 3}
+      propertyPath: deck
+      value: 
+      objectReference: {fileID: 1777917426}
+    - target: {fileID: 1741719470422608192, guid: a6d83be4a118c466681a307356959030,
+        type: 3}
+      propertyPath: cardButton
+      value: 
+      objectReference: {fileID: 653017289}
+    - target: {fileID: 3586008659485290899, guid: a6d83be4a118c466681a307356959030,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -150
+      objectReference: {fileID: 0}
+    - target: {fileID: 3840551304909367850, guid: a6d83be4a118c466681a307356959030,
+        type: 3}
+      propertyPath: m_AspectRatio
+      value: 1000
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a6d83be4a118c466681a307356959030, type: 3}
@@ -3246,7 +3246,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 36
+    m_FontSize: 32
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -3325,7 +3325,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 36
+    m_FontSize: 32
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -4248,16 +4248,10 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 1741719470422608192, guid: a6d83be4a118c466681a307356959030,
-        type: 3}
-      propertyPath: deck
-      value: 
-      objectReference: {fileID: 1777917426}
-    - target: {fileID: 1741719470422608192, guid: a6d83be4a118c466681a307356959030,
-        type: 3}
-      propertyPath: cardButton
-      value: 
-      objectReference: {fileID: 1094270336}
+    - target: {fileID: 1904425109, guid: a6d83be4a118c466681a307356959030, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 1741719470326531283, guid: a6d83be4a118c466681a307356959030,
         type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -4268,24 +4262,30 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: -0.16999817
       objectReference: {fileID: 0}
-    - target: {fileID: 3840551304909367850, guid: a6d83be4a118c466681a307356959030,
-        type: 3}
-      propertyPath: m_AspectRatio
-      value: 1000
-      objectReference: {fileID: 0}
-    - target: {fileID: 3586008659485290899, guid: a6d83be4a118c466681a307356959030,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -150
-      objectReference: {fileID: 0}
     - target: {fileID: 1741719470188536858, guid: a6d83be4a118c466681a307356959030,
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 5.7100067
       objectReference: {fileID: 0}
-    - target: {fileID: 1904425109, guid: a6d83be4a118c466681a307356959030, type: 3}
-      propertyPath: m_RootOrder
-      value: 2
+    - target: {fileID: 1741719470422608192, guid: a6d83be4a118c466681a307356959030,
+        type: 3}
+      propertyPath: deck
+      value: 
+      objectReference: {fileID: 1777917426}
+    - target: {fileID: 1741719470422608192, guid: a6d83be4a118c466681a307356959030,
+        type: 3}
+      propertyPath: cardButton
+      value: 
+      objectReference: {fileID: 1094270336}
+    - target: {fileID: 3586008659485290899, guid: a6d83be4a118c466681a307356959030,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -150
+      objectReference: {fileID: 0}
+    - target: {fileID: 3840551304909367850, guid: a6d83be4a118c466681a307356959030,
+        type: 3}
+      propertyPath: m_AspectRatio
+      value: 1000
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a6d83be4a118c466681a307356959030, type: 3}
@@ -4492,35 +4492,35 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 1741719469463339166, guid: a6d83be4a118c466681a307356959030,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1741719470422608192, guid: a6d83be4a118c466681a307356959030,
         type: 3}
       propertyPath: deck
       value: 
       objectReference: {fileID: 1433163878}
-    - target: {fileID: 3840551304909367850, guid: a6d83be4a118c466681a307356959030,
+    - target: {fileID: 6392517834501626625, guid: a6d83be4a118c466681a307356959030,
         type: 3}
-      propertyPath: m_AspectRatio
-      value: 1000
-      objectReference: {fileID: 0}
-    - target: {fileID: 1741719469463339160, guid: a6d83be4a118c466681a307356959030,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1741719469463339166, guid: a6d83be4a118c466681a307356959030,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
+      propertyPath: m_MinWidth
+      value: 180
       objectReference: {fileID: 0}
     - target: {fileID: 1741719469463339163, guid: a6d83be4a118c466681a307356959030,
         type: 3}
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 6392517834501626625, guid: a6d83be4a118c466681a307356959030,
+    - target: {fileID: 1741719469463339160, guid: a6d83be4a118c466681a307356959030,
         type: 3}
-      propertyPath: m_MinWidth
-      value: 180
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3840551304909367850, guid: a6d83be4a118c466681a307356959030,
+        type: 3}
+      propertyPath: m_AspectRatio
+      value: 1000
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a6d83be4a118c466681a307356959030, type: 3}
@@ -35190,16 +35190,10 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 1741719470422608192, guid: a6d83be4a118c466681a307356959030,
-        type: 3}
-      propertyPath: deck
-      value: 
-      objectReference: {fileID: 1433163878}
-    - target: {fileID: 1741719470422608192, guid: a6d83be4a118c466681a307356959030,
-        type: 3}
-      propertyPath: cardButton
-      value: 
-      objectReference: {fileID: 834361470}
+    - target: {fileID: 1904425109, guid: a6d83be4a118c466681a307356959030, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 1741719470326531283, guid: a6d83be4a118c466681a307356959030,
         type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -35210,19 +35204,25 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: -0.16999817
       objectReference: {fileID: 0}
-    - target: {fileID: 3840551304909367850, guid: a6d83be4a118c466681a307356959030,
-        type: 3}
-      propertyPath: m_AspectRatio
-      value: 1000
-      objectReference: {fileID: 0}
     - target: {fileID: 1741719470188536858, guid: a6d83be4a118c466681a307356959030,
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 5.7100067
       objectReference: {fileID: 0}
-    - target: {fileID: 1904425109, guid: a6d83be4a118c466681a307356959030, type: 3}
-      propertyPath: m_RootOrder
-      value: 2
+    - target: {fileID: 1741719470422608192, guid: a6d83be4a118c466681a307356959030,
+        type: 3}
+      propertyPath: deck
+      value: 
+      objectReference: {fileID: 1433163878}
+    - target: {fileID: 1741719470422608192, guid: a6d83be4a118c466681a307356959030,
+        type: 3}
+      propertyPath: cardButton
+      value: 
+      objectReference: {fileID: 834361470}
+    - target: {fileID: 3840551304909367850, guid: a6d83be4a118c466681a307356959030,
+        type: 3}
+      propertyPath: m_AspectRatio
+      value: 1000
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a6d83be4a118c466681a307356959030, type: 3}
@@ -37117,16 +37117,10 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 1741719470422608192, guid: a6d83be4a118c466681a307356959030,
-        type: 3}
-      propertyPath: deck
-      value: 
-      objectReference: {fileID: 1777917426}
-    - target: {fileID: 1741719470422608192, guid: a6d83be4a118c466681a307356959030,
-        type: 3}
-      propertyPath: cardButton
-      value: 
-      objectReference: {fileID: 1361404529}
+    - target: {fileID: 1904425109, guid: a6d83be4a118c466681a307356959030, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 1741719470326531283, guid: a6d83be4a118c466681a307356959030,
         type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -37137,28 +37131,34 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: -0.16999817
       objectReference: {fileID: 0}
-    - target: {fileID: 3840551304909367850, guid: a6d83be4a118c466681a307356959030,
-        type: 3}
-      propertyPath: m_AspectRatio
-      value: 1000
-      objectReference: {fileID: 0}
-    - target: {fileID: 3586008659485290899, guid: a6d83be4a118c466681a307356959030,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -150
-      objectReference: {fileID: 0}
     - target: {fileID: 1741719470188536858, guid: a6d83be4a118c466681a307356959030,
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 5.7100067
       objectReference: {fileID: 0}
-    - target: {fileID: 1904425109, guid: a6d83be4a118c466681a307356959030, type: 3}
-      propertyPath: m_RootOrder
-      value: 2
+    - target: {fileID: 1741719470422608192, guid: a6d83be4a118c466681a307356959030,
+        type: 3}
+      propertyPath: deck
+      value: 
+      objectReference: {fileID: 1777917426}
+    - target: {fileID: 1741719470422608192, guid: a6d83be4a118c466681a307356959030,
+        type: 3}
+      propertyPath: cardButton
+      value: 
+      objectReference: {fileID: 1361404529}
+    - target: {fileID: 3586008659485290899, guid: a6d83be4a118c466681a307356959030,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -150
       objectReference: {fileID: 0}
     - target: {fileID: 1904425112, guid: a6d83be4a118c466681a307356959030, type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3840551304909367850, guid: a6d83be4a118c466681a307356959030,
+        type: 3}
+      propertyPath: m_AspectRatio
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 6422187214041029694, guid: a6d83be4a118c466681a307356959030,
         type: 3}
@@ -42589,6 +42589,46 @@ PrefabInstance:
       propertyPath: heights.Array.data[2].decoration
       value: 
       objectReference: {fileID: 1227746185}
+    - target: {fileID: 4345628681701702433, guid: e6315f16c77324ef4b7e271bdac5a525,
+        type: 3}
+      propertyPath: foodDisplay
+      value: 
+      objectReference: {fileID: 603689810}
+    - target: {fileID: 4345628681701702433, guid: e6315f16c77324ef4b7e271bdac5a525,
+        type: 3}
+      propertyPath: energyDisplay
+      value: 
+      objectReference: {fileID: 925693515}
+    - target: {fileID: 4345628681701702433, guid: e6315f16c77324ef4b7e271bdac5a525,
+        type: 3}
+      propertyPath: popsDisplay
+      value: 
+      objectReference: {fileID: 1036161966}
+    - target: {fileID: 4345628681701702433, guid: e6315f16c77324ef4b7e271bdac5a525,
+        type: 3}
+      propertyPath: popsAngryDisplay
+      value: 
+      objectReference: {fileID: 44387876}
+    - target: {fileID: 4345628681701702433, guid: e6315f16c77324ef4b7e271bdac5a525,
+        type: 3}
+      propertyPath: foodTooltip
+      value: 
+      objectReference: {fileID: 1600667500}
+    - target: {fileID: 4345628681701702433, guid: e6315f16c77324ef4b7e271bdac5a525,
+        type: 3}
+      propertyPath: energyTooltip
+      value: 
+      objectReference: {fileID: 1044091254}
+    - target: {fileID: 4345628681701702433, guid: e6315f16c77324ef4b7e271bdac5a525,
+        type: 3}
+      propertyPath: popsTooltip
+      value: 
+      objectReference: {fileID: 679484310}
+    - target: {fileID: 4345628681701702433, guid: e6315f16c77324ef4b7e271bdac5a525,
+        type: 3}
+      propertyPath: popsAngryTooltip
+      value: 
+      objectReference: {fileID: 1169961068}
     - target: {fileID: 4345628682165669934, guid: e6315f16c77324ef4b7e271bdac5a525,
         type: 3}
       propertyPath: m_LocalScale.y
@@ -50157,46 +50197,6 @@ PrefabInstance:
       propertyPath: m_Tiles.Array.data[67].second.m_ColliderType
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 4345628681701702433, guid: e6315f16c77324ef4b7e271bdac5a525,
-        type: 3}
-      propertyPath: foodDisplay
-      value: 
-      objectReference: {fileID: 603689810}
-    - target: {fileID: 4345628681701702433, guid: e6315f16c77324ef4b7e271bdac5a525,
-        type: 3}
-      propertyPath: energyDisplay
-      value: 
-      objectReference: {fileID: 925693515}
-    - target: {fileID: 4345628681701702433, guid: e6315f16c77324ef4b7e271bdac5a525,
-        type: 3}
-      propertyPath: popsDisplay
-      value: 
-      objectReference: {fileID: 1036161966}
-    - target: {fileID: 4345628681701702433, guid: e6315f16c77324ef4b7e271bdac5a525,
-        type: 3}
-      propertyPath: popsAngryDisplay
-      value: 
-      objectReference: {fileID: 44387876}
-    - target: {fileID: 4345628681701702433, guid: e6315f16c77324ef4b7e271bdac5a525,
-        type: 3}
-      propertyPath: foodTooltip
-      value: 
-      objectReference: {fileID: 1600667500}
-    - target: {fileID: 4345628681701702433, guid: e6315f16c77324ef4b7e271bdac5a525,
-        type: 3}
-      propertyPath: energyTooltip
-      value: 
-      objectReference: {fileID: 1044091254}
-    - target: {fileID: 4345628681701702433, guid: e6315f16c77324ef4b7e271bdac5a525,
-        type: 3}
-      propertyPath: popsTooltip
-      value: 
-      objectReference: {fileID: 679484310}
-    - target: {fileID: 4345628681701702433, guid: e6315f16c77324ef4b7e271bdac5a525,
-        type: 3}
-      propertyPath: popsAngryTooltip
-      value: 
-      objectReference: {fileID: 1169961068}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e6315f16c77324ef4b7e271bdac5a525, type: 3}
 --- !u!1 &1777917425 stripped
@@ -50748,36 +50748,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 1741719470422608192, guid: a6d83be4a118c466681a307356959030,
-        type: 3}
-      propertyPath: deck
-      value: 
-      objectReference: {fileID: 1433163878}
-    - target: {fileID: 1741719470422608192, guid: a6d83be4a118c466681a307356959030,
-        type: 3}
-      propertyPath: cardButton
-      value: 
-      objectReference: {fileID: 1534890896}
-    - target: {fileID: 1741719470326531283, guid: a6d83be4a118c466681a307356959030,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -4.850006
-      objectReference: {fileID: 0}
-    - target: {fileID: 1741719470326531283, guid: a6d83be4a118c466681a307356959030,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -0.16999817
-      objectReference: {fileID: 0}
-    - target: {fileID: 3840551304909367850, guid: a6d83be4a118c466681a307356959030,
-        type: 3}
-      propertyPath: m_AspectRatio
-      value: 1000
-      objectReference: {fileID: 0}
-    - target: {fileID: 1741719470188536858, guid: a6d83be4a118c466681a307356959030,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 5.7100067
-      objectReference: {fileID: 0}
     - target: {fileID: 1904425109, guid: a6d83be4a118c466681a307356959030, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -50791,6 +50761,36 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1741719470326531283, guid: a6d83be4a118c466681a307356959030,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -4.850006
+      objectReference: {fileID: 0}
+    - target: {fileID: 1741719470326531283, guid: a6d83be4a118c466681a307356959030,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.16999817
+      objectReference: {fileID: 0}
+    - target: {fileID: 1741719470188536858, guid: a6d83be4a118c466681a307356959030,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 5.7100067
+      objectReference: {fileID: 0}
+    - target: {fileID: 1741719470422608192, guid: a6d83be4a118c466681a307356959030,
+        type: 3}
+      propertyPath: deck
+      value: 
+      objectReference: {fileID: 1433163878}
+    - target: {fileID: 1741719470422608192, guid: a6d83be4a118c466681a307356959030,
+        type: 3}
+      propertyPath: cardButton
+      value: 
+      objectReference: {fileID: 1534890896}
+    - target: {fileID: 3840551304909367850, guid: a6d83be4a118c466681a307356959030,
+        type: 3}
+      propertyPath: m_AspectRatio
+      value: 1000
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a6d83be4a118c466681a307356959030, type: 3}
@@ -50953,7 +50953,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 36
+    m_FontSize: 32
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
