@@ -9,10 +9,12 @@ public class ResourceController : MonoBehaviour
     public ResourceValues current;
     public ResourceValues trade;
 
+    [Header("Trade UI")]
     public Text foodToTradeDisplay;
     public Text energyToTradeDisplay;
     public Text popsToTradeDisplay;
 
+    [Header("Stock UI")]
     public Text currentFoodDisplay;
     public Text currentEnergyDisplay;
     public Text currentPopsDisplay;
@@ -22,16 +24,12 @@ public class ResourceController : MonoBehaviour
     private int popEnergyDifference;
     private int popsLostToAnger;
 
-    public void UpdateResourceCount(ResourceValues newResources)
+    public void UpdateResourceCount(ResourceValues changes)
     {
-        ResourceValues stock = current;
-        current = new ResourceValues();
+        // The TurnController did put the production and the received trades in `changes`
+        current.Add(changes);
 
-        current.AddProduced(stock); // Add previous produced resources
-        current.Add(newResources);  // Add current production and poulation
-        current.AddPopulation(trade.Revert());// Remove what was traded last turn
-
-        //calculate subsequent food and energy loss based off population
+        // Calculate subsequent food and energy loss based off population
         current.food -= current.TotalPopulation;
         current.energy -= current.TotalPopulation;
 
@@ -44,117 +42,58 @@ public class ResourceController : MonoBehaviour
         current.population -= popTurningAngry;
         current.populationAngry += popTurningAngry;
 
-        // Ensure we don't have any negative value
+        // Ensure we don't have any negative food or energy
         current.SetMin(0);
 
-        //clear trades
+        // Clear trades from last turn
         trade.Reset();
 
+        UpdateUI();
+    }
+
+    public void UpdateUI() {
         UpdateCurrentUI();
         UpdateTradeUI();
     }
 
     public void UpdateCurrentUI() {
-        //update mockup UI
         currentFoodDisplay.text = current.food.ToString();
         currentEnergyDisplay.text = current.energy.ToString();
         currentPopsDisplay.text = current.population.ToString();
         currentPopsAngryDisplay.text = current.populationAngry.ToString();
-
     }
 
-    public void UpdateTradeUI()
-    {
+    public void UpdateTradeUI() {
         foodToTradeDisplay.text = trade.food.ToString();
         energyToTradeDisplay.text = trade.energy.ToString();
         popsToTradeDisplay.text = trade.population.ToString();
     }
 
-    //there's probably a super easy way to refactor these 6 trade methods but for now it works so I leave it as is
-    public void TradeFoodAway(int Food)
-    {
-        if (current.food != 0)
-        {
-            current.food -= Food;
-            trade.food += Food;
-            UpdateCurrentUI();
-            UpdateTradeUI();
+    // Trade functions, use negative value for minus button
+    public void TradeFood(int food) {
+        if (current.food - food >= 0 && trade.food + food >= 0) {
+            current.food -= food;
+            trade.food += food;
+
+            UpdateUI();
         }
     }
 
-    public void TakeFoodBack(int Food)
-    {
-        if (trade.food != 0)
-        {
-            current.food += Food;
-            trade.food -= Food;
-            UpdateCurrentUI();
-            UpdateTradeUI();
+    public void TradeEnergy(int energy) {
+        if (current.energy - energy >= 0 && trade.energy + energy >= 0) {
+            current.energy -= energy;
+            trade.energy += energy;
+
+            UpdateUI();
         }
     }
 
-    public void TradeEnergyAway(int Energy)
-    {
-        if (current.energy != 0)
-        {
-            current.energy -= Energy;
-            trade.energy += Energy;
-            UpdateCurrentUI();
-            UpdateTradeUI();
+    public void TradePopulation(int population) {
+        if (current.population - population >= 0 && trade.population + population >= 0) {
+            current.population -= population;
+            trade.population += population;
+
+            UpdateUI();
         }
-    }
-
-    public void TakeEnergyBack(int Energy)
-    {
-        if (trade.energy != 0)
-        {
-            current.energy += Energy;
-            trade.energy -= Energy;
-            UpdateCurrentUI();
-            UpdateTradeUI();
-        }
-    }
-
-    public void TradePopsAway(int Pops)
-    {
-        if (current.population != 0)
-        {
-            current.population -= Pops;
-            trade.population += Pops;
-            UpdateCurrentUI();
-            UpdateTradeUI();
-        }
-    }
-
-    public void TakePopsBack(int Pops)
-    {
-        if (trade.population != 0)
-        {
-            current.population += Pops;
-            trade.population -= Pops;
-            UpdateCurrentUI();
-            UpdateTradeUI();
-        }
-    }
-
-    public void GetFoodFromTrade(int Food)
-    {
-        current.food += Food;
-    }
-
-    public void GetEnergyFromTrade(int Energy)
-    {
-        current.energy += Energy;
-    }
-
-    public void GetPopsFromTrade(int Pops)
-    {
-        current.population += Pops;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }

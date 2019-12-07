@@ -14,25 +14,22 @@ public class TurnController : MonoBehaviour
     public int turnLimit;
     public Text turnDisplay;
 
+    public ResourceValues source;
+
     private List<Action>[] turnActions;
 
     private bool started, gameOver;
     private ResourceController p1Resources, p2Resources;
-    private TradeController p1Trades, p2Trades;
     private WaterLevelController p1Water, p2Water;
     private ProductionController p1Production, p2Production;
     private SeaLevelController seaLevel;
     private MusicController musicController;
-
-    private Icon testIcon;
     
     // Start is called before the first frame update
     void Start()
     {
         p1Resources = islandA.GetComponentInChildren<ResourceController>();
         p2Resources = islandB.GetComponentInChildren<ResourceController>();
-        p1Trades = islandA.GetComponentInChildren<TradeController>();
-        p2Trades = islandB.GetComponentInChildren<TradeController>();
         p1Production = islandA.GetComponentInChildren<ProductionController>();
         p2Production = islandB.GetComponentInChildren<ProductionController>();
 
@@ -45,18 +42,14 @@ public class TurnController : MonoBehaviour
         for (int i = 0; i < turnLimit; ++i)
             turnActions[i] = new List<Action>();
 
-        testIcon = new Icon(
-            IconType.Skill,
-            (Texture2D)Resources.Load("Sprites/Basic_button"),
-            new Rect(0, 0, 400, 400),
-            "Heal of Light"
-            );
+        // Setup the first turn
+        Clicked();
     }
 
     //turn execution
     public void Clicked()
     {
-        if ((currentTurn != turnLimit) && (gameOver == false)) {
+        if ((currentTurn < turnLimit) && (gameOver == false)) {
             currentTurn += 1;
 
             turnDisplay.text = "End turn " + currentTurn;
@@ -64,7 +57,7 @@ public class TurnController : MonoBehaviour
             //sea level calculations
             seaLevel.UpdateSeaLevel();
 
-            /* Collect current production */
+            /* Collect effective production after eventual flood */
             p1Production.UpdateProduction();
             p2Production.UpdateProduction();
 
@@ -72,29 +65,24 @@ public class TurnController : MonoBehaviour
             foreach (Action action in ActionsForTurn(currentTurn))
                 action();
 
-            ResourceValues playerOneResources = p2Trades.ProcessTrades();
-            ResourceValues playerTwoResources = p1Trades.ProcessTrades();
+            ResourceValues playerOneResources = p2Resources.trade;
+            ResourceValues playerTwoResources = p1Resources.trade;
 
+            //collecting all the resources
             playerOneResources.Add(p1Production.production);
             playerTwoResources.Add(p2Production.production);
 
+            //update game with new amount of resources from production on every turn but 1st
             p1Resources.UpdateResourceCount(playerOneResources);
             p2Resources.UpdateResourceCount(playerTwoResources);
 
+            //draw a new hand of policies for each players
             p1Cards.DrawNewHand();
             p2Cards.DrawNewHand();
         } else if (currentTurn == turnLimit) {
+            currentTurn += 1; // Increment so we don't restart the music each click
             musicController.PlayLevel(4);
             GameOver("You win!");
-        }
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        if (!started) {
-            started = true;
-            Clicked();
         }
     }
 

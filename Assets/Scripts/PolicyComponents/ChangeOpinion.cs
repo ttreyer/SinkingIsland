@@ -5,7 +5,7 @@ using UnityEngine;
 public class ChangeOpinion : PolicyComponent {
     public int opinionChange;
 
-    public virtual void Execute(PolicyController controller) {
+    public override void Execute(PolicyController controller) {
         controller.island
             .GetComponentInChildren<OpinionController>()
             .opinion += opinionChange;

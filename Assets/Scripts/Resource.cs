@@ -35,6 +35,7 @@ public struct ResourceValues {
     public ResourceValues AddProduced(ResourceValues v) {
         food += v.food;
         energy += v.energy;
+        population += v.population;
         //polution += v.polution;
 
         return this;
@@ -82,6 +83,18 @@ public struct ResourceValues {
 
         return this;
     }
+
+    public override string ToString() {
+        List<string> resources = new List<string>();
+
+        resources.Add("Food: " + food);
+        resources.Add("Energy: " + energy);
+        resources.Add("Pollution: " + polution);
+        resources.Add("Population: " + population);
+        resources.Add("Population angry: " + populationAngry);
+
+        return String.Join(", ", resources);
+    }
 }
 
 public class Resource : MonoBehaviour {
@@ -90,6 +103,14 @@ public class Resource : MonoBehaviour {
     public ResourceValues bonusValues;
     public string title, description;
     public TooltipController tooltip;
+
+	public ResourceValues TotalValues { get
+		{
+			ResourceValues total = new ResourceValues();
+			total.Add(baseValues);
+			total.Add(bonusValues);
+			return total;
+		} }
 
     void Start() {
         UpdateTooltip();
@@ -121,12 +142,12 @@ public class Resource : MonoBehaviour {
 
         int populationAngry = baseValues.populationAngry + bonusValues.populationAngry;
         if (populationAngry != 0)
-            resources.Add("Population ngry: " + populationAngry.ToString(NUMBER_FORMAT));
+            resources.Add("Population angry: " + populationAngry.ToString(NUMBER_FORMAT));
 
         return String.Join("\n", resources);
     }
 
-    private string NUMBER_FORMAT = "+#;-#";
+    private string NUMBER_FORMAT = "+#;-#;0";
     private void UpdateTooltip() {
         if (tooltip)
             tooltip.SetContent(title, ToString());

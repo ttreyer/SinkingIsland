@@ -1,4 +1,0 @@
-[sk]Heal of Light[0]
-[id]1
-[s]35 - 68 Healing
-[d]A Healing of Light[0]
